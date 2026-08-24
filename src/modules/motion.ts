@@ -7,6 +7,13 @@
 
 const REDUCED = window.matchMedia("(prefers-reduced-motion: reduce)");
 
+function stopAmbientVideo(): void {
+  document.querySelectorAll<HTMLVideoElement>("video[autoplay]").forEach((v) => {
+    v.removeAttribute("autoplay");
+    v.pause();
+  });
+}
+
 function settleAll(): void {
   document.querySelectorAll(".reveal").forEach((n) => n.classList.add("is-in"));
   document.querySelectorAll<HTMLElement>("[data-count]").forEach((n) => {
@@ -35,6 +42,7 @@ function countUp(node: HTMLElement, target: number): void {
 
 export function initMotion(): void {
   if (REDUCED.matches) {
+    stopAmbientVideo();
     settleAll();
     return;
   }
