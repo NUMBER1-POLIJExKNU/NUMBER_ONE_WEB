@@ -62,7 +62,7 @@
   "shipped.source": "코드 보기",
   "shipped.web.name": "PlantMoji 웹앱",
   "shipped.web.tagline": "센서값이 식물의 감정이 되고, 감정이 퀘스트가 됩니다.",
-  "shipped.web.body": "센서가 읽은 값을 식물 감정으로 바꾸고, 그 감정이 돌봄 퀘스트를 냅니다. 실제로 물을 주면 다음 센서값이 확인해 주고, 맞으면 경험치와 유대 레벨, 배지가 쌓입니다. 마스코트 이름 <strong>Jamkachu</strong>는 젬버에서 땄습니다.",
+  "shipped.web.body": "센서가 읽은 값을 식물 감정으로 바꾸고, 그 감정이 돌봄 퀘스트를 냅니다. 실제로 물을 주면 다음 센서값이 확인해 주고, 맞으면 경험치와 유대 레벨, 배지가 쌓입니다. 아키텍처 설계부터 백엔드까지 서진석 학생이 구조를 세우고 구현을 이끌었습니다. 마스코트 이름 <strong>Jamkachu</strong>는 젬버에서 땄습니다.",
   "shipped.mobile.name": "Mobile PlantEmoji",
   "shipped.mobile.tagline": "웹에서 끝내지 않고, 모바일 앱으로도 배포했습니다.",
   "shipped.mobile.body": "대시보드, 정원, 카메라, 도감, 재배일지 — Flutter로 만든 다섯 화면이 PlantMoji 서버와 실시간으로 이어져 있습니다. 웹에서 물을 주면 모바일의 잼카츄도 함께 자랍니다. 카메라 스캔은 현지의 느린 회선에서도 끊기지 않도록 전송 크기를 스스로 줄입니다.",

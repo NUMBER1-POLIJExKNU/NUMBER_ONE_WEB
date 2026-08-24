@@ -62,7 +62,7 @@
   "shipped.source": "Kode sumber",
   "shipped.web.name": "Aplikasi web PlantMoji",
   "shipped.web.tagline": "Angka sensor menjadi suasana hati, dan suasana hati menjadi misi.",
-  "shipped.web.body": "Pembacaan sensor berubah menjadi suasana hati tanaman, lalu suasana hati itu memunculkan misi perawatan. Ketika pengguna benar-benar menyiram, pembacaan berikutnya memverifikasinya, dan keberhasilan memberi XP, level ikatan, serta lencana. Maskotnya bernama <strong>Jamkachu</strong>, diambil dari nama Jember.",
+  "shipped.web.body": "Pembacaan sensor menjadi suasana hati tanaman, dan suasana hati itu memunculkan misi perawatan. Siram tanamannya sungguhan, pembacaan berikutnya mengonfirmasinya — XP, level ikatan, dan lencana pun bertambah. Jinseok Seo menyusun arsitekturnya dan memimpin pembangunannya, dari backend sampai aplikasi. Nama maskotnya, <strong>Jamkachu</strong>, diambil dari Jember.",
   "shipped.mobile.name": "Mobile PlantEmoji",
   "shipped.mobile.tagline": "Tidak berhenti di web — kami juga merilis aplikasi mobile.",
   "shipped.mobile.body": "Dasbor, kebun, kamera, koleksi, buku harian tanam — lima layar Flutter tersambung langsung dengan server PlantMoji. Siram tanamannya di web, dan Jamkachu di ponsel ikut tumbuh. Pemindaian kamera mengecilkan sendiri ukuran unggahannya agar tetap lancar di jaringan lokal yang lambat.",
