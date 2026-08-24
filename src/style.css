@@ -566,6 +566,13 @@ code {
   color: var(--ink-soft);
 }
 
+/* 긴 영어 낭독조 제목 — 기본 타이틀 크기면 화면을 다 먹습니다 */
+.section__title--pledge {
+  font-size: calc(clamp(1.05rem, 3.2vw, 1.6rem) * var(--display-scale));
+  line-height: 1.7;
+  color: var(--forest);
+}
+
 /* --------------------------------------------------- 팀 단체 사진 */
 .teamphoto {
   max-width: 30rem;
@@ -1372,13 +1379,15 @@ code {
 
 .win__rank {
   display: inline-block;
-  margin: 0 0 0.75rem;
-  padding: 0.25rem 0.55rem;
+  margin: 0 0 0.85rem;
+  padding: 0.45rem 0.8rem;
   background: var(--yellow);
   color: var(--outline);
+  border: 2px solid var(--outline);
   font-family: var(--font-display);
-  font-size: calc(0.62rem * var(--display-scale));
-  line-height: 1.6;
+  font-weight: 700;
+  font-size: calc(1rem * var(--display-scale));
+  line-height: 1.5;
 }
 .win__title {
   margin: 0 0 0.35rem;
