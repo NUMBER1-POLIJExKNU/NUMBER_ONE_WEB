@@ -1122,19 +1122,6 @@ code {
   font-size: 0.82rem;
   color: var(--ink-soft);
 }
-/* 페이지의 마지막 문장 — 낭독조 한 줄. 항상 영어 원문 그대로. */
-.footer__pledge {
-  grid-column: 1 / -1;
-  margin: 1.5rem 0 0;
-  padding-top: 1.25rem;
-  border-top: 2px dashed var(--soil-light);
-  font-family: "Paperlogy", "Apple SD Gothic Neo", sans-serif;
-  font-weight: 700;
-  font-size: clamp(0.95rem, 2.2vw, 1.15rem);
-  line-height: 1.6;
-  text-align: center;
-  color: var(--forest);
-}
 
 /* -------------------------------------------------------- 스크롤 등장 */
 .reveal {
