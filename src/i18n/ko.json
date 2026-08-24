@@ -184,5 +184,8 @@
   "numbers.team": "명",
   "numbers.team.sub": "두 나라에서 온 한 팀",
   "philos.sdg.label": "이 활동이 잇닿는 유엔 지속가능발전목표(UN SDGs) — 2015년 유엔 총회에서 193개국이 합의한 2030년까지의 공동 목표입니다",
-  "philos.sdg.items": "SDG 4 양질의 교육 · SDG 9 산업, 혁신과 인프라 · SDG 11 지속가능한 도시와 공동체"
+  "philos.sdg.items": "SDG 4 양질의 교육 · SDG 9 산업, 혁신과 인프라 · SDG 11 지속가능한 도시와 공동체",
+  "hero.slides.label": "젬버에서 찍은 사진들",
+  "hero.slides.pause": "슬라이드 일시정지",
+  "hero.slides.play": "슬라이드 재생"
 }

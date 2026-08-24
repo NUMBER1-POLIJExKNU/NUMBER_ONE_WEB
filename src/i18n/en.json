@@ -184,5 +184,8 @@
   "numbers.team": "people",
   "numbers.team.sub": "one team from two countries",
   "philos.sdg.label": "UN Sustainable Development Goals this work connects to — shared goals for 2030, agreed by 193 nations at the UN General Assembly in 2015",
-  "philos.sdg.items": "SDG 4 Quality Education · SDG 9 Industry, Innovation and Infrastructure · SDG 11 Sustainable Cities and Communities"
+  "philos.sdg.items": "SDG 4 Quality Education · SDG 9 Industry, Innovation and Infrastructure · SDG 11 Sustainable Cities and Communities",
+  "hero.slides.label": "Photographs from Jember",
+  "hero.slides.pause": "Pause slideshow",
+  "hero.slides.play": "Play slideshow"
 }

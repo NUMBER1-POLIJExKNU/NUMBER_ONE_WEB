@@ -40,7 +40,44 @@ function countUp(node: HTMLElement, target: number): void {
   requestAnimationFrame(frame);
 }
 
+/** 히어로 배경 슬라이드쇼 — 6초 간격 크로스페이드, 일시정지 버튼, 감속 설정 시 정지 */
+function initHeroSlides(): void {
+  const slides = [...document.querySelectorAll<HTMLImageElement>(".hero__slides img")];
+  const counter = document.querySelector<HTMLElement>("#slide-now");
+  const toggle = document.querySelector<HTMLButtonElement>("#slide-toggle");
+  if (slides.length < 2 || !counter || !toggle) return;
+
+  let idx = 0;
+  let timer: number | null = null;
+
+  const show = (next: number): void => {
+    slides[idx].classList.remove("is-active");
+    idx = (next + slides.length) % slides.length;
+    slides[idx].classList.add("is-active");
+    counter.textContent = String(idx + 1).padStart(2, "0");
+  };
+  const start = (): void => {
+    if (timer !== null) return;
+    timer = window.setInterval(() => show(idx + 1), 6000);
+    toggle.textContent = "⏸";
+  };
+  const stop = (): void => {
+    if (timer !== null) { clearInterval(timer); timer = null; }
+    toggle.textContent = "▶";
+  };
+
+  toggle.addEventListener("click", () => (timer === null ? start() : stop()));
+
+  if (REDUCED.matches) {
+    stop();
+    return;
+  }
+  start();
+  REDUCED.addEventListener("change", (e) => { if (e.matches) stop(); });
+}
+
 export function initMotion(): void {
+  initHeroSlides();
   if (REDUCED.matches) {
     stopAmbientVideo();
     settleAll();

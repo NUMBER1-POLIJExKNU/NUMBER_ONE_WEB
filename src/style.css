@@ -326,46 +326,67 @@ code {
   background: linear-gradient(180deg, var(--sky) 0%, #d4f0ff 55%, var(--paper) 100%);
 }
 
-.hero__sky {
+.hero__slides {
   position: absolute;
   inset: 0;
+  overflow: hidden;
   pointer-events: none;
 }
-.cloud {
+.hero__slides img {
   position: absolute;
-  width: 64px;
-  height: 20px;
-  background: #fff;
-  /* 구름은 글자 뒤로 지나갑니다. 본문이 항상 이기도록 눌러 둡니다. */
-  opacity: 0.55;
-  box-shadow: 16px -10px 0 0 #fff, 34px -6px 0 0 #fff;
-  animation: drift 46s linear infinite;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1.2s ease;
 }
-.cloud--1 {
-  top: 12%;
-  left: -20%;
+.hero__slides img.is-active {
+  opacity: 1;
 }
-.cloud--2 {
-  top: 26%;
-  left: -40%;
-  transform: scale(0.7);
-  animation-duration: 62s;
+/* 위쪽은 밝게 눌러 글이 읽히고, 아래로 갈수록 사진이 드러납니다 */
+.hero__scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 253, 247, 0.96) 0%,
+    rgba(236, 248, 255, 0.9) 38%,
+    rgba(236, 248, 255, 0.55) 68%,
+    rgba(236, 248, 255, 0.15) 100%
+  );
 }
-.cloud--3 {
-  top: 8%;
-  left: -70%;
-  transform: scale(1.2);
-  animation-duration: 78s;
+
+.hero__slidenav {
+  position: absolute;
+  right: 1.25rem;
+  bottom: 2.5rem;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
-@keyframes drift {
-  to {
-    transform: translateX(180vw);
-  }
+.hero__slidecount {
+  font-family: var(--font-data);
+  font-weight: 500;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  color: var(--outline);
+  background: rgba(255, 253, 247, 0.75);
+  padding: 0.25rem 0.55rem;
 }
-@media (prefers-reduced-motion: reduce) {
-  .cloud {
-    animation: none;
-  }
+.hero__slidecount b {
+  font-weight: 700;
+}
+.hero__slidenav button {
+  width: 1.9rem;
+  height: 1.9rem;
+  border: 2px solid var(--outline);
+  background: rgba(255, 253, 247, 0.85);
+  color: var(--outline);
+  font-size: 0.8rem;
+  line-height: 1;
+  cursor: pointer;
 }
 
 .hero__inner {
