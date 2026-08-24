@@ -80,7 +80,7 @@
   "shipped.nodered.note": "There are six feelings — happy, thirsty, too hot, sleepy, soil gone sour, soil gone salty.",
   "codev.eyebrow": "What makes this different",
   "codev.title": "Proof that we built it together",
-  "codev.lede": "Everyone says they collaborated. We have the commit log. Nine people worked in the same repositories and fixed each other's code.",
+  "codev.lede": "This collaboration is written into the commit log. Who changed whose code, and when — you can verify it right now in three public repositories.",
   "codev.org.label": "Where the repositories live",
   "codev.org.desc": "Both institutions are written into the organisation name. All three repositories are public.",
   "codev.dir1.label": "Main-PlantMoji",
