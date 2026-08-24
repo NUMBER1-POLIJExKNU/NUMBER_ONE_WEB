@@ -175,5 +175,9 @@
   "philos.photo.caption": "Midday, 6 August 2026, at a farm in Jember, Indonesia — after interviewing a local farmer",
   "ground.smk.photo.caption": "In the classroom at SMK Negeri 4 Jember, after the session",
   "legacy.photo.caption": "Signatures and notes left on the classroom whiteboard",
-  "footer.pledge": "One team — under one sky — indivisible, with wisdom and technology, for the next generation."
+  "footer.pledge": "One team — under one sky — indivisible, with wisdom and technology, for the next generation.",
+  "legacy.s1.title": "People who can build it stayed",
+  "legacy.s1.body": "Nine of us built PlantMoji together, and five are still in Jember. They raised this system from the first line, so they can fix it — and grow it.",
+  "legacy.s2.title": "The collaboration did not end at the airport",
+  "legacy.s2.body": "Working in the same repositories became a habit. With an ocean in between, the code still lands in one place, and we can see each other's commits today."
 }
