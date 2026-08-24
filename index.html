@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NUMBER ONE — POLIJE × KNU, Jember 2026</title>
+    <meta
+      name="description"
+      content="2026 WFK IT 봉사단 경북대학교 01팀. 인도네시아 Jember에서 22일간 한국·인도네시아 9명이 만들어 배포한 스마트팜 학습 게임 PlantMoji."
+    />
+    <meta name="theme-color" content="#FFFDF7" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="NUMBER ONE — POLIJE × KNU, Jember 2026" />
+    <meta
+      property="og:description"
+      content="3주. 두 나라. 하나의 코드베이스. 그리고 아직 온라인."
+    />
+    <meta property="og:image" content="/og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- 폰트는 전부 자체 호스팅입니다. 한국어가 기본이라 Galmuri 두 벌만
+         미리 당겨 옵니다 — 라틴 두 벌은 언어를 바꿀 때 필요해집니다. -->
+    <link
+      rel="preload"
+      href="/fonts/Galmuri11.subset.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/Galmuri11-Bold.subset.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+  </head>
+
+  <body>
+    <a class="skiplink" href="#main" data-i18n="nav.skip">본문으로 건너뛰기</a>
+
+    <header class="nav">
+      <div class="nav__inner">
+        <a class="nav__brand" href="#top">
+          <img
+            src="/images/logo-numberone.png"
+            alt="NUMBER ONE"
+            width="96"
+            height="32"
+            decoding="async"
+          />
+        </a>
+
+        <nav class="nav__links" aria-label="Sections">
+          <a class="nav__link" href="#team" data-i18n="nav.team">팀</a>
+          <a class="nav__link" href="#shipped" data-i18n="nav.shipped">산출물</a>
+          <a class="nav__link" href="#codev" data-i18n="nav.codev">협업 증거</a>
+          <a class="nav__link" href="#retrain" data-i18n="nav.retrain">재학습</a>
+          <a class="nav__link" href="#ground" data-i18n="nav.ground">현장</a>
+        </nav>
+
+        <div class="langs" role="group" data-i18n-attr="aria-label:nav.lang">
+          <button type="button" data-lang="ko" aria-pressed="true">KO</button>
+          <button type="button" data-lang="en" aria-pressed="false">EN</button>
+          <button type="button" data-lang="id" aria-pressed="false">ID</button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- ───────────────────────────────── HERO -->
+      <section class="hero" id="top">
+        <div class="hero__sky" aria-hidden="true">
+          <span class="cloud cloud--1"></span>
+          <span class="cloud cloud--2"></span>
+          <span class="cloud cloud--3"></span>
+        </div>
+
+        <div class="wrap hero__inner">
+          <p class="eyebrow" data-i18n="hero.eyebrow">2026 WFK IT 봉사단 · 경북대학교 01팀</p>
+
+          <h1 class="hero__title">
+            <span class="hero__line" data-i18n="hero.title1">3주. 두 나라.</span>
+            <span class="hero__line hero__line--accent" data-i18n="hero.title2"
+              >하나의 코드베이스.</span
+            >
+          </h1>
+
+          <p class="hero__lede lede" data-i18n-html="hero.lede"></p>
+
+          <p class="hero__livelabel" data-i18n="hero.livenow">지금 열어볼 수 있습니다</p>
+          <div class="hero__actions">
+            <a
+              class="btn btn--primary"
+              href="https://main-plant-moji.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-i18n="hero.cta.web"
+              >웹앱 열기</a
+            >
+            <a
+              class="btn btn--secondary"
+              href="https://mobile-plantemoji.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-i18n="hero.cta.mobile"
+              >모바일 앱 열기</a
+            >
+            <a
+              class="btn btn--ghost"
+              href="https://github.com/NUMBER1-POLIJExKNU"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-i18n="hero.cta.code"
+              >소스 코드</a
+            >
+          </div>
+        </div>
+
+        <div class="hero__soil" aria-hidden="true"></div>
+      </section>
+
+      <!-- ───────────────────────────────── TEAM -->
+      <section class="section section--team" id="team">
+        <div class="wrap">
+          <header class="section__head reveal">
+            <p class="eyebrow" data-i18n="team.eyebrow">누가 만들었나</p>
+            <h2 class="section__title" data-i18n="team.title">한 팀, 두 나라, 네 개의 역할</h2>
+            <p class="lede" data-i18n-html="team.lede"></p>
+          </header>
+
+          <div id="team-mount" class="reveal"></div>
+
+          <p class="footnote" data-i18n="team.note"></p>
+        </div>
+      </section>
+
+      <!-- ───────────────────────────────── SHIPPED -->
+      <section class="section section--shipped" id="shipped">
+        <div class="wrap">
+          <header class="section__head reveal">
+            <p class="eyebrow" data-i18n="shipped.eyebrow">무엇을 만들었나</p>
+            <h2 class="section__title" data-i18n="shipped.title">우리가 배포한 것</h2>
+            <p class="lede" data-i18n="shipped.lede"></p>
+          </header>
+
+          <div id="shipped-hero" class="cards cards--hero reveal"></div>
+          <div id="shipped-support" class="cards cards--support reveal"></div>
+        </div>
+      </section>
+
+      <!-- ───────────────────────────────── CO-DEVELOPMENT -->
+      <section class="section section--codev" id="codev">
+        <div class="wrap">
+          <header class="section__head reveal">
+            <p class="eyebrow" data-i18n="codev.eyebrow">차별점</p>
+            <h2 class="section__title" data-i18n="codev.title">같이 만들었다는 증거</h2>
+            <p class="lede" data-i18n-html="codev.lede"></p>
+          </header>
+
+          <ul id="codev-mount" class="evidences reveal"></ul>
+
+          <aside class="honest reveal">
+            <h3 class="honest__title" data-i18n="codev.honest.title">숨기지 않을 부분</h3>
+            <p data-i18n-html="codev.honest.body"></p>
+          </aside>
+        </div>
+      </section>
+
+      <!-- ───────────────────────────────── RETRAIN (signature) -->
+      <section class="section section--retrain" id="retrain">
+        <div class="wrap">
+          <header class="section__head reveal">
+            <p class="eyebrow" data-i18n="retrain.eyebrow">이 팀을 가장 잘 설명하는 장면</p>
+            <h2 class="section__title" data-i18n="retrain.title">현장에서 다시 학습시켰습니다</h2>
+            <p class="lede" data-i18n="retrain.lede"></p>
+          </header>
+
+          <ol class="steps reveal">
+            <li class="step">
+              <p class="step__date" data-i18n="retrain.step1.date"></p>
+              <h3 class="step__title" data-i18n="retrain.step1.title"></h3>
+              <p class="step__body" data-i18n="retrain.step1.body"></p>
+            </li>
+            <li class="step step--break">
+              <p class="step__date" data-i18n="retrain.step2.date"></p>
+              <h3 class="step__title" data-i18n="retrain.step2.title"></h3>
+              <p class="step__body" data-i18n="retrain.step2.body"></p>
+            </li>
+            <li class="step">
+              <p class="step__date" data-i18n="retrain.step3.date"></p>
+              <h3 class="step__title" data-i18n="retrain.step3.title"></h3>
+              <p class="step__body" data-i18n="retrain.step3.body"></p>
+            </li>
+          </ol>
+
+          <figure class="tensorfig reveal">
+            <figcaption class="tensorfig__title" data-i18n="retrain.viz.title"></figcaption>
+            <div id="tensor-mount"></div>
+            <p class="tensorfig__caption" data-i18n-html="retrain.viz.caption"></p>
+          </figure>
+        </div>
+      </section>
+
+      <!-- ───────────────────────────────── ARCHITECTURE -->
+      <section class="section section--arch" id="arch">
+        <div class="wrap">
+          <header class="section__head reveal">
+            <p class="eyebrow" data-i18n="arch.eyebrow">어떻게 돌아가나</p>
+            <h2 class="section__title" data-i18n="arch.title">센서에서 감정까지</h2>
+            <p class="lede" data-i18n="arch.lede"></p>
+          </header>
+
+          <ol id="arch-mount" class="arch reveal"></ol>
+          <p class="footnote" data-i18n="arch.note"></p>
+        </div>
+      </section>
+
+      <!-- ───────────────────────────────── ON THE GROUND -->
+      <section class="section section--ground" id="ground">
+        <div class="wrap">
+          <header class="section__head reveal">
+            <p class="eyebrow" data-i18n="ground.eyebrow">코드 밖에서</p>
+            <h2 class="section__title" data-i18n="ground.title">현장에서</h2>
+            <p class="lede" data-i18n="ground.lede"></p>
+          </header>
+
+          <ul class="facts reveal">
+            <li class="fact">
+              <span class="fact__label" data-i18n="ground.stay.label"></span>
+              <span class="fact__value" data-i18n="ground.stay.value"></span>
+              <span class="fact__unit" data-i18n="ground.stay.unit"></span>
+            </li>
+            <li class="fact">
+              <span class="fact__label" data-i18n="ground.partner.label"></span>
+              <span class="fact__value" data-i18n="ground.partner.value"></span>
+            </li>
+            <li class="fact">
+              <span class="fact__label" data-i18n="ground.meet.label"></span>
+              <span class="fact__value" data-i18n="ground.meet.value"></span>
+            </li>
+          </ul>
+
+          <div class="blocks reveal">
+            <article class="block">
+              <h3 class="block__title" data-i18n="ground.edu.title"></h3>
+              <p class="block__items" data-i18n="ground.edu.items"></p>
+            </article>
+            <article class="block">
+              <h3 class="block__title" data-i18n="ground.culture.title"></h3>
+              <p class="block__items" data-i18n="ground.culture.items"></p>
+            </article>
+            <article class="block">
+              <h3 class="block__title" data-i18n="ground.school.title"></h3>
+              <p class="block__items" data-i18n="ground.school.items"></p>
+            </article>
+          </div>
+
+          <p class="footnote" data-i18n="ground.photos"></p>
+        </div>
+      </section>
+
+      <!-- ───────────────────────────────── NUMBERS -->
+      <section class="section section--numbers" id="numbers">
+        <div class="wrap">
+          <header class="section__head reveal">
+            <p class="eyebrow" data-i18n="numbers.eyebrow">규모</p>
+            <h2 class="section__title" data-i18n="numbers.title">숫자로</h2>
+          </header>
+          <ul id="metrics-mount" class="metrics"></ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="wrap footer__inner">
+        <div class="footer__id">
+          <img
+            src="/images/logo-numberone.png"
+            alt=""
+            width="72"
+            height="24"
+            loading="lazy"
+            decoding="async"
+          />
+          <p class="footer__team" data-i18n="footer.team">NUMBER ONE</p>
+          <p class="footer__program" data-i18n="footer.program"></p>
+          <p class="footer__partners" data-i18n="footer.partners"></p>
+        </div>
+
+        <nav class="footer__repos" aria-label="Repositories">
+          <p class="footer__repostitle" data-i18n="footer.repos">저장소</p>
+          <a href="https://github.com/NUMBER1-POLIJExKNU/Main-PlantMoji" target="_blank" rel="noopener noreferrer">Main-PlantMoji</a>
+          <a href="https://github.com/NUMBER1-POLIJExKNU/Mobile-PlantEmoji" target="_blank" rel="noopener noreferrer">Mobile-PlantEmoji</a>
+          <a href="https://github.com/NUMBER1-POLIJExKNU/Web-PlantEmoji" target="_blank" rel="noopener noreferrer">Web-PlantEmoji</a>
+        </nav>
+
+        <p class="footer__built" data-i18n="footer.built"></p>
+        <p class="footer__stamp">
+          <span data-i18n="footer.updated">최종 검증</span>
+          <time id="verified-on">2026-08-25</time>
+        </p>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

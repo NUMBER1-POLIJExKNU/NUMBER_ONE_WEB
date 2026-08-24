@@ -1,0 +1,24 @@
+{
+  "name": "numberone-portfolio",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "npm run fonts && npm run og && tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "fonts": "node scripts/subset-fonts.mjs",
+    "og": "node scripts/make-og.mjs"
+  },
+  "devDependencies": {
+    "@fontsource/press-start-2p": "^5.3.0",
+    "@fontsource/vt323": "^5.3.0",
+    "sharp": "^0.35.3",
+    "subset-font": "^2.5.0",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.7"
+  },
+  "dependencies": {
+    "galmuri": "^2.40.3"
+  }
+}

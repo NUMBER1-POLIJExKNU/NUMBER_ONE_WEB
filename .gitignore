@@ -1,0 +1,14 @@
+node_modules/
+dist/
+
+# 빌드 때 생성됩니다 (npm run fonts / npm run og)
+public/fonts/
+public/og.png
+
+# 팀 내부 검토 문서 — 공개 저장소에 올리지 않습니다.
+# 페이지에 실을 수 있는 사실과 실으면 안 되는 주장의 근거가 정리되어 있습니다.
+implementation_plan.md
+implementation_plan.*.bak
+
+.DS_Store
+*.local

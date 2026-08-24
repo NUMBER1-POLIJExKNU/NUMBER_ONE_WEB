@@ -1,0 +1,1217 @@
+/* =============================================================
+   NUMBER ONE — 포트폴리오 랜딩페이지
+
+   색과 폰트는 팀원 Reno가 RENO/Web-PlantEmoji/style.css에 정의한
+   "Refined Cozy Palette"를 그대로 가져왔습니다. 새로 발명하지 않았습니다.
+
+   역할 분리가 이 스타일시트의 핵심입니다.
+   - 픽셀 폰트는 크롬(제목·라벨·수치)에만 씁니다.
+   - 심사위원이 실제로 읽어야 하는 산문은 시스템 폰트로 둡니다.
+   비트맵 폰트로 문단을 조판하면 분위기는 사나 가독성을 잃습니다.
+   ============================================================= */
+
+/* -------------------------------------------------------- 픽셀 폰트
+   네 벌 모두 자체 호스팅합니다. 발표장 회선에서 Google Fonts가 느리거나
+   막히면 픽셀 정체성이 통째로 무너지고, 외부 요청 하나가 렌더를 막습니다.
+   빌드 때 실제 쓰는 글자로만 서브셋됩니다 → scripts/subset-fonts.mjs */
+@font-face {
+  font-family: "Galmuri11";
+  src: url("/fonts/Galmuri11.subset.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Galmuri11";
+  src: url("/fonts/Galmuri11-Bold.subset.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Press Start 2P";
+  src: url("/fonts/PressStart2P.subset.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "VT323";
+  src: url("/fonts/VT323.subset.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+
+/* ------------------------------------------------------------ 토큰 */
+:root {
+  /* Reno의 Refined Cozy Palette — 원본 값 그대로 */
+  --grass: #69c455;
+  --grass-light: #89d974;
+  --forest: #397a2b;
+  --sky: #a3e4ff;
+  --water: #4da1ed;
+  --soil: #aa7e55;
+  --soil-light: #c9a075;
+  --soil-dark: #825c37;
+  --yellow: #ffde6a;
+  --cheek: #ff9e9e;
+  --outline: #2b3a27;
+
+  /* 정보 레이어 — 가독 우선 */
+  --paper: #fffdf7;
+  --paper-2: #f6f2e6;
+  --ink: var(--outline);
+  --ink-soft: #5b6b56;
+
+  --font-display: "Press Start 2P", "Galmuri11", monospace;
+  --font-data: "VT323", "Galmuri11", monospace;
+  --font-body: system-ui, -apple-system, "Segoe UI", "Apple SD Gothic Neo",
+    "Malgun Gothic", sans-serif;
+
+  /* Press Start 2P는 같은 px에서 훨씬 크게 보입니다. 언어별로 보정합니다. */
+  --display-scale: 0.72;
+
+  --step: 4px;
+  --wrap: 68rem;
+
+  --shadow-pixel: 0 var(--step) 0 0 var(--outline);
+}
+
+/* 한국어에서는 Galmuri가 라틴까지 담당합니다 — 한 줄에 두 폰트가 섞이지 않게. */
+:root:lang(ko) {
+  --font-display: "Galmuri11", "Press Start 2P", monospace;
+  --display-scale: 1;
+}
+
+/* -------------------------------------------------------- 베이스 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.75;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: var(--step) solid var(--water);
+  outline-offset: var(--step);
+}
+
+.skiplink {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  padding: 0.75rem 1rem;
+  background: var(--outline);
+  color: var(--paper);
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  text-decoration: none;
+}
+.skiplink:focus {
+  left: 0;
+}
+
+/* ------------------------------------------------ 레이아웃 프리미티브 */
+.wrap {
+  width: min(100% - 2.5rem, var(--wrap));
+  margin-inline: auto;
+}
+
+.section {
+  padding-block: clamp(3.5rem, 9vw, 7rem);
+  border-top: var(--step) solid var(--outline);
+}
+
+.section__head {
+  max-width: 46rem;
+  margin-bottom: clamp(2rem, 5vw, 3.5rem);
+}
+
+.eyebrow {
+  margin: 0 0 1rem;
+  font-family: var(--font-display);
+  font-size: calc(0.78rem * var(--display-scale));
+  line-height: 1.6;
+  letter-spacing: 0.04em;
+  color: var(--forest);
+  text-transform: uppercase;
+}
+
+.section__title {
+  margin: 0 0 1.25rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: calc(clamp(1.6rem, 4.4vw, 2.5rem) * var(--display-scale));
+  line-height: 1.35;
+  color: var(--outline);
+}
+
+.lede {
+  margin: 0;
+  font-size: clamp(1rem, 2.2vw, 1.125rem);
+  color: var(--ink-soft);
+}
+.lede strong {
+  color: var(--outline);
+  font-weight: 700;
+}
+
+.footnote {
+  margin: 2rem 0 0;
+  padding-left: 1rem;
+  border-left: var(--step) solid var(--soil-light);
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+
+code {
+  font-family: var(--font-data);
+  font-size: 1.05em;
+  background: var(--paper-2);
+  padding: 0.05em 0.35em;
+}
+
+/* ----------------------------------------------------------- 버튼 */
+.btn {
+  display: inline-block;
+  padding: 0.85rem 1.25rem;
+  border: var(--step) solid var(--outline);
+  background: var(--paper);
+  color: var(--outline);
+  font-family: var(--font-display);
+  font-size: calc(0.8rem * var(--display-scale));
+  line-height: 1.4;
+  text-decoration: none;
+  box-shadow: var(--shadow-pixel);
+  transition: transform 0.08s steps(2), box-shadow 0.08s steps(2);
+}
+.btn:hover {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 0 var(--outline);
+}
+.btn:active {
+  transform: translateY(var(--step));
+  box-shadow: 0 0 0 0 var(--outline);
+}
+.btn--primary {
+  background: var(--grass);
+}
+.btn--secondary {
+  background: var(--sky);
+}
+.btn--ghost {
+  background: var(--paper);
+}
+
+/* ------------------------------------------------------------ 네비 */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  transition: background-color 0.2s, border-color 0.2s;
+  border-bottom: var(--step) solid transparent;
+}
+.nav--solid {
+  background: var(--paper);
+  border-bottom-color: var(--outline);
+}
+
+.nav__inner {
+  width: min(100% - 1.5rem, var(--wrap));
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-height: 3.75rem;
+}
+
+.nav__brand {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+}
+.nav__brand img {
+  height: 1.75rem;
+  width: auto;
+  /* 로고가 흰색이라 밝은 배경에서 보이지 않습니다. 잉크색으로 눕힙니다. */
+  filter: brightness(0) saturate(100%) invert(18%) sepia(14%) saturate(1042%)
+    hue-rotate(60deg) brightness(94%) contrast(88%);
+}
+
+.nav__links {
+  flex: 1 1 auto;
+  display: flex;
+  gap: 0.35rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.nav__links::-webkit-scrollbar {
+  display: none;
+}
+
+.nav__link {
+  flex: 0 0 auto;
+  padding: 0.4rem 0.6rem;
+  font-family: var(--font-display);
+  font-size: calc(0.7rem * var(--display-scale));
+  text-decoration: none;
+  color: var(--ink-soft);
+  white-space: nowrap;
+  border-bottom: var(--step) solid transparent;
+}
+.nav__link.is-current {
+  color: var(--forest);
+  border-bottom-color: var(--grass);
+}
+
+.langs {
+  flex: 0 0 auto;
+  display: flex;
+  gap: 2px;
+}
+.langs button {
+  padding: 0.35rem 0.5rem;
+  border: 2px solid var(--outline);
+  background: var(--paper);
+  color: var(--ink-soft);
+  font-family: var(--font-display);
+  font-size: 0.6rem;
+  cursor: pointer;
+}
+.langs button[aria-pressed="true"] {
+  background: var(--outline);
+  color: var(--paper);
+}
+
+/* ------------------------------------------------------------ 히어로 */
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding-block: clamp(3rem, 12vw, 7rem) clamp(5rem, 14vw, 9rem);
+  background: linear-gradient(180deg, var(--sky) 0%, #d4f0ff 55%, var(--paper) 100%);
+}
+
+.hero__sky {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.cloud {
+  position: absolute;
+  width: 64px;
+  height: 20px;
+  background: #fff;
+  /* 구름은 글자 뒤로 지나갑니다. 본문이 항상 이기도록 눌러 둡니다. */
+  opacity: 0.55;
+  box-shadow: 16px -10px 0 0 #fff, 34px -6px 0 0 #fff;
+  animation: drift 46s linear infinite;
+}
+.cloud--1 {
+  top: 12%;
+  left: -20%;
+}
+.cloud--2 {
+  top: 26%;
+  left: -40%;
+  transform: scale(0.7);
+  animation-duration: 62s;
+}
+.cloud--3 {
+  top: 8%;
+  left: -70%;
+  transform: scale(1.2);
+  animation-duration: 78s;
+}
+@keyframes drift {
+  to {
+    transform: translateX(180vw);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cloud {
+    animation: none;
+  }
+}
+
+.hero__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 52rem;
+}
+
+.hero__title {
+  margin: 0 0 1.5rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: calc(clamp(1.9rem, 7vw, 3.6rem) * var(--display-scale));
+  line-height: 1.28;
+  color: var(--outline);
+}
+.hero__line {
+  display: block;
+}
+.hero__line--accent {
+  color: var(--forest);
+}
+
+.hero__lede {
+  max-width: 42rem;
+  margin-bottom: 2.5rem;
+  color: var(--outline);
+}
+
+.hero__livelabel {
+  margin: 0 0 0.75rem;
+  font-family: var(--font-display);
+  font-size: calc(0.72rem * var(--display-scale));
+  color: var(--forest);
+}
+.hero__livelabel::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 0.5rem;
+  background: var(--grass);
+  vertical-align: 1px;
+  animation: blink 2.2s steps(1) infinite;
+}
+@keyframes blink {
+  50% {
+    opacity: 0.25;
+  }
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.hero__soil {
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 24px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--soil) 0 8px,
+    var(--soil-dark) 8px 16px
+  );
+  border-top: var(--step) solid var(--outline);
+}
+
+/* ------------------------------------------------------------- 팀 */
+.rolelegend {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1rem;
+  margin: 0 0 2.5rem;
+  padding: 0;
+  list-style: none;
+}
+.rolelegend__item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.25rem 0.6rem;
+  padding: 0.9rem;
+  background: var(--paper-2);
+  border: 2px solid var(--outline);
+}
+.rolelegend__code {
+  grid-row: span 2;
+  align-self: start;
+  padding: 0.3rem 0.45rem;
+  background: var(--forest);
+  color: var(--paper);
+  font-family: var(--font-display);
+  font-size: 0.62rem;
+}
+.rolelegend__label {
+  font-family: var(--font-data);
+  font-size: 1.15rem;
+  line-height: 1.2;
+  color: var(--outline);
+}
+.rolelegend__desc {
+  grid-column: 2;
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: var(--ink-soft);
+}
+
+.sides {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  gap: 1.5rem;
+}
+
+.side {
+  padding: 1.25rem;
+  border: var(--step) solid var(--outline);
+  background: var(--paper);
+  box-shadow: var(--shadow-pixel);
+}
+.side[data-side="polije"] {
+  background: linear-gradient(180deg, #fff6f6 0%, var(--paper) 40%);
+}
+.side[data-side="knu"] {
+  background: linear-gradient(180deg, #f2f9ff 0%, var(--paper) 40%);
+}
+
+.side__head {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0 0 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px dashed var(--soil-light);
+  font-family: var(--font-display);
+  font-size: calc(0.75rem * var(--display-scale));
+  line-height: 1.5;
+}
+.side__flag {
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.side__members {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.member {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+.member__avatar {
+  flex: 0 0 auto;
+  width: 3rem;
+  height: 3rem;
+  display: grid;
+  place-items: center;
+  border: 2px solid var(--outline);
+  background: var(--grass-light);
+  overflow: hidden;
+  image-rendering: pixelated;
+}
+.member__avatar--placeholder {
+  font-family: var(--font-display);
+  font-size: calc(0.9rem * var(--display-scale));
+  color: var(--outline);
+  background: repeating-linear-gradient(
+    45deg,
+    var(--grass-light) 0 6px,
+    var(--grass) 6px 12px
+  );
+}
+.member__body {
+  min-width: 0;
+}
+.member__name {
+  margin: 0;
+  font-family: var(--font-data);
+  font-size: 1.3rem;
+  line-height: 1.25;
+  color: var(--outline);
+}
+.member__role {
+  margin: 0;
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+}
+.member__legal {
+  margin: 0.1rem 0 0;
+  font-size: 0.75rem;
+  color: var(--soil-dark);
+}
+.member__bio {
+  margin: 0.25rem 0 0;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+}
+
+/* --------------------------------------------------------- 산출물 */
+.cards {
+  display: grid;
+  gap: 1.5rem;
+}
+.cards--hero {
+  grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+}
+.cards--support {
+  grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+  margin-top: 1.5rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.25rem;
+  border: var(--step) solid var(--outline);
+  background: var(--paper);
+  box-shadow: var(--shadow-pixel);
+}
+.card--support {
+  background: var(--paper-2);
+  box-shadow: none;
+}
+
+.card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+.card__glyph {
+  font-size: 1.75rem;
+  line-height: 1;
+}
+.card__status {
+  padding: 0.25rem 0.5rem;
+  border: 2px solid var(--outline);
+  font-family: var(--font-display);
+  font-size: 0.55rem;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+.card__status--live {
+  background: var(--grass);
+}
+.card__status--shipped {
+  background: var(--yellow);
+}
+.card__status--proto {
+  background: var(--paper-2);
+}
+
+.card__name {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: calc(1rem * var(--display-scale));
+  line-height: 1.45;
+  color: var(--outline);
+}
+.card__tagline {
+  margin: 0;
+  font-family: var(--font-data);
+  font-size: 1.15rem;
+  line-height: 1.35;
+  color: var(--forest);
+}
+.card__body {
+  margin: 0;
+  font-size: 0.94rem;
+  color: var(--ink-soft);
+}
+.card__body strong {
+  color: var(--outline);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.chips__item {
+  padding: 0.15rem 0.45rem;
+  background: var(--paper-2);
+  border: 1px solid var(--soil-light);
+  font-family: var(--font-data);
+  font-size: 1rem;
+  line-height: 1.4;
+  color: var(--soil-dark);
+}
+.card--support .chips__item {
+  background: var(--paper);
+}
+
+.card__note {
+  margin: 0;
+  padding: 0.6rem 0.75rem;
+  background: #fff8e8;
+  border-left: var(--step) solid var(--yellow);
+  font-size: 0.84rem;
+  line-height: 1.6;
+  color: var(--soil-dark);
+}
+
+.card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: auto;
+  padding-top: 0.25rem;
+}
+
+/* ------------------------------------------------------- 협업 증거 */
+.evidences {
+  display: grid;
+  /* minmax(0, 1fr): 안쪽의 긴 커밋 로그가 트랙을 밀어 넓히지 못하게 막습니다. */
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.evidence {
+  position: relative;
+  min-width: 0;
+  padding: 1.1rem 3rem 1.1rem 1.1rem;
+  border: 2px solid var(--outline);
+  background: var(--paper);
+}
+.evidence--in-to-kr {
+  border-left: var(--step) solid var(--cheek);
+}
+.evidence--kr-to-in {
+  border-left: var(--step) solid var(--water);
+}
+.evidence--org,
+.evidence--shared {
+  border-left: var(--step) solid var(--grass);
+}
+
+.evidence__label {
+  margin: 0 0 0.35rem;
+  font-family: var(--font-display);
+  font-size: calc(0.78rem * var(--display-scale));
+  line-height: 1.5;
+  color: var(--outline);
+}
+.evidence__desc {
+  margin: 0 0 0.6rem;
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+}
+.evidence__proof {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5rem 0.6rem;
+  background: var(--outline);
+  color: var(--grass-light);
+  font-size: 1rem;
+  white-space: pre;
+}
+.evidence__link {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.25rem;
+  text-decoration: none;
+  color: var(--forest);
+}
+
+.honest {
+  margin-top: 1.5rem;
+  padding: 1.25rem;
+  background: var(--paper-2);
+  border: 2px dashed var(--soil);
+}
+.honest__title {
+  margin: 0 0 0.5rem;
+  font-family: var(--font-display);
+  font-size: calc(0.8rem * var(--display-scale));
+  color: var(--soil-dark);
+}
+.honest p {
+  margin: 0;
+  font-size: 0.94rem;
+  color: var(--ink-soft);
+}
+.honest strong {
+  color: var(--outline);
+}
+
+/* ----------------------------------------------- 재학습 (시그니처) */
+.section--retrain {
+  background: var(--paper-2);
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1rem;
+  margin: 0 0 2.5rem;
+  padding: 0;
+  list-style: none;
+  counter-reset: step;
+}
+.step {
+  position: relative;
+  padding: 1.1rem;
+  background: var(--paper);
+  border: 2px solid var(--outline);
+}
+/* 이 세 칸은 실제로 순서가 있는 사건이라 번호를 붙입니다. */
+.step::before {
+  counter-increment: step;
+  content: counter(step);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  padding: 0.2rem 0.5rem;
+  background: var(--outline);
+  color: var(--paper);
+  font-family: var(--font-display);
+  font-size: 0.6rem;
+}
+.step--break {
+  background: #fff3f3;
+  border-color: var(--cheek);
+}
+.step__date {
+  margin: 1.25rem 0 0.35rem;
+  font-family: var(--font-data);
+  font-size: 1.1rem;
+  color: var(--soil-dark);
+}
+.step__title {
+  margin: 0 0 0.4rem;
+  font-family: var(--font-display);
+  font-size: calc(0.8rem * var(--display-scale));
+  line-height: 1.5;
+  color: var(--outline);
+}
+.step__body {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+
+.tensorfig {
+  margin: 0;
+  padding: 1.5rem;
+  background: var(--paper);
+  border: var(--step) solid var(--outline);
+  box-shadow: var(--shadow-pixel);
+}
+.tensorfig__title {
+  margin: 0 0 1rem;
+  font-family: var(--font-display);
+  font-size: calc(0.8rem * var(--display-scale));
+  color: var(--outline);
+}
+
+.tensors {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(10px, 1fr));
+  gap: 3px;
+  margin-bottom: 1rem;
+}
+.tensors__cell {
+  aspect-ratio: 1;
+  background: var(--grass-light);
+  opacity: 0.55;
+}
+.tensors__cell--changed {
+  background: var(--cheek);
+  opacity: 1;
+  animation: pop 1.4s steps(3) infinite alternate;
+  animation-delay: calc(var(--i, 0) * 0.18s);
+}
+@keyframes pop {
+  from {
+    box-shadow: 0 0 0 0 var(--cheek);
+  }
+  to {
+    box-shadow: 0 0 0 3px rgba(255, 158, 158, 0.45);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tensors__cell--changed {
+    animation: none;
+    box-shadow: 0 0 0 2px var(--outline);
+  }
+}
+
+.tensors__key {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 0 0 1rem;
+  padding: 0;
+  list-style: none;
+  font-family: var(--font-data);
+  font-size: 1.05rem;
+  color: var(--ink-soft);
+}
+.tensors__key li {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.tensors__swatch {
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+}
+.tensors__swatch--changed {
+  background: var(--cheek);
+}
+.tensors__swatch--same {
+  background: var(--grass-light);
+  opacity: 0.55;
+}
+
+.tensorfig__caption {
+  margin: 0;
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+}
+.tensorfig__caption strong {
+  color: var(--outline);
+  font-family: var(--font-data);
+  font-size: 1.25rem;
+}
+
+/* -------------------------------------------------------- 아키텍처 */
+.arch {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 0.6rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.arch__step {
+  flex: 1 1 9rem;
+  padding: 0.9rem;
+  background: var(--paper);
+  border: 2px solid var(--outline);
+  border-bottom: var(--step) solid var(--forest);
+}
+.arch__name {
+  margin: 0 0 0.3rem;
+  font-family: var(--font-display);
+  font-size: calc(0.72rem * var(--display-scale));
+  line-height: 1.5;
+  color: var(--outline);
+}
+.arch__desc {
+  margin: 0;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+.arch__arrow {
+  flex: 0 0 auto;
+  align-self: center;
+  font-family: var(--font-data);
+  font-size: 1.6rem;
+  color: var(--soil);
+}
+
+/* ------------------------------------------------------------ 현장 */
+.facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  gap: 1rem;
+  margin: 0 0 2rem;
+  padding: 0;
+  list-style: none;
+}
+.fact {
+  padding: 1rem;
+  background: var(--paper-2);
+  border-left: var(--step) solid var(--grass);
+}
+.fact__label {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+}
+.fact__value {
+  display: block;
+  font-family: var(--font-data);
+  font-size: 1.35rem;
+  line-height: 1.3;
+  color: var(--outline);
+}
+.fact__unit {
+  display: inline-block;
+  margin-top: 0.15rem;
+  padding: 0.05rem 0.4rem;
+  background: var(--yellow);
+  font-family: var(--font-data);
+  font-size: 1rem;
+}
+
+.blocks {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 1rem;
+}
+.block {
+  padding: 1.1rem;
+  border: 2px solid var(--outline);
+  background: var(--paper);
+}
+.block__title {
+  margin: 0 0 0.5rem;
+  font-family: var(--font-display);
+  font-size: calc(0.74rem * var(--display-scale));
+  line-height: 1.55;
+  color: var(--forest);
+}
+.block__items {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+
+/* ------------------------------------------------------------ 숫자 */
+.section--numbers {
+  background: var(--outline);
+  color: var(--paper);
+}
+.section--numbers .section__title,
+.section--numbers .eyebrow {
+  color: var(--grass-light);
+}
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: 1.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.metric {
+  padding: 1rem;
+  border: 2px solid var(--forest);
+  background: rgba(105, 196, 85, 0.08);
+}
+.metric__value {
+  display: block;
+  font-family: var(--font-data);
+  font-size: clamp(2.25rem, 7vw, 3rem);
+  line-height: 1;
+  color: var(--grass-light);
+}
+.metric__unit {
+  display: block;
+  margin-top: 0.15rem;
+  font-family: var(--font-data);
+  font-size: 1.2rem;
+  color: var(--yellow);
+}
+.metric__sub {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: #c8d6c3;
+}
+
+/* ------------------------------------------------------------ 푸터 */
+.footer {
+  padding-block: clamp(2.5rem, 6vw, 4rem);
+  background: var(--paper-2);
+  border-top: var(--step) solid var(--outline);
+}
+.footer__inner {
+  display: grid;
+  gap: 1.5rem;
+}
+.footer__id img {
+  height: 1.5rem;
+  width: auto;
+  filter: brightness(0) saturate(100%) invert(18%) sepia(14%) saturate(1042%)
+    hue-rotate(60deg) brightness(94%) contrast(88%);
+}
+.footer__team {
+  margin: 0.5rem 0 0.25rem;
+  font-family: var(--font-display);
+  font-size: calc(0.9rem * var(--display-scale));
+  color: var(--outline);
+}
+.footer__program,
+.footer__partners {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+}
+.footer__repos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: baseline;
+}
+.footer__repostitle {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 0.6rem;
+  color: var(--soil-dark);
+}
+.footer__repos a {
+  font-family: var(--font-data);
+  font-size: 1.1rem;
+  color: var(--forest);
+}
+.footer__built {
+  margin: 0;
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+}
+.footer__stamp {
+  margin: 0;
+  font-family: var(--font-data);
+  font-size: 1rem;
+  color: var(--soil-dark);
+}
+
+/* -------------------------------------------------------- 스크롤 등장 */
+.reveal {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.45s ease-out, transform 0.45s ease-out;
+}
+.reveal.is-in {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* ------------------------------- 한글·숫자 혼용 지점의 폰트 통일
+   VT323은 한글 글리프가 없어 한글만 Galmuri로 넘어갑니다. 두 폰트는
+   x-height가 달라서 "총장 외 8인", "22일"처럼 섞이면 숫자가 작아 보입니다.
+   숫자만 들어가는 곳(지표 수치, 칩)은 VT323을 유지하고,
+   혼용되는 곳만 Galmuri로 통일합니다. */
+:root:lang(ko) .fact__value,
+:root:lang(ko) .fact__unit,
+:root:lang(ko) .rolelegend__label,
+:root:lang(ko) .card__tagline,
+:root:lang(ko) .step__date {
+  font-family: "Galmuri11", monospace;
+}
+
+/* --------------------------------------------- 가로 오버플로 방지
+   그리드·플렉스 자식은 기본 min-width가 auto라, 안에 줄바꿈 불가능한
+   긴 문자열(커밋 해시, API 응답)이 있으면 트랙을 밀어 페이지를 넓힙니다.
+   폰으로 보는 페이지에서 이건 바로 본문 잘림으로 나타납니다. */
+.card,
+.side,
+.metric,
+.fact,
+.block,
+.arch__step,
+.rolelegend__item,
+.member__body {
+  min-width: 0;
+}
+
+.chips__item,
+.card__body,
+.evidence__desc {
+  overflow-wrap: anywhere;
+}
+
+/* ------------------------------------------------------------ 반응형 */
+@media (min-width: 48rem) {
+  .footer__inner {
+    grid-template-columns: 1fr auto;
+    align-items: start;
+  }
+  .footer__built,
+  .footer__stamp {
+    grid-column: 1 / -1;
+  }
+}
+
+/* 좁은 화면에서는 네비를 두 줄로 접습니다.
+   한 줄에 로고 + 섹션 링크 + 언어 버튼을 다 넣으면 뒤쪽 링크가
+   언어 버튼에 가려집니다. 햄버거를 여는 것보다 두 줄이 탭 수가 적습니다. */
+@media (max-width: 40rem) {
+  .nav__inner {
+    flex-wrap: wrap;
+    padding-block: 0.5rem;
+    row-gap: 0.35rem;
+  }
+  .nav__brand {
+    order: 1;
+    margin-right: auto;
+  }
+  .langs {
+    order: 2;
+  }
+  .nav__links {
+    order: 3;
+    flex-basis: 100%;
+    margin-inline: -0.25rem;
+    padding-inline: 0.25rem;
+  }
+}
+
+@media (max-width: 30rem) {
+  /* 좁은 화면에서 Press Start 2P는 줄바꿈이 거칠어집니다. 한 단계 더 줄입니다. */
+  :root {
+    --display-scale: 0.62;
+  }
+  :root:lang(ko) {
+    --display-scale: 0.88;
+  }
+  .nav__brand img {
+    height: 1.4rem;
+  }
+  .evidence {
+    padding-right: 1.1rem;
+  }
+  .evidence__link {
+    position: static;
+    display: inline-block;
+    margin-top: 0.5rem;
+  }
+}
