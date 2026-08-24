@@ -287,7 +287,7 @@ code {
   flex: 0 0 auto;
   padding: 0.45rem 0.7rem;
   font-family: "Paperlogy", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 0.95rem;
   text-decoration: none;
   color: var(--ink-soft);
