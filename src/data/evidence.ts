@@ -27,20 +27,20 @@ export interface Metric {
 }
 
 /**
- * 요약면 숫자.
+ * 요약면 숫자 — 팀이 이룬 것만 셉니다.
  *
- * 코드량 지표(총 줄 수, 테스트 파일 수, API 개수)는 일부러 내렸습니다.
- * 기술봉사 성과 심사에서 앞세울 것은 코드의 부피가 아닙니다.
+ * 제품 사양(센서 종수, 감정 개수)은 여기 넣지 않습니다. 그건 산출물 카드 몫입니다.
+ * 코드량 지표(총 줄 수, 테스트 파일 수)도 내렸습니다 — 부피는 기여가 아닙니다.
  * 수혜 인원·시수 수치도 올리지 않습니다 — 직접 교육 수강생이 없는 구조라
  * 인원 표로 겨루는 구도를 스스로 만들지 않습니다.
  */
 export const METRICS: Metric[] = [
-  { value: 9, unitKey: "numbers.team", subKey: "numbers.team.sub" },
-  { value: 4, unitKey: "numbers.sensors", subKey: "numbers.sensors.sub" },
-  { value: 6, unitKey: "numbers.moods", subKey: "numbers.moods.sub" },
+  { value: 1, unitKey: "numbers.first", subKey: "numbers.first.sub" },
+  { value: 22, unitKey: "numbers.days", subKey: "numbers.days.sub" },
   { value: 3, unitKey: "numbers.deploys", subKey: "numbers.deploys.sub" },
-  { value: 300, unitKey: "numbers.sprites", subKey: "numbers.sprites.sub" },
   { value: 280, unitKey: "numbers.commits", subKey: "numbers.commits.sub" },
+  { value: 300, unitKey: "numbers.sprites", subKey: "numbers.sprites.sub" },
+  { value: 1, unitKey: "numbers.docu", subKey: "numbers.docu.sub" },
 ];
 
 /** 협업 증거. 커밋 해시는 실제 저장소의 것. */
@@ -95,7 +95,6 @@ export const RETRAIN = {
   reclassifySeconds: 2.5,
 } as const;
 
-export const ARCH_NODES = ["n1", "n2", "n3", "n4", "n5"] as const;
 
 export const DEPLOYMENT = {
   startISO: "2026-07-27",

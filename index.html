@@ -20,18 +20,11 @@
     <meta property="og:image" content="/og.png" />
     <meta name="twitter:card" content="summary_large_image" />
 
-    <!-- 폰트는 전부 자체 호스팅입니다. 한국어가 기본이라 Galmuri 두 벌만
+    <!-- 폰트는 전부 자체 호스팅입니다. 한국어가 기본이라 네오둥근모만
          미리 당겨 옵니다 — 라틴 두 벌은 언어를 바꿀 때 필요해집니다. -->
     <link
       rel="preload"
-      href="/fonts/Galmuri11.subset.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="/fonts/Galmuri11-Bold.subset.woff2"
+      href="/fonts/NeoDGM.subset.woff2"
       as="font"
       type="font/woff2"
       crossorigin
@@ -54,10 +47,10 @@
         </a>
 
         <nav class="nav__links" aria-label="Sections">
+          <a class="nav__link" href="#team" data-i18n="nav.team">팀</a>
           <a class="nav__link" href="#philosophy" data-i18n="nav.philos">철학</a>
           <a class="nav__link" href="#wins" data-i18n="nav.wins">성과</a>
           <a class="nav__link" href="#legacy" data-i18n="nav.legacy">남긴 것</a>
-          <a class="nav__link" href="#team" data-i18n="nav.team">팀</a>
           <a class="nav__link" href="#shipped" data-i18n="nav.shipped">산출물</a>
           <a class="nav__link" href="#codev" data-i18n="nav.codev">협업 증거</a>
           <a class="nav__link" href="#retrain" data-i18n="nav.retrain">재학습</a>
@@ -86,7 +79,7 @@
 
           <!-- 팀 구호. 언어와 무관하게 영어 원문 그대로 둡니다. -->
           <p class="hero__slogan" data-i18n-html="hero.slogan">
-            One team, One vision, <em>Infinite impact!</em>
+            One Team. One Vision. <em>Infinite Impact.</em>
           </p>
 
           <h1 class="hero__title">
@@ -128,6 +121,21 @@
         </div>
 
         <div class="hero__soil" aria-hidden="true"></div>
+      </section>
+
+      <!-- ───────────────────────────────── TEAM -->
+      <section class="section section--team" id="team">
+        <div class="wrap">
+          <header class="section__head reveal">
+            <p class="eyebrow" data-i18n="team.eyebrow">누가 만들었나</p>
+            <h2 class="section__title" data-i18n="team.title">한 팀, 두 나라, 네 개의 역할</h2>
+            <p class="lede" data-i18n-html="team.lede"></p>
+          </header>
+
+          <div id="team-mount" class="reveal"></div>
+
+          <p class="footnote" data-i18n="team.note"></p>
+        </div>
       </section>
 
       <!-- ───────────────────────────────── PHILOSOPHY -->
@@ -216,21 +224,6 @@
         </div>
       </section>
 
-      <!-- ───────────────────────────────── TEAM -->
-      <section class="section section--team" id="team">
-        <div class="wrap">
-          <header class="section__head reveal">
-            <p class="eyebrow" data-i18n="team.eyebrow">누가 만들었나</p>
-            <h2 class="section__title" data-i18n="team.title">한 팀, 두 나라, 네 개의 역할</h2>
-            <p class="lede" data-i18n-html="team.lede"></p>
-          </header>
-
-          <div id="team-mount" class="reveal"></div>
-
-          <p class="footnote" data-i18n="team.note"></p>
-        </div>
-      </section>
-
       <!-- ───────────────────────────────── SHIPPED -->
       <section class="section section--shipped" id="shipped">
         <div class="wrap">
@@ -290,19 +283,6 @@
             <div id="tensor-mount"></div>
             <p class="tensorfig__caption" data-i18n-html="retrain.viz.caption"></p>
           </figure>
-        </div>
-      </section>
-
-      <!-- ───────────────────────────────── ARCHITECTURE -->
-      <section class="section section--arch" id="arch">
-        <div class="wrap">
-          <header class="section__head reveal">
-            <p class="eyebrow" data-i18n="arch.eyebrow">어떻게 돌아가나</p>
-            <h2 class="section__title" data-i18n="arch.title">센서에서 감정까지</h2>
-            <p class="lede" data-i18n="arch.lede"></p>
-          </header>
-
-          <ol id="arch-mount" class="arch reveal"></ol>
         </div>
       </section>
 

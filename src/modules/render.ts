@@ -7,7 +7,7 @@
 
 import { SIDES, ROLE_ORDER, type Member } from "../data/team";
 import { HERO_ITEMS, SUPPORT_ITEMS, type Deliverable } from "../data/deliverables";
-import { CODEV, METRICS, RETRAIN, ARCH_NODES } from "../data/evidence";
+import { CODEV, METRICS, RETRAIN } from "../data/evidence";
 import { POSTS, HAS_SOCIAL, profileUrl } from "../data/social";
 import { t, translate } from "./i18n";
 
@@ -255,31 +255,6 @@ export function renderTensorGrid(mount: HTMLElement): void {
   );
 
   mount.append(grid, key);
-  translate(mount);
-}
-
-/* ---------------------------------------------------- 아키텍처 */
-
-export function renderArchitecture(mount: HTMLElement): void {
-  ARCH_NODES.forEach((n, idx) => {
-    const step = el("li", "arch__step");
-
-    const name = el("p", "arch__name");
-    bind(name, `arch.${n}`);
-
-    const desc = el("p", "arch__desc");
-    bind(desc, `arch.${n}d`);
-
-    step.append(name, desc);
-    mount.append(step);
-
-    if (idx < ARCH_NODES.length - 1) {
-      const arrow = el("li", "arch__arrow");
-      arrow.textContent = "→";
-      arrow.setAttribute("aria-hidden", "true");
-      mount.append(arrow);
-    }
-  });
   translate(mount);
 }
 

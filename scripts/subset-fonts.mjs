@@ -53,23 +53,28 @@ async function run() {
   const text = await collectText();
   await mkdir(outDir, { recursive: true });
 
+  // 한국어는 네오둥근모(vendor/fonts, OFL) — Galmuri에서 교체했습니다.
+  // 일부 한글이 깨져 보이는 문제가 있었고, 네오둥근모는 현대 한글 11,172자를
+  // 전부 담고 있어 서브셋에서 글자가 빠질 일이 없습니다.
   const faces = [
-    [join("galmuri", "dist", "Galmuri11.woff2"), "Galmuri11.subset.woff2"],
-    [join("galmuri", "dist", "Galmuri11-Bold.woff2"), "Galmuri11-Bold.subset.woff2"],
+    [join(root, "vendor", "fonts", "neodgm.ttf"), "NeoDGM.subset.woff2"],
     // 라틴 픽셀 폰트도 자체 호스팅합니다. 발표장 회선에서 Google Fonts가
     // 느리거나 막히면 페이지의 픽셀 정체성이 통째로 무너지기 때문입니다.
     [
-      join("@fontsource", "press-start-2p", "files", "press-start-2p-latin-400-normal.woff2"),
+      join(root, "node_modules", "@fontsource", "press-start-2p", "files", "press-start-2p-latin-400-normal.woff2"),
       "PressStart2P.subset.woff2",
     ],
-    [join("@fontsource", "vt323", "files", "vt323-latin-400-normal.woff2"), "VT323.subset.woff2"],
+    [
+      join(root, "node_modules", "@fontsource", "vt323", "files", "vt323-latin-400-normal.woff2"),
+      "VT323.subset.woff2",
+    ],
   ];
 
   let totalBefore = 0;
   let totalAfter = 0;
 
   for (const [src, dest] of faces) {
-    const buf = await readFile(join(root, "node_modules", src));
+    const buf = await readFile(src);
     const out = await subsetFont(buf, text, { targetFormat: "woff2" });
     await writeFile(join(outDir, dest), out);
 

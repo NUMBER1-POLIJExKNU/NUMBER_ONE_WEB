@@ -15,15 +15,9 @@
    막히면 픽셀 정체성이 통째로 무너지고, 외부 요청 하나가 렌더를 막습니다.
    빌드 때 실제 쓰는 글자로만 서브셋됩니다 → scripts/subset-fonts.mjs */
 @font-face {
-  font-family: "Galmuri11";
-  src: url("/fonts/Galmuri11.subset.woff2") format("woff2");
-  font-weight: 400;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Galmuri11";
-  src: url("/fonts/Galmuri11-Bold.subset.woff2") format("woff2");
-  font-weight: 700;
+  font-family: "NeoDGM";
+  src: url("/fonts/NeoDGM.subset.woff2") format("woff2");
+  font-weight: 400 700; /* 단일 웨이트 — 가짜 볼드 합성을 막습니다 */
   font-display: swap;
 }
 @font-face {
@@ -60,8 +54,8 @@
   --ink: var(--outline);
   --ink-soft: #5b6b56;
 
-  --font-display: "Press Start 2P", "Galmuri11", monospace;
-  --font-data: "VT323", "Galmuri11", monospace;
+  --font-display: "Press Start 2P", "NeoDGM", monospace;
+  --font-data: "VT323", "NeoDGM", monospace;
   --font-body: system-ui, -apple-system, "Segoe UI", "Apple SD Gothic Neo",
     "Malgun Gothic", sans-serif;
 
@@ -74,9 +68,9 @@
   --shadow-pixel: 0 var(--step) 0 0 var(--outline);
 }
 
-/* 한국어에서는 Galmuri가 라틴까지 담당합니다 — 한 줄에 두 폰트가 섞이지 않게. */
+/* 한국어에서는 네오둥근모가 라틴까지 담당합니다 — 한 줄에 두 폰트가 섞이지 않게. */
 :root:lang(ko) {
-  --font-display: "Galmuri11", "Press Start 2P", monospace;
+  --font-display: "NeoDGM", "Press Start 2P", monospace;
   --display-scale: 1;
 }
 
@@ -1440,16 +1434,14 @@ code {
 }
 
 /* ------------------------------- 한글·숫자 혼용 지점의 폰트 통일
-   VT323은 한글 글리프가 없어 한글만 Galmuri로 넘어갑니다. 두 폰트는
-   x-height가 달라서 "총장 외 8인", "22일"처럼 섞이면 숫자가 작아 보입니다.
-   숫자만 들어가는 곳(지표 수치, 칩)은 VT323을 유지하고,
-   혼용되는 곳만 Galmuri로 통일합니다. */
+   VT323은 한글 글리프가 없어 한글만 네오둥근모로 넘어갑니다. 두 폰트는
+   x-height가 달라서 혼용되는 곳만 네오둥근모로 통일합니다. */
 :root:lang(ko) .fact__value,
 :root:lang(ko) .fact__unit,
 :root:lang(ko) .rolelegend__label,
 :root:lang(ko) .card__tagline,
 :root:lang(ko) .step__date {
-  font-family: "Galmuri11", monospace;
+  font-family: "NeoDGM", monospace;
 }
 
 /* --------------------------------------------- 가로 오버플로 방지

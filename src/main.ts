@@ -8,7 +8,6 @@ import {
   renderDeliverables,
   renderCodev,
   renderTensorGrid,
-  renderArchitecture,
   renderSocial,
   renderMetrics,
 } from "./modules/render";
@@ -28,7 +27,6 @@ async function main(): Promise<void> {
   renderDeliverables(mount("#shipped-hero"), mount("#shipped-support"));
   renderCodev(mount("#codev-mount"));
   renderTensorGrid(mount("#tensor-mount"));
-  renderArchitecture(mount("#arch-mount"));
   renderSocial(mount("#social"), mount("#social-mount"));
   renderMetrics(mount("#metrics-mount"));
 
