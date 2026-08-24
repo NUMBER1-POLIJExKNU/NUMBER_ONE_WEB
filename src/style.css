@@ -1411,6 +1411,41 @@ code {
   color: #c8d6c3;
 }
 
+/* -------------------------------------------- 섹션 사진 (공용) */
+.snap {
+  max-width: 34rem;
+  margin: 2rem auto 0;
+}
+.snap img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: var(--step) solid var(--outline);
+  box-shadow: var(--shadow-pixel);
+}
+.snap figcaption {
+  margin-top: 0.6rem;
+  font-family: var(--font-data);
+  font-size: 1.05rem;
+  color: var(--ink-soft);
+}
+
+.proof__photo {
+  margin: 0 0 1rem;
+}
+.proof__photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 2px solid var(--outline);
+}
+.proof__photo figcaption {
+  margin-top: 0.5rem;
+  font-family: var(--font-data);
+  font-size: 1rem;
+  color: var(--ink-soft);
+}
+
 /* ------------------------------------------------ 현장 사진 그리드 */
 .groundphotos {
   display: grid;
