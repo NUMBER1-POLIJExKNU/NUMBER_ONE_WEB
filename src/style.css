@@ -1138,11 +1138,6 @@ code {
   font-size: 1.1rem;
   color: var(--forest);
 }
-.footer__built {
-  margin: 0;
-  font-size: 0.82rem;
-  color: var(--ink-soft);
-}
 
 /* -------------------------------------------------------- 스크롤 등장 */
 .reveal {
@@ -1644,10 +1639,6 @@ code {
   .footer__inner {
     grid-template-columns: 1fr auto;
     align-items: start;
-  }
-  .footer__built,
-  .footer__stamp {
-    grid-column: 1 / -1;
   }
 }
 
