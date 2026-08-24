@@ -35,12 +35,12 @@ export interface Metric {
  * 인원 표로 겨루는 구도를 스스로 만들지 않습니다.
  */
 export const METRICS: Metric[] = [
-  { value: 1, unitKey: "numbers.first", subKey: "numbers.first.sub" },
+  { value: 2, unitKey: "numbers.first", subKey: "numbers.first.sub" },
+  { value: 9, unitKey: "numbers.team", subKey: "numbers.team.sub" },
   { value: 22, unitKey: "numbers.days", subKey: "numbers.days.sub" },
   { value: 3, unitKey: "numbers.deploys", subKey: "numbers.deploys.sub" },
   { value: 280, unitKey: "numbers.commits", subKey: "numbers.commits.sub" },
   { value: 300, unitKey: "numbers.sprites", subKey: "numbers.sprites.sub" },
-  { value: 1, unitKey: "numbers.docu", subKey: "numbers.docu.sub" },
 ];
 
 /** 협업 증거. 커밋 해시는 실제 저장소의 것. */

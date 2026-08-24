@@ -155,12 +155,10 @@
   "footer.slogan": "One Team. One Vision. Infinite Impact.",
   "numbers.deploys": "services",
   "numbers.deploys.sub": "services still running",
-  "numbers.first": "st place",
-  "numbers.first.sub": "of 9 teams — twice (Arduino project · K-Food Day)",
+  "numbers.first": "categories won",
+  "numbers.first.sub": "1st of 9 teams — Arduino project · K-Food Day",
   "numbers.days": "days",
   "numbers.days.sub": "on the ground in Indonesia",
-  "numbers.docu": "broadcast",
-  "numbers.docu.sub": "KBS DOCU-ON (scheduled 5 Sep)",
   "ground.program.label": "Programme",
   "ground.program.value": "WFK IT Volunteer Corps (NIA · KNU)",
   "social.tags": "#해외봉사 #월드프렌즈코리아 #IT봉사단 #NIA #NUMBERONE",
@@ -183,5 +181,7 @@
   "legacy.snaps.title": "We did not take these photos",
   "legacy.snaps.body": "PlantMoji's own camera left these in the grow diary. The students in front of the lens and the strawberry in the kit were captured by the same camera. Open the diary today and the records are still there.",
   "codev.photo.caption": "Morning, 14 August 2026 — a phone, a tablet and a laptop all watching the same Jamkachu",
-  "retrain.photo.caption": "Evening, 7 August 2026 — hands fitting the sensors"
+  "retrain.photo.caption": "Evening, 7 August 2026 — hands fitting the sensors",
+  "numbers.team": "people",
+  "numbers.team.sub": "one team from two countries"
 }

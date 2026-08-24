@@ -155,12 +155,10 @@
   "footer.slogan": "One Team. One Vision. Infinite Impact.",
   "numbers.deploys": "layanan",
   "numbers.deploys.sub": "layanan yang masih berjalan",
-  "numbers.first": "peringkat",
-  "numbers.first.sub": "dari 9 tim — dua kali (proyek Arduino · K-Food Day)",
+  "numbers.first": "kategori juara",
+  "numbers.first.sub": "peringkat 1 dari 9 tim — proyek Arduino · K-Food Day",
   "numbers.days": "hari",
   "numbers.days.sub": "di lapangan, di Indonesia",
-  "numbers.docu": "tayangan",
-  "numbers.docu.sub": "KBS DOCU-ON (dijadwalkan 5 Sep)",
   "ground.program.label": "Program",
   "ground.program.value": "Korps Relawan TI WFK (NIA · KNU)",
   "social.tags": "#해외봉사 #월드프렌즈코리아 #IT봉사단 #NIA #NUMBERONE",
@@ -183,5 +181,7 @@
   "legacy.snaps.title": "Foto-foto ini bukan kami yang mengambil",
   "legacy.snaps.body": "Kamera PlantMoji sendiri yang meninggalkannya di buku harian tanam. Para siswa di depan lensa dan stroberi di dalam kit direkam oleh kamera yang sama. Buka buku hariannya hari ini, catatan itu masih ada.",
   "codev.photo.caption": "Pagi, 14 Agustus 2026 — ponsel, tablet, dan laptop menatap Jamkachu yang sama",
-  "retrain.photo.caption": "Malam, 7 Agustus 2026 — tangan yang memasang sensor"
+  "retrain.photo.caption": "Malam, 7 Agustus 2026 — tangan yang memasang sensor",
+  "numbers.team": "orang",
+  "numbers.team.sub": "satu tim dari dua negara"
 }
