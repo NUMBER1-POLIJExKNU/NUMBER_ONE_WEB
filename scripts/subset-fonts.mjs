@@ -56,6 +56,7 @@ async function run() {
   // 디스플레이는 페이퍼로지(vendor/fonts, 무료 폰트) — 기하학적 모던체.
   // Press Start 2P는 히어로 구호·푸터 낭독(영문 브랜드 라인)에만 씁니다.
   const faces = [
+    [join(root, "vendor", "fonts", "Paperlogy-4Regular.woff2"), "Paperlogy-Regular.subset.woff2"],
     [join(root, "vendor", "fonts", "Paperlogy-7Bold.woff2"), "Paperlogy-Bold.subset.woff2"],
     [join(root, "vendor", "fonts", "Paperlogy-5Medium.woff2"), "Paperlogy-Medium.subset.woff2"],
     // 라틴 픽셀 폰트도 자체 호스팅합니다. 발표장 회선에서 Google Fonts가
