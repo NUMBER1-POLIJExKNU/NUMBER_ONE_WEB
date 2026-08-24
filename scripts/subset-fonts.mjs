@@ -53,11 +53,11 @@ async function run() {
   const text = await collectText();
   await mkdir(outDir, { recursive: true });
 
-  // 디스플레이는 주아체(vendor/fonts, OFL) — 픽셀 비트맵이 작은 화면에서
-  // 거칠게 렌더되는 문제로 교체. 벡터라 어떤 크기에서도 깨끗합니다.
+  // 디스플레이는 페이퍼로지(vendor/fonts, 무료 폰트) — 기하학적 모던체.
   // Press Start 2P는 히어로 구호·푸터 낭독(영문 브랜드 라인)에만 씁니다.
   const faces = [
-    [join(root, "vendor", "fonts", "jua.ttf"), "Jua.subset.woff2"],
+    [join(root, "vendor", "fonts", "Paperlogy-7Bold.woff2"), "Paperlogy-Bold.subset.woff2"],
+    [join(root, "vendor", "fonts", "Paperlogy-5Medium.woff2"), "Paperlogy-Medium.subset.woff2"],
     // 라틴 픽셀 폰트도 자체 호스팅합니다. 발표장 회선에서 Google Fonts가
     // 느리거나 막히면 페이지의 픽셀 정체성이 통째로 무너지기 때문입니다.
     [

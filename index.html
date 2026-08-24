@@ -20,11 +20,18 @@
     <meta property="og:image" content="/og.png" />
     <meta name="twitter:card" content="summary_large_image" />
 
-    <!-- 폰트는 전부 자체 호스팅입니다. 한국어가 기본이라 주아체만
+    <!-- 폰트는 전부 자체 호스팅입니다. 기본 서체(페이퍼로지)만
          미리 당겨 옵니다 — 라틴 두 벌은 언어를 바꿀 때 필요해집니다. -->
     <link
       rel="preload"
-      href="/fonts/Jua.subset.woff2"
+      href="/fonts/Paperlogy-Bold.subset.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/Paperlogy-Medium.subset.woff2"
       as="font"
       type="font/woff2"
       crossorigin
@@ -48,13 +55,13 @@
 
         <nav class="nav__links" aria-label="Sections">
           <a class="nav__link" href="#team" data-i18n="nav.team">팀</a>
-          <a class="nav__link" href="#philosophy" data-i18n="nav.philos">철학</a>
           <a class="nav__link" href="#wins" data-i18n="nav.wins">성과</a>
-          <a class="nav__link" href="#legacy" data-i18n="nav.legacy">남긴 것</a>
+          <a class="nav__link" href="#philosophy" data-i18n="nav.philos">철학</a>
           <a class="nav__link" href="#shipped" data-i18n="nav.shipped">산출물</a>
           <a class="nav__link" href="#codev" data-i18n="nav.codev">협업 증거</a>
           <a class="nav__link" href="#retrain" data-i18n="nav.retrain">재학습</a>
           <a class="nav__link" href="#ground" data-i18n="nav.ground">현장</a>
+          <a class="nav__link" href="#legacy" data-i18n="nav.legacy">남긴 것</a>
         </nav>
 
         <div class="langs" role="group" data-i18n-attr="aria-label:nav.lang">
@@ -159,51 +166,6 @@
         </div>
       </section>
 
-      <!-- ───────────────────────────────── PHILOSOPHY -->
-      <section class="section section--philos" id="philosophy">
-        <div class="wrap">
-          <header class="section__head reveal">
-            <p class="eyebrow" data-i18n="philos.eyebrow">우리가 들고 간 생각</p>
-            <h2 class="section__title" data-i18n="philos.title"></h2>
-            <p class="lede" data-i18n-html="philos.lede"></p>
-          </header>
-
-          <ol class="flow reveal">
-            <li class="flow__step flow__step--wisdom">
-              <p class="flow__tag" data-i18n="philos.s1.tag">WISDOM</p>
-              <h3 class="flow__title" data-i18n="philos.s1.title"></h3>
-              <p class="flow__body" data-i18n="philos.s1.body"></p>
-            </li>
-            <li class="flow__step flow__step--data">
-              <p class="flow__tag" data-i18n="philos.s2.tag">DATA</p>
-              <h3 class="flow__title" data-i18n="philos.s2.title"></h3>
-              <p class="flow__body" data-i18n="philos.s2.body"></p>
-            </li>
-            <li class="flow__step flow__step--next">
-              <p class="flow__tag" data-i18n="philos.s3.tag">NEXT GENERATION</p>
-              <h3 class="flow__title" data-i18n="philos.s3.title"></h3>
-              <p class="flow__body" data-i18n="philos.s3.body"></p>
-            </li>
-          </ol>
-
-          <p class="footnote reveal" data-i18n="philos.roots"></p>
-
-          <blockquote class="creed reveal">
-            <p data-i18n="philos.quote"></p>
-          </blockquote>
-
-          <p class="sdg reveal">
-            <span class="sdg__label" data-i18n="philos.sdg.label"></span>
-            <span class="sdg__items" data-i18n="philos.sdg.items"></span>
-          </p>
-
-          <figure class="snap reveal">
-            <img src="/images/philos-field.webp" alt="젬버의 농장에서 현지 농부 취재를 마친 뒤 찍은 사진" width="900" height="675" loading="lazy" decoding="async" />
-            <figcaption data-i18n="philos.photo.caption"></figcaption>
-          </figure>
-        </div>
-      </section>
-
       <!-- ───────────────────────────────── RESULTS -->
       <section class="section section--wins" id="wins">
         <div class="wrap">
@@ -250,48 +212,47 @@
         </div>
       </section>
 
-      <!-- ───────────────────────────────── WHAT REMAINS -->
-      <section class="section section--legacy" id="legacy">
+      <!-- ───────────────────────────────── PHILOSOPHY -->
+      <section class="section section--philos" id="philosophy">
         <div class="wrap">
           <header class="section__head reveal">
-            <p class="eyebrow" data-i18n="legacy.eyebrow">다른 봉사와 다른 점</p>
-            <h2 class="section__title" data-i18n="legacy.title"></h2>
-            <p class="lede" data-i18n-html="legacy.lede"></p>
+            <p class="eyebrow" data-i18n="philos.eyebrow">우리가 들고 간 생각</p>
+            <h2 class="section__title" data-i18n="philos.title"></h2>
+            <p class="lede" data-i18n-html="philos.lede"></p>
           </header>
 
-          <ul class="stays reveal">
-            <li class="stay">
-              <h3 class="stay__title" data-i18n="legacy.s1.title"></h3>
-              <p class="stay__body" data-i18n="legacy.s1.body"></p>
+          <ol class="flow reveal">
+            <li class="flow__step flow__step--wisdom">
+              <p class="flow__tag" data-i18n="philos.s1.tag">WISDOM</p>
+              <h3 class="flow__title" data-i18n="philos.s1.title"></h3>
+              <p class="flow__body" data-i18n="philos.s1.body"></p>
             </li>
-            <li class="stay">
-              <h3 class="stay__title" data-i18n="legacy.s2.title"></h3>
-              <p class="stay__body" data-i18n="legacy.s2.body"></p>
+            <li class="flow__step flow__step--data">
+              <p class="flow__tag" data-i18n="philos.s2.tag">DATA</p>
+              <h3 class="flow__title" data-i18n="philos.s2.title"></h3>
+              <p class="flow__body" data-i18n="philos.s2.body"></p>
             </li>
-            <li class="stay">
-              <h3 class="stay__title" data-i18n="legacy.s3.title"></h3>
-              <p class="stay__body" data-i18n="legacy.s3.body"></p>
+            <li class="flow__step flow__step--next">
+              <p class="flow__tag" data-i18n="philos.s3.tag">NEXT GENERATION</p>
+              <h3 class="flow__title" data-i18n="philos.s3.title"></h3>
+              <p class="flow__body" data-i18n="philos.s3.body"></p>
             </li>
-            <li class="stay">
-              <h3 class="stay__title" data-i18n="legacy.s4.title"></h3>
-              <p class="stay__body" data-i18n="legacy.s4.body"></p>
-            </li>
-          </ul>
+          </ol>
 
-          <div class="diaryblock reveal">
-            <h3 class="diaryblock__title" data-i18n="legacy.snaps.title"></h3>
-            <p class="diaryblock__body" data-i18n="legacy.snaps.body"></p>
-            <div class="groundphotos">
-              <img src="/images/diary-students.webp" alt="PlantMoji 카메라 앞에 모인 파란 바틱 교복의 학생들" width="640" height="480" loading="lazy" decoding="async" />
-              <img src="/images/diary-together.webp" alt="팀원과 학생들이 함께 카메라를 향해 브이를 하는 모습" width="640" height="480" loading="lazy" decoding="async" />
-              <img src="/images/diary-kit.webp" alt="레이저컷 프레임의 센서 키트에 심긴 딸기" width="640" height="480" loading="lazy" decoding="async" />
-              <img src="/images/diary-plant.webp" alt="노트북 앞에 놓인 화분을 지켜보는 카메라 시점" width="640" height="480" loading="lazy" decoding="async" />
-            </div>
-          </div>
+          <p class="footnote reveal" data-i18n="philos.roots"></p>
+
+          <blockquote class="creed reveal">
+            <p data-i18n="philos.quote"></p>
+          </blockquote>
+
+          <p class="sdg reveal">
+            <span class="sdg__label" data-i18n="philos.sdg.label"></span>
+            <span class="sdg__items" data-i18n="philos.sdg.items"></span>
+          </p>
 
           <figure class="snap reveal">
-            <img src="/images/legacy-board.webp" alt="WE DID GREAT 문구와 서명이 적힌 강의실 화이트보드 클로즈업" width="900" height="675" loading="lazy" decoding="async" />
-            <figcaption data-i18n="legacy.photo.caption"></figcaption>
+            <img src="/images/philos-field.webp" alt="젬버의 농장에서 현지 농부 취재를 마친 뒤 찍은 사진" width="900" height="675" loading="lazy" decoding="async" />
+            <figcaption data-i18n="philos.photo.caption"></figcaption>
           </figure>
         </div>
       </section>
@@ -493,6 +454,52 @@
           <ul id="metrics-mount" class="metrics"></ul>
         </div>
       </section>
+      <!-- ───────────────────────────────── WHAT REMAINS -->
+      <section class="section section--legacy" id="legacy">
+        <div class="wrap">
+          <header class="section__head reveal">
+            <p class="eyebrow" data-i18n="legacy.eyebrow">다른 봉사와 다른 점</p>
+            <h2 class="section__title" data-i18n="legacy.title"></h2>
+            <p class="lede" data-i18n-html="legacy.lede"></p>
+          </header>
+
+          <ul class="stays reveal">
+            <li class="stay">
+              <h3 class="stay__title" data-i18n="legacy.s1.title"></h3>
+              <p class="stay__body" data-i18n="legacy.s1.body"></p>
+            </li>
+            <li class="stay">
+              <h3 class="stay__title" data-i18n="legacy.s2.title"></h3>
+              <p class="stay__body" data-i18n="legacy.s2.body"></p>
+            </li>
+            <li class="stay">
+              <h3 class="stay__title" data-i18n="legacy.s3.title"></h3>
+              <p class="stay__body" data-i18n="legacy.s3.body"></p>
+            </li>
+            <li class="stay">
+              <h3 class="stay__title" data-i18n="legacy.s4.title"></h3>
+              <p class="stay__body" data-i18n="legacy.s4.body"></p>
+            </li>
+          </ul>
+
+          <div class="diaryblock reveal">
+            <h3 class="diaryblock__title" data-i18n="legacy.snaps.title"></h3>
+            <p class="diaryblock__body" data-i18n="legacy.snaps.body"></p>
+            <div class="groundphotos">
+              <img src="/images/diary-students.webp" alt="PlantMoji 카메라 앞에 모인 파란 바틱 교복의 학생들" width="640" height="480" loading="lazy" decoding="async" />
+              <img src="/images/diary-together.webp" alt="팀원과 학생들이 함께 카메라를 향해 브이를 하는 모습" width="640" height="480" loading="lazy" decoding="async" />
+              <img src="/images/diary-kit.webp" alt="레이저컷 프레임의 센서 키트에 심긴 딸기" width="640" height="480" loading="lazy" decoding="async" />
+              <img src="/images/diary-plant.webp" alt="노트북 앞에 놓인 화분을 지켜보는 카메라 시점" width="640" height="480" loading="lazy" decoding="async" />
+            </div>
+          </div>
+
+          <figure class="snap reveal">
+            <img src="/images/legacy-board.webp" alt="WE DID GREAT 문구와 서명이 적힌 강의실 화이트보드 클로즈업" width="900" height="675" loading="lazy" decoding="async" />
+            <figcaption data-i18n="legacy.photo.caption"></figcaption>
+          </figure>
+        </div>
+      </section>
+
     </main>
 
     <footer class="footer">
