@@ -564,6 +564,26 @@ code {
   color: var(--ink-soft);
 }
 
+/* ------------------------------------------------- 팀 각오 포스터 */
+.poster {
+  max-width: 26rem;
+  margin: 2.5rem auto 0;
+}
+.poster img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: var(--step) solid var(--outline);
+  box-shadow: var(--shadow-pixel);
+}
+.poster figcaption {
+  margin-top: 0.75rem;
+  font-family: var(--font-data);
+  font-size: 1.05rem;
+  text-align: center;
+  color: var(--ink-soft);
+}
+
 /* --------------------------------------------------------- 산출물 */
 .cards {
   display: grid;

@@ -55,7 +55,7 @@
   "team.note": "Profil dan foto anggota akan ditambahkan setelah semua memberikan persetujuan.",
   "shipped.eyebrow": "Apa yang kami buat",
   "shipped.title": "Hasil kerja kami",
-  "shipped.lede": "Bagian inilah yang tidak sempat dibahas saat presentasi. Kelimanya nyata. Dua di antaranya bisa Anda buka sekarang.",
+  "shipped.lede": "Inilah yang kami bangun dan rilis. Dua di antaranya bisa Anda buka sekarang juga.",
   "shipped.status.live": "Sudah dirilis · publik",
   "shipped.status.proto": "Prototipe yang berfungsi",
   "shipped.status.shipped": "Dipakai di produk",
@@ -143,10 +143,10 @@
   "wins.rank": "Peringkat 1 dari 9 tim",
   "wins.w1.title": "Proyek Arduino",
   "wins.w1.judge": "Dinilai oleh dosen Polije",
-  "wins.w1.body": "Dosen Polije yang menilai — orang-orang yang mengajar TI pertanian di sana.",
+  "wins.w1.body": "Diberikan atas demonstrasi langsung kit sensor dan PlantMoji yang kami bangun selama tiga minggu.",
   "wins.w2.title": "K-Food Day",
   "wins.w2.judge": "Suara peserta + penilaian dosen + suka di Reels",
-  "wins.w2.body": "Suara peserta, penilaian dosen, dan suka di Reels digabungkan. Orang-orang yang hadir hari itu yang memilihnya.",
+  "wins.w2.body": "Diraih lewat stan tempat kami membuat dan berbagi hwachae serta es buah bersama-sama.",
   "wins.w3.title": "Tayangan KBS DOCU-ON",
   "wins.w3.judge": "Dijadwalkan 5 September 2026 (KBS 1TV)",
   "wins.w3.body": "Program dokumenter KBS DOCU-ON meliput kegiatan tim sepanjang masa penugasan.",
@@ -166,5 +166,6 @@
   "numbers.docu.sub": "KBS DOCU-ON (dijadwalkan 5 Sep)",
   "ground.program.label": "Program",
   "ground.program.value": "Korps Relawan TI WFK (NIA · KNU)",
-  "social.tags": "#해외봉사 #월드프렌즈코리아 #IT봉사단 #NIA #NUMBERONE"
+  "social.tags": "#해외봉사 #월드프렌즈코리아 #IT봉사단 #NIA #NUMBERONE",
+  "team.poster.caption": "31 Juli 2026 — tekad yang ditulis sembilan orang saat proyek dimulai"
 }

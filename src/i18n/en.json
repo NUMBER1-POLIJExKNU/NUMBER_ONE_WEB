@@ -55,7 +55,7 @@
   "team.note": "Member introductions and photographs will be added once everyone has given consent.",
   "shipped.eyebrow": "What we made",
   "shipped.title": "What we shipped",
-  "shipped.lede": "This is the part the presentation had no time for. All five exist. Two of them you can open right now.",
+  "shipped.lede": "These are the things we built and shipped. Two of them you can open right now.",
   "shipped.status.live": "Deployed · public",
   "shipped.status.proto": "Working prototype",
   "shipped.status.shipped": "In the product",
@@ -143,10 +143,10 @@
   "wins.rank": "1st of 9 teams",
   "wins.w1.title": "Arduino project",
   "wins.w1.judge": "Judged by Polije faculty",
-  "wins.w1.body": "Polije faculty judged it — the people who teach agricultural IT there.",
+  "wins.w1.body": "Awarded for demonstrating the sensor kit and PlantMoji we built over three weeks, live in front of the judges.",
   "wins.w2.title": "K-Food Day",
   "wins.w2.judge": "Participant vote + faculty scoring + Reels likes",
-  "wins.w2.body": "Participant votes, faculty scoring and Reels likes were combined. The people who were in the room that day picked it.",
+  "wins.w2.body": "Earned with a booth where we made and shared hwachae and es buah together.",
   "wins.w3.title": "KBS DOCU-ON broadcast",
   "wins.w3.judge": "Scheduled 5 September 2026 (KBS 1TV)",
   "wins.w3.body": "KBS's documentary programme DOCU-ON filmed the team's activities throughout the deployment.",
@@ -166,5 +166,6 @@
   "numbers.docu.sub": "KBS DOCU-ON (scheduled 5 Sep)",
   "ground.program.label": "Programme",
   "ground.program.value": "WFK IT Volunteer Corps (NIA · KNU)",
-  "social.tags": "#해외봉사 #월드프렌즈코리아 #IT봉사단 #NIA #NUMBERONE"
+  "social.tags": "#해외봉사 #월드프렌즈코리아 #IT봉사단 #NIA #NUMBERONE",
+  "team.poster.caption": "31 July 2026 — what each of the nine wrote as the project began"
 }

@@ -55,7 +55,7 @@
   "team.note": "팀원 소개와 사진은 본인 동의를 받아 추가할 예정입니다.",
   "shipped.eyebrow": "무엇을 만들었나",
   "shipped.title": "우리가 배포한 것",
-  "shipped.lede": "발표에서 시간이 없어 넘어간 부분입니다. 두 개는 지금 바로 열어보실 수 있습니다.",
+  "shipped.lede": "저희가 만들어 배포한 것들입니다. 두 개는 지금 바로 열어보실 수 있습니다.",
   "shipped.status.live": "배포 완료 · 공개",
   "shipped.status.proto": "동작하는 프로토타입",
   "shipped.status.shipped": "제품에 반영됨",
@@ -143,10 +143,10 @@
   "wins.rank": "9개 팀 중 1위",
   "wins.w1.title": "아두이노 프로젝트",
   "wins.w1.judge": "Polije 교수진 심사",
-  "wins.w1.body": "Polije 교수님들이 심사했습니다. 현지에서 농업 IT를 가르치는 분들입니다.",
+  "wins.w1.body": "3주 동안 만든 센서 키트와 PlantMoji를 현장에서 시연하여 받은 평가입니다.",
   "wins.w2.title": "K-Food Day",
   "wins.w2.judge": "참가자 투표 + 교수 채점 + 릴스 좋아요",
-  "wins.w2.body": "참가자 투표와 교수 채점, 릴스 좋아요를 합쳐서 정했습니다. 그날 현장에 있던 사람들이 뽑아준 셈입니다.",
+  "wins.w2.body": "화채와 에스 부아를 함께 만들어 나눈 부스 운영으로 받은 결과입니다.",
   "wins.w3.title": "KBS 다큐온 방영 예정",
   "wins.w3.judge": "2026년 9월 5일 (KBS 1TV)",
   "wins.w3.body": "KBS 다큐멘터리 프로그램 「다큐온」이 파견 기간 전반에 걸쳐 팀의 활동을 촬영했습니다.",
@@ -166,5 +166,6 @@
   "numbers.docu.sub": "KBS 다큐온 방영 (9월 5일 예정)",
   "ground.program.label": "소속 프로그램",
   "ground.program.value": "WFK IT봉사단 (NIA · 경북대학교)",
-  "social.tags": "#해외봉사 #월드프렌즈코리아 #IT봉사단 #NIA #NUMBERONE"
+  "social.tags": "#해외봉사 #월드프렌즈코리아 #IT봉사단 #NIA #NUMBERONE",
+  "team.poster.caption": "2026년 7월 31일, 프로젝트를 시작하며 아홉 명이 적은 각오"
 }
