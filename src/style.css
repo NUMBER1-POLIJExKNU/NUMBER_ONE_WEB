@@ -1194,12 +1194,25 @@ code {
   line-height: 1.65;
 }
 
-.hero__kicker {
-  margin: 0 0 2rem;
-  font-family: var(--font-data);
-  font-size: 1.15rem;
-  line-height: 1.4;
-  color: var(--forest);
+/* 팀 구호. 히어로에서 제일 먼저 읽히는 자리이고, 픽셀 게임의
+   타이틀 배너처럼 세웁니다. 영어 원문이라 언어와 무관하게
+   Press Start 2P를 강제합니다 — 한국어에서도 이 줄만은 라틴 픽셀체입니다. */
+.hero__slogan {
+  display: inline-block;
+  margin: 0 0 1.75rem;
+  padding: 0.7rem 1rem;
+  background: var(--outline);
+  color: var(--paper);
+  border: 2px solid var(--outline);
+  box-shadow: var(--shadow-pixel);
+  font-family: "Press Start 2P", monospace;
+  font-size: clamp(0.6rem, 2.1vw, 0.95rem);
+  line-height: 1.8;
+  letter-spacing: 0.01em;
+}
+.hero__slogan em {
+  font-style: normal;
+  color: var(--yellow);
 }
 
 /* ------------------------------------------------- 남긴 것 (지속가능성)
