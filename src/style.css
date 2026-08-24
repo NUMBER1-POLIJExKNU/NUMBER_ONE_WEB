@@ -568,7 +568,8 @@ code {
 
 /* --------------------------------------------------- 팀 단체 사진 */
 .teamphoto {
-  margin: 0 0 2.5rem;
+  max-width: 30rem;
+  margin: 0 auto 2.5rem;
 }
 .teamphoto img {
   display: block;
@@ -1384,6 +1385,47 @@ code {
   margin: 0;
   font-size: 0.92rem;
   color: #c8d6c3;
+}
+
+/* ------------------------------------------------ 성과 사진 2장 */
+.winsphotos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+.winsphotos figure {
+  margin: 0;
+  min-width: 0;
+}
+.winsphotos img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 2px solid var(--forest);
+}
+.winsphotos figcaption {
+  margin-top: 0.5rem;
+  font-family: var(--font-data);
+  font-size: 1rem;
+  color: #c8d6c3;
+}
+
+/* ------------------------------------------------ 현장 사진 그리드 */
+.groundphotos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: 0.75rem;
+  margin: 0 0 2rem;
+}
+.groundphotos img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border: 2px solid var(--outline);
 }
 
 /* ---------------------------------------- SMKN 4 확산 실증 블록 */

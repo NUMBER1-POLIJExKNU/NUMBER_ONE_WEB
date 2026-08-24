@@ -117,7 +117,6 @@
   "ground.edu.items": "AI 활용 음악 창작 · AI 활용 바틱과 현대미술의 교류 · 디지털 도구로 만든 한국 전통 예절 놀이 · IT 프로젝트 관리 기법",
   "ground.culture.title": "문화 교류",
   "ground.culture.items": "K-I Food Day · Green Earth Day · K-I Speech Day · K-I Sports Day",
-  "ground.photos": "활동 사진은 정리되는 대로 추가됩니다.",
   "social.eyebrow": "활동 기록",
   "social.title": "인스타그램 @no.1_wfk",
   "social.lede": "젬버에서 보낸 3주가 이 안에 있습니다. 게시물을 누르면 인스타그램으로 이동합니다.",
@@ -169,5 +168,7 @@
   "team.poster.caption": "2026년 7월 31일, 프로젝트를 시작하며 아홉 명이 적은 각오",
   "shipped.web.note": "화면의 측정값은 젬버 현장의 센서가 기록한 실데이터입니다.",
   "shipped.camera.note": "현장에서 학습시키고, 사흘 뒤 현장에서 다시 학습시킨 모델입니다. 그 이야기는 아래 재학습 섹션에 있습니다.",
-  "team.photo.caption": "젬버에서, 같은 포즈로"
+  "team.photo.caption": "아홉 명 전원, 젬버에서",
+  "wins.photo1.caption": "POLIJE 시상 무대, 1ST PLACE",
+  "wins.photo2.caption": "K-Food Day — 카메라가 돌아가는 중"
 }

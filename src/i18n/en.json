@@ -117,7 +117,6 @@
   "ground.edu.items": "AI-assisted music creation · AI-assisted batik meets contemporary art · Korean traditional etiquette games built with digital tools · IT project management",
   "ground.culture.title": "Cultural exchange",
   "ground.culture.items": "K-I Food Day · Green Earth Day · K-I Speech Day · K-I Sports Day",
-  "ground.photos": "Photographs from the activities will be added as they are collected.",
   "social.eyebrow": "Field record",
   "social.title": "Instagram @no.1_wfk",
   "social.lede": "Three weeks in Jember, kept here. Tap a post to open it on Instagram.",
@@ -169,5 +168,7 @@
   "team.poster.caption": "31 July 2026 — what each of the nine wrote as the project began",
   "shipped.web.note": "The readings on screen are real data recorded by the sensors in Jember.",
   "shipped.camera.note": "Trained in the field, then retrained in the field three days later. That story is in the retrain section below.",
-  "team.photo.caption": "In Jember, striking the same pose"
+  "team.photo.caption": "All nine of us, in Jember",
+  "wins.photo1.caption": "On the POLIJE stage — 1st place",
+  "wins.photo2.caption": "K-Food Day, with the cameras rolling"
 }
