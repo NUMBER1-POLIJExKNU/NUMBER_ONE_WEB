@@ -802,7 +802,8 @@ code {
   color: var(--grass-light);
   font-family: Consolas, "Courier New", monospace;
   font-size: 0.85rem;
-  white-space: pre;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
 }
 .evidence__link {
   position: absolute;
