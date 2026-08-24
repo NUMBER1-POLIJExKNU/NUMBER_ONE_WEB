@@ -65,7 +65,7 @@
   "shipped.web.body": "Pembacaan sensor berubah menjadi suasana hati tanaman, lalu suasana hati itu memunculkan misi perawatan. Ketika pengguna benar-benar menyiram, pembacaan berikutnya memverifikasinya, dan keberhasilan memberi XP, level ikatan, serta lencana. Maskotnya bernama <strong>Jamkachu</strong>, diambil dari nama Jember.",
   "shipped.mobile.name": "Mobile PlantEmoji",
   "shipped.mobile.tagline": "Tidak berhenti di web — kami juga merilis aplikasi mobile.",
-  "shipped.mobile.body": "Lima layar Flutter melakukan polling ke backend PlantMoji setiap sepuluh detik. Sprite tanaman tumbuh melalui empat tahap sesuai level yang dihitung server, dan koleksi suasana hati serta buku harian berbagi status yang sama dengan aplikasi web. Pemindaian kamera mengulang enkode JPEG pada kualitas 72, 60, 48, dan 36 sampai unggahan muat dalam 195 KB.",
+  "shipped.mobile.body": "Dasbor, kebun, kamera, koleksi, buku harian tanam — lima layar Flutter tersambung langsung dengan server PlantMoji. Siram tanamannya di web, dan Jamkachu di ponsel ikut tumbuh. Pemindaian kamera mengecilkan sendiri ukuran unggahannya agar tetap lancar di jaringan lokal yang lambat.",
   "shipped.mobile.note": "Aplikasi web dan aplikasi mobile berbagi satu status permainan. Rawat tanamannya dari salah satu, progresnya tetap berlanjut.",
   "shipped.design.name": "Desain pixel farm & UI/UX",
   "shipped.design.tagline": "Yang kami gambar menjadi produknya sendiri.",

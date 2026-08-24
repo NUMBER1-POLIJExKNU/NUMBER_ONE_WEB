@@ -65,7 +65,7 @@
   "shipped.web.body": "A sensor reading turns into a plant's mood, and that mood issues a care quest. When you actually water the plant, the next reading verifies it, and success pays out XP, bond levels and badges. The mascot is called <strong>Jamkachu</strong>, after Jember.",
   "shipped.mobile.name": "Mobile PlantEmoji",
   "shipped.mobile.tagline": "We did not stop at the web — we shipped a mobile app too.",
-  "shipped.mobile.body": "Five Flutter screens poll the PlantMoji backend every ten seconds. The plant sprite grows through four stages driven by the level the server computes, and the mood collection and grow diary share the same state as the web app. The camera scan re-encodes JPEG at quality 72, 60, 48 and 36 until the upload fits a 195 KB budget.",
+  "shipped.mobile.body": "Dashboard, garden, camera, collection, grow diary — five Flutter screens stay in sync with the PlantMoji server. Water the plant on the web, and the Jamkachu on mobile grows with it. The camera scan trims its own upload size so it holds up even on slow local networks.",
   "shipped.mobile.note": "The web app and the mobile app share one game state. Care for the plant from either one and the same progress carries over.",
   "shipped.design.name": "Pixel farm design & UI/UX",
   "shipped.design.tagline": "What we drew became the product itself.",
