@@ -35,7 +35,7 @@ export interface Metric {
  * 인원 표로 겨루는 구도를 스스로 만들지 않습니다.
  */
 export const METRICS: Metric[] = [
-  { value: 2, unitKey: "numbers.first", subKey: "numbers.first.sub" },
+  { value: 1, unitKey: "numbers.first", subKey: "numbers.first.sub" },
   { value: 9, unitKey: "numbers.team", subKey: "numbers.team.sub" },
   { value: 22, unitKey: "numbers.days", subKey: "numbers.days.sub" },
   { value: 3, unitKey: "numbers.deploys", subKey: "numbers.deploys.sub" },
