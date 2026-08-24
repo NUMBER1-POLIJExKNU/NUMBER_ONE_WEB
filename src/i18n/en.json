@@ -32,8 +32,8 @@
   "philos.s2.body": "Put a sensor on it and the sense becomes numbers. Keep logging soil moisture, temperature, humidity, light and pH, and \"I know because I've done it for years\" turns into \"at this reading, do this.\" From there you can check it, and you can teach it.",
   "philos.s3.tag": "NEXT GENERATION",
   "philos.s3.title": "The next generation",
-  "philos.s3.body": "But nobody looks at raw numbers. So we turned them into a face. When the plant looks thirsty, kids water it without being told. Whether they actually did is confirmed by the next reading. Care for it well and the XP goes up.",
-  "philos.quote": "We are not replacing traditional farming wisdom. We are making it measurable, teachable, and sustainable.",
+  "philos.s3.body": "A number has to be learned before it can be read; a face is read at once. So we turned the sensor readings into the plant's expression. See a thirsty face, water the plant, and the next reading confirms the change — care for it well and the XP builds up.",
+  "philos.quote": "A farmer's instinct becomes a record, and the record becomes the next generation's starting point.",
   "legacy.eyebrow": "What sets this apart",
   "legacy.title": "What stayed after we left",
   "legacy.lede": "Volunteering usually ends when the trip ends. We wanted what we left behind to keep running.",
@@ -167,5 +167,7 @@
   "ground.program.label": "Programme",
   "ground.program.value": "WFK IT Volunteer Corps (NIA · KNU)",
   "social.tags": "#해외봉사 #월드프렌즈코리아 #IT봉사단 #NIA #NUMBERONE",
-  "team.poster.caption": "31 July 2026 — what each of the nine wrote as the project began"
+  "team.poster.caption": "31 July 2026 — what each of the nine wrote as the project began",
+  "shipped.web.note": "The readings on screen are real data recorded by the sensors in Jember.",
+  "shipped.camera.note": "Trained in the field, then retrained in the field three days later. That story is in the retrain section below."
 }

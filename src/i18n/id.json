@@ -32,8 +32,8 @@
   "philos.s2.body": "Pasang sensor, dan kepekaan itu menjadi angka. Terus catat kelembapan tanah, suhu, kelembapan udara, cahaya, dan pH, maka \"saya tahu karena sudah bertahun-tahun\" berubah menjadi \"pada angka ini, lakukan ini.\" Sejak itu ia bisa diperiksa, dan bisa diajarkan.",
   "philos.s3.tag": "NEXT GENERATION",
   "philos.s3.title": "Generasi berikutnya",
-  "philos.s3.body": "Tapi tidak ada yang mau melihat angka mentah. Maka kami mengubahnya menjadi wajah. Ketika tanamannya tampak haus, anak-anak menyiramnya tanpa disuruh. Benar tidaknya dikonfirmasi oleh pembacaan berikutnya. Rawat dengan baik, XP-nya naik.",
-  "philos.quote": "Kami tidak menggantikan kearifan bertani tradisional. Kami membuatnya terukur, dapat diajarkan, dan berkelanjutan.",
+  "philos.s3.body": "Angka harus dipelajari dulu sebelum bisa dibaca; wajah langsung terbaca. Maka kami mengubah pembacaan sensor menjadi ekspresi tanaman. Lihat wajah kehausan, siram tanamannya, dan pembacaan berikutnya mengonfirmasi perubahannya — rawat dengan baik dan XP pun bertambah.",
+  "philos.quote": "Naluri petani menjadi catatan, dan catatan menjadi titik awal bagi generasi berikutnya.",
   "legacy.eyebrow": "Yang membedakan",
   "legacy.title": "Yang tertinggal setelah kami pulang",
   "legacy.lede": "Kegiatan relawan biasanya berakhir ketika perjalanannya berakhir. Kami ingin apa yang kami tinggalkan tetap berjalan.",
@@ -167,5 +167,7 @@
   "ground.program.label": "Program",
   "ground.program.value": "Korps Relawan TI WFK (NIA · KNU)",
   "social.tags": "#해외봉사 #월드프렌즈코리아 #IT봉사단 #NIA #NUMBERONE",
-  "team.poster.caption": "31 Juli 2026 — tekad yang ditulis sembilan orang saat proyek dimulai"
+  "team.poster.caption": "31 Juli 2026 — tekad yang ditulis sembilan orang saat proyek dimulai",
+  "shipped.web.note": "Angka yang tampil adalah data nyata yang direkam sensor di Jember.",
+  "shipped.camera.note": "Dilatih di lapangan, lalu dilatih ulang di lapangan tiga hari kemudian. Kisahnya ada di bagian pelatihan ulang di bawah."
 }

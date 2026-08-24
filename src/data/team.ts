@@ -27,6 +27,8 @@ export interface Member {
 export interface Side {
   id: "polije" | "knu";
   flag: string;
+  /** 로컬 국기 SVG — 국기 이모지는 Windows에서 글자로 렌더됩니다 */
+  flagSrc: string;
   labelKey: string;
   members: Member[];
 }
@@ -37,6 +39,7 @@ export const SIDES: Side[] = [
   {
     id: "polije",
     flag: "🇮🇩",
+    flagSrc: "/images/flag-id.svg",
     labelKey: "team.polije",
     members: [
       { name: "Rama", legalName: null, role: "PL", bio: "Don't believe in the you that believes in me. Believe in the you that believes in yourself.", photo: null },
@@ -49,6 +52,7 @@ export const SIDES: Side[] = [
   {
     id: "knu",
     flag: "🇰🇷",
+    flagSrc: "/images/flag-kr.svg",
     labelKey: "team.knu",
     members: [
       { name: "오윤성", legalName: null, role: "PL", bio: "We are No.1, we will be the No.1!", photo: null },

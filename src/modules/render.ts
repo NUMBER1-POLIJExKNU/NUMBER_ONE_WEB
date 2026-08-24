@@ -97,9 +97,12 @@ export function renderTeam(mount: HTMLElement): void {
     col.dataset.side = side.id;
 
     const head = el("h3", "side__head");
-    const flag = el("span", "side__flag");
-    flag.textContent = side.flag;
-    flag.setAttribute("role", "img");
+    const flag = el("img", "side__flag");
+    flag.src = side.flagSrc;
+    flag.alt = "";
+    flag.width = 27;
+    flag.height = 18;
+    flag.decoding = "async";
     const label = el("span");
     bind(label, side.labelKey);
     head.append(flag, label);
