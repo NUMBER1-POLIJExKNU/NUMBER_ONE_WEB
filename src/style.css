@@ -576,6 +576,7 @@ code {
 
 /* 긴 영어 낭독조 제목 — 기본 타이틀 크기면 화면을 다 먹습니다 */
 .section__title--pledge {
+  font-family: "Paperlogy", "Apple SD Gothic Neo", sans-serif;
   font-size: calc(clamp(1.05rem, 3.2vw, 1.6rem) * var(--display-scale));
   line-height: 1.7;
   color: var(--forest);
@@ -1133,8 +1134,9 @@ code {
   margin: 1.5rem 0 0;
   padding-top: 1.25rem;
   border-top: 2px dashed var(--soil-light);
-  font-family: "Press Start 2P", monospace;
-  font-size: clamp(0.6rem, 1.8vw, 0.8rem);
+  font-family: "Paperlogy", "Apple SD Gothic Neo", sans-serif;
+  font-weight: 700;
+  font-size: clamp(0.95rem, 2.2vw, 1.15rem);
   line-height: 1.6;
   text-align: center;
   color: var(--forest);
