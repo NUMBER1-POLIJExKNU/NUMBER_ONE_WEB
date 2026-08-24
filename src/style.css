@@ -1328,6 +1328,23 @@ code {
   }
 }
 
+/* ------------------------------------------------------ SDG 표기 */
+.sdg {
+  margin: 1.5rem 0 0;
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: var(--ink-soft);
+}
+.sdg__label {
+  display: block;
+  font-family: var(--font-data);
+  font-size: 1rem;
+  color: var(--soil-dark);
+}
+.sdg__items {
+  display: block;
+}
+
 /* --------------------------------------------------- 성과 (외부 검증)
    우리가 우리를 평가한 게 아니라는 점이 이 섹션의 전부입니다.
    그래서 순위보다 "누가 심사했는지"를 같은 크기로 세웁니다. */

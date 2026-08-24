@@ -84,7 +84,7 @@
   "codev.org.label": "Where the repositories live",
   "codev.org.desc": "Both institutions are written into the organisation name. All three repositories are public.",
   "codev.dir1.label": "Main-PlantMoji",
-  "codev.dir1.desc": "Our teammate Revi put the Camera AI model he retrained in the field straight into the web app codebase. The background-music system came from the same hands.",
+  "codev.dir1.desc": "Our teammate Reno put the Camera AI model he retrained in the field straight into the web app codebase. The background-music system came from the same hands.",
   "codev.dir2.label": "Mobile-PlantEmoji",
   "codev.dir2.desc": "Our teammate Jinseok Seo wired the Flutter app to the PlantMoji APIs and made bond level and sensor state actually show up.",
   "codev.shared.label": "One shared state",
@@ -183,5 +183,7 @@
   "codev.photo.caption": "14 August 2026 — one PlantMoji, running on three devices",
   "retrain.photo.caption": "Evening, 7 August 2026 — hands fitting the sensors",
   "numbers.team": "people",
-  "numbers.team.sub": "one team from two countries"
+  "numbers.team.sub": "one team from two countries",
+  "philos.sdg.label": "Sustainable Development Goals this work connects to",
+  "philos.sdg.items": "SDG 4 Quality Education · SDG 9 Industry, Innovation and Infrastructure · SDG 11 Sustainable Cities and Communities"
 }

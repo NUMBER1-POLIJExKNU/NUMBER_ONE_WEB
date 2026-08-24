@@ -84,7 +84,7 @@
   "codev.org.label": "Tempat repositori berada",
   "codev.org.desc": "Kedua institusi tertulis di nama organisasinya. Ketiga repositori bersifat publik.",
   "codev.dir1.label": "Main-PlantMoji",
-  "codev.dir1.desc": "Rekan kami Revi memasukkan model Camera AI yang ia latih ulang di lapangan langsung ke basis kode aplikasi web. Sistem musik latar juga lahir dari tangan yang sama.",
+  "codev.dir1.desc": "Rekan kami Reno memasukkan model Camera AI yang ia latih ulang di lapangan langsung ke basis kode aplikasi web. Sistem musik latar juga lahir dari tangan yang sama.",
   "codev.dir2.label": "Mobile-PlantEmoji",
   "codev.dir2.desc": "Rekan kami Jinseok Seo menyambungkan aplikasi Flutter ke API PlantMoji dan membuat level ikatan serta status sensor benar-benar tampil.",
   "codev.shared.label": "Satu status bersama",
@@ -183,5 +183,7 @@
   "codev.photo.caption": "14 Agustus 2026 — satu PlantMoji, berjalan di tiga perangkat",
   "retrain.photo.caption": "Malam, 7 Agustus 2026 — tangan yang memasang sensor",
   "numbers.team": "orang",
-  "numbers.team.sub": "satu tim dari dua negara"
+  "numbers.team.sub": "satu tim dari dua negara",
+  "philos.sdg.label": "Tujuan Pembangunan Berkelanjutan yang terhubung dengan kegiatan ini",
+  "philos.sdg.items": "SDG 4 Pendidikan Berkualitas · SDG 9 Industri, Inovasi dan Infrastruktur · SDG 11 Kota dan Komunitas Berkelanjutan"
 }

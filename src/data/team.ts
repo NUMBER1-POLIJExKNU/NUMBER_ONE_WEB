@@ -5,8 +5,7 @@
  * 표기 원칙
  * - 인니측은 팀에서 확인해 준 표기(Rama · Dhede · Marquez · Reno · Kiki)를 씁니다.
  *   회의록의 "Rema"는 Rama의 오기이며 별도 인물이 아닙니다.
- * - git 실명(Revi Ardiano 등)과 닉네임의 대응은 아직 미확인이라 병기하지 않습니다.
- *   본인 확인 + 공개 동의가 끝나면 `legalName`을 채우세요.
+ * - Reno = Revi Ardiano (2026-08-25 팀 확인). 나머지 git 실명 대응은 미확인.
  * - `bio`에는 팀 각오 포스터(20260731 PROJECT START)의 각자 모토가 들어 있습니다.
  */
 
@@ -45,7 +44,7 @@ export const SIDES: Side[] = [
       { name: "Rama", legalName: null, role: "PL", bio: "Don't believe in the you that believes in me. Believe in the you that believes in yourself.", photo: null },
       { name: "Dhede", legalName: null, role: "TL", bio: "Every failure is a step closer to success.", photo: null },
       { name: "Marquez", legalName: null, role: "TL", bio: "Let's go! New project, new goal!", photo: null },
-      { name: "Reno", legalName: null, role: "KL", bio: "It doesn't matter how slowly you go as long as you do not stop.", photo: null },
+      { name: "Reno", legalName: "Revi Ardiano", role: "KL", bio: "It doesn't matter how slowly you go as long as you do not stop.", photo: null },
       { name: "Kiki", legalName: null, role: "ML", bio: "We're young, let's live in the moment!", photo: null },
     ],
   },

@@ -84,7 +84,7 @@
   "codev.org.label": "저장소가 사는 곳",
   "codev.org.desc": "조직 이름에 두 기관이 그대로 들어가 있고, 저장소 세 개 모두 공개입니다.",
   "codev.dir1.label": "Main-PlantMoji",
-  "codev.dir1.desc": "Revi 학생이 현장에서 다시 학습시킨 Camera AI 모델을 웹앱 코드베이스에 직접 넣었습니다. 배경음악 시스템도 같은 사람 손에서 나왔습니다.",
+  "codev.dir1.desc": "Reno 학생이 현장에서 다시 학습시킨 Camera AI 모델을 웹앱 코드베이스에 직접 넣었습니다. 배경음악 시스템도 같은 사람 손에서 나왔습니다.",
   "codev.dir2.label": "Mobile-PlantEmoji",
   "codev.dir2.desc": "서진석 학생이 Flutter 앱을 PlantMoji API에 연결하고, 유대 레벨과 센서 상태가 실제로 뜨게 만들었습니다.",
   "codev.shared.label": "하나의 상태를 공유",
@@ -183,5 +183,7 @@
   "codev.photo.caption": "2026년 8월 14일 — 세 기기에 띄운 하나의 PlantMoji",
   "retrain.photo.caption": "2026년 8월 7일 저녁, 센서를 다는 손",
   "numbers.team": "명",
-  "numbers.team.sub": "두 나라에서 온 한 팀"
+  "numbers.team.sub": "두 나라에서 온 한 팀",
+  "philos.sdg.label": "이 활동이 잇닿는 지속가능발전목표(SDGs)",
+  "philos.sdg.items": "SDG 4 양질의 교육 · SDG 9 산업, 혁신과 인프라 · SDG 11 지속가능한 도시와 공동체"
 }
