@@ -1122,6 +1122,19 @@ code {
   color: var(--soil-dark);
 }
 
+/* 페이지의 마지막 문장 — 낭독조 한 줄. 항상 영어 원문 그대로. */
+.footer__pledge {
+  grid-column: 1 / -1;
+  margin: 1.5rem 0 0;
+  padding-top: 1.25rem;
+  border-top: 2px dashed var(--soil-light);
+  font-family: var(--font-data);
+  font-size: clamp(1.05rem, 2.4vw, 1.3rem);
+  line-height: 1.6;
+  text-align: center;
+  color: var(--forest);
+}
+
 /* -------------------------------------------------------- 스크롤 등장 */
 .reveal {
   opacity: 0;
