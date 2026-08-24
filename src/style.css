@@ -15,12 +15,6 @@
    막히면 픽셀 정체성이 통째로 무너지고, 외부 요청 하나가 렌더를 막습니다.
    빌드 때 실제 쓰는 글자로만 서브셋됩니다 → scripts/subset-fonts.mjs */
 @font-face {
-  font-family: "Maplestory";
-  src: url("/fonts/Maplestory-Bold.subset.woff2") format("woff2");
-  font-weight: 400 800;
-  font-display: swap;
-}
-@font-face {
   font-family: "Paperlogy";
   src: url("/fonts/Paperlogy-Regular.subset.woff2") format("woff2");
   font-weight: 300 400;
@@ -66,7 +60,7 @@
   --ink: var(--outline);
   --ink-soft: #5b6b56;
 
-  --font-display: "Maplestory", "Paperlogy", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  --font-display: "Paperlogy", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
   --font-data: "Paperlogy", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
   --weight-data: 500;
   --font-body: "Paperlogy", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
