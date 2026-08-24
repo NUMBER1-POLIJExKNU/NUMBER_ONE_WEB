@@ -28,7 +28,7 @@ export interface InstaPost {
 /** 팀 공식 계정 핸들. @는 빼고 적습니다. 비우면 팔로우 버튼이 숨겨집니다. */
 export const INSTAGRAM_HANDLE = "no.1_wfk";
 
-/* 2026-08-25, @no.1_wfk 프로필에서 최신 12개(전체 24개 중).
+/* 2026-08-25, @no.1_wfk 프로필에서 전체 25개.
    썸네일은 public/social/에 로컬 저장 — 인스타 CDN 링크는 서명이 만료되면 깨집니다. */
 export const POSTS: InstaPost[] = [
   { url: "https://www.instagram.com/no.1_wfk/p/DbZ8X6FEVPI/", image: "DbZ8X6FEVPI.jpg", alt: "7/29 활동일지 — 현지 친구에게 배우는 인도네시아 여행 회화" },
@@ -43,8 +43,20 @@ export const POSTS: InstaPost[] = [
   { url: "https://www.instagram.com/no.1_wfk/p/Dbr8ROEkb8f/", image: "Dbr8ROEkb8f.jpg", alt: "8/3 활동일지 — 진정한 해외봉사의 시작! Opening Ceremony" },
   { url: "https://www.instagram.com/no.1_wfk/reel/DbrpYQMx6b0/", image: "DbrpYQMx6b0.jpg", alt: "해외봉사 선발 릴스" },
   { url: "https://www.instagram.com/wfk_knupolije/reel/DbnosYFSib4/", image: "DbnosYFSib4.jpg", alt: "KNU × POLIJE 문화교류 릴스" },
+  { url: "https://www.instagram.com/wfk_knupolije/reel/DbngGkaOFk6/", image: "DbngGkaOFk6.jpg", alt: "레트로 필터 단체 릴스" },
+  { url: "https://www.instagram.com/no.1_wfk/reel/DbmwH19R6Yk/", image: "DbmwH19R6Yk.jpg", alt: "수박 화채 릴스" },
+  { url: "https://www.instagram.com/no.1_wfk/p/Dbke-y1EXQR/", image: "Dbke-y1EXQR.jpg", alt: "No.1 팀이 궁금해?! 인도네시아 멤버 소개" },
+  { url: "https://www.instagram.com/no.1_wfk/p/DbkNi2ekVOi/", image: "DbkNi2ekVOi.jpg", alt: "8/1 활동일지 — 카카오농장 어디까지 가봤니" },
+  { url: "https://www.instagram.com/no.1_wfk/reel/DbhqHAHxgDm/", image: "DbhqHAHxgDm.jpg", alt: "인도네시아 친구들과 함께 하는 No.1 팀송 챌린지" },
+  { url: "https://www.instagram.com/no.1_wfk/reel/DbaTS1ExPHa/", image: "DbaTS1ExPHa.jpg", alt: "인도네시아에서 닮은꼴 찾기" },
+  { url: "https://www.instagram.com/no.1_wfk/reel/DbX1FsKRfUN/", image: "DbX1FsKRfUN.jpg", alt: "Where are you guys going 릴스" },
+  { url: "https://www.instagram.com/no.1_wfk/reel/DbV--V6vEDe/", image: "DbV--V6vEDe.jpg", alt: "여행 갈 때 친구 유형" },
+  { url: "https://www.instagram.com/no.1_wfk/reel/DbU9HPPxREg/", image: "DbU9HPPxREg.jpg", alt: "KIV 릴스" },
+  { url: "https://www.instagram.com/no.1_wfk/reel/DbRuwKrv7Mk/", image: "DbRuwKrv7Mk.jpg", alt: "출국 준비 릴스" },
+  { url: "https://www.instagram.com/no.1_wfk/p/DbPZ8w0Rrsa/", image: "DbPZ8w0Rrsa.jpg", alt: "인도네시아 입국 D-1" },
+  { url: "https://www.instagram.com/no.1_wfk/reel/DbKv4Yox1yZ/", image: "DbKv4Yox1yZ.jpg", alt: "Pov: 해외 봉사 가기 전 우리들" },
+  { url: "https://www.instagram.com/no.1_wfk/p/DbF7fLJEWYj/", image: "DbF7fLJEWYj.jpg", alt: "2026 WFK IT 봉사단 발대식" },
 ];
-
 export const HAS_SOCIAL = POSTS.length > 0 || INSTAGRAM_HANDLE.length > 0;
 
 export const profileUrl = (): string =>

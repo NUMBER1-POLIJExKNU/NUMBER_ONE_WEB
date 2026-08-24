@@ -16,7 +16,7 @@
   "hero.title1": "경험에서 데이터로,",
   "hero.title2": "데이터에서 다음 세대로.",
   "hero.lede": "2026년 7월 27일부터 8월 17일까지 22일 동안 인도네시아 젬버에 있었습니다. Politeknik Negeri Jember(POLIJE) 학생 다섯 명과 경북대학교(KNU) 학생 네 명이 한 팀이었습니다. 농사 짓는 법은 대개 사람에게서 사람으로 전해집니다. 그걸 데이터로 남겨서 다음 세대가 이어받게 하고 싶었고, 그래서 <strong>PlantMoji</strong>를 만들었습니다.",
-  "hero.livenow": "지금 열어볼 수 있습니다",
+  "hero.livenow": "지금 열어볼 수 있습니다 · 2026.08.25 기준 가동 중",
   "hero.cta.web": "웹앱 열기",
   "hero.cta.mobile": "모바일 앱 열기",
   "hero.cta.code": "소스 코드",
@@ -147,9 +147,9 @@
   "wins.w2.title": "K-Food Day",
   "wins.w2.judge": "참가자 투표 + 교수 채점 + 릴스 좋아요",
   "wins.w2.body": "참가자 투표와 교수 채점, 릴스 좋아요를 합쳐서 정했습니다. 그날 현장에 있던 사람들이 뽑아준 셈입니다.",
-  "wins.w3.title": "KBS 다큐온 촬영",
-  "wins.w3.judge": "2026년 9월 5일 방영 예정",
-  "wins.w3.body": "파견 기간 내내 촬영이 붙었고, 우리 팀 분량이 꽤 됩니다.",
+  "wins.w3.title": "KBS 다큐온 방영 예정",
+  "wins.w3.judge": "2026년 9월 5일 (KBS 1TV)",
+  "wins.w3.body": "KBS 다큐멘터리 프로그램 「다큐온」이 파견 기간 전반에 걸쳐 팀의 활동을 촬영했습니다.",
   "ground.smk.title": "SMK Negeri 4 Jember",
   "ground.smk.body": "원래 이 학교 일정에는 K-공연만 있었습니다. PlantMoji도 해보면 어떻겠냐고 팀원이 먼저 제안했고, 학교와 협의해 체험 세션이 추가됐습니다. 학생들이 직접 게임을 하면서 식물을 돌봤고, 반응이 아주 좋았습니다.",
   "ground.smk.note": "교실 하나가 순식간에 스마트팜이 됐습니다. 이 세션은 계획에 없던 것을 우리가 만들어낸 시간이었습니다.",
@@ -163,5 +163,8 @@
   "numbers.days": "일",
   "numbers.days.sub": "젬버 현장에서",
   "numbers.docu": "회",
-  "numbers.docu.sub": "KBS 다큐온 방영 (9월 5일 예정)"
+  "numbers.docu.sub": "KBS 다큐온 방영 (9월 5일 예정)",
+  "ground.program.label": "소속 프로그램",
+  "ground.program.value": "WFK IT봉사단 (NIA · 경북대학교)",
+  "social.tags": "#해외봉사 #월드프렌즈코리아 #IT봉사단 #NIA #NUMBERONE"
 }

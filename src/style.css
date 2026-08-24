@@ -1429,6 +1429,15 @@ code {
   opacity: 1;
 }
 
+.posts__tags {
+  margin: 1.25rem 0 0;
+  font-family: var(--font-data);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--forest);
+  overflow-wrap: anywhere;
+}
+
 .posts__foot {
   margin: 1.5rem 0 0;
 }
