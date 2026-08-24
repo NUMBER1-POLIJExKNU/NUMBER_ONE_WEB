@@ -37,7 +37,7 @@ export interface Metric {
 export const METRICS: Metric[] = [
   { value: 1, unitKey: "numbers.first", subKey: "numbers.first.sub" },
   { value: 9, unitKey: "numbers.team", subKey: "numbers.team.sub" },
-  { value: 22, unitKey: "numbers.days", subKey: "numbers.days.sub" },
+  { value: 528, unitKey: "numbers.days", subKey: "numbers.days.sub" },
   { value: 3, unitKey: "numbers.deploys", subKey: "numbers.deploys.sub" },
   { value: 280, unitKey: "numbers.commits", subKey: "numbers.commits.sub" },
   { value: 300, unitKey: "numbers.sprites", subKey: "numbers.sprites.sub" },
