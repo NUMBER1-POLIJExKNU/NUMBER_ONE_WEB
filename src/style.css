@@ -292,7 +292,7 @@ code {
 .nav__link {
   flex: 0 0 auto;
   padding: 0.4rem 0.6rem;
-  font-family: var(--font-display);
+  font-family: "Paperlogy", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
   font-weight: 700;
   font-size: calc(0.7rem * var(--display-scale));
   text-decoration: none;
