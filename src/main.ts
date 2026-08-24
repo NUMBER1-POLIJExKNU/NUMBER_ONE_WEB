@@ -11,7 +11,6 @@ import {
   renderSocial,
   renderMetrics,
 } from "./modules/render";
-import { VERIFIED_ON } from "./data/evidence";
 
 function mount(selector: string): HTMLElement {
   const node = document.querySelector<HTMLElement>(selector);
@@ -30,8 +29,6 @@ async function main(): Promise<void> {
   renderSocial(mount("#social"), mount("#social-mount"));
   renderMetrics(mount("#metrics-mount"));
 
-  const stamp = document.querySelector<HTMLElement>("#verified-on");
-  if (stamp) stamp.textContent = VERIFIED_ON;
 
   initLangSwitcher();
   initNavigation();

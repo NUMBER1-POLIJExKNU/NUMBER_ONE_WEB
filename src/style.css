@@ -1122,13 +1122,6 @@ code {
   font-size: 0.82rem;
   color: var(--ink-soft);
 }
-.footer__stamp {
-  margin: 0;
-  font-family: var(--font-data);
-  font-size: 1rem;
-  color: var(--soil-dark);
-}
-
 /* 페이지의 마지막 문장 — 낭독조 한 줄. 항상 영어 원문 그대로. */
 .footer__pledge {
   grid-column: 1 / -1;
