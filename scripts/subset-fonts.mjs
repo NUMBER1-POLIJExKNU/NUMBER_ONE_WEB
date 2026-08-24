@@ -53,9 +53,10 @@ async function run() {
   const text = await collectText();
   await mkdir(outDir, { recursive: true });
 
-  // 디스플레이는 페이퍼로지(vendor/fonts, 무료 폰트) — 기하학적 모던체.
-  // Press Start 2P는 히어로 구호·푸터 낭독(영문 브랜드 라인)에만 씁니다.
+  // 제목은 메이플스토리체(넥슨 무료 폰트) — 게임 정체성.
+  // 본문·캡션은 페이퍼로지, Press Start 2P는 구호·낭독 전용.
   const faces = [
+    [join(root, "vendor", "fonts", "Maplestory-Bold.woff2"), "Maplestory-Bold.subset.woff2"],
     [join(root, "vendor", "fonts", "Paperlogy-4Regular.woff2"), "Paperlogy-Regular.subset.woff2"],
     [join(root, "vendor", "fonts", "Paperlogy-7Bold.woff2"), "Paperlogy-Bold.subset.woff2"],
     [join(root, "vendor", "fonts", "Paperlogy-5Medium.woff2"), "Paperlogy-Medium.subset.woff2"],
