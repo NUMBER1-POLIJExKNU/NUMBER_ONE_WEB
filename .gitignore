@@ -12,3 +12,8 @@ implementation_plan.*.bak
 
 .DS_Store
 *.local
+
+# 로컬 에이전트 도구 (Higgsfield 스킬 등) — 사이트 소스가 아닙니다
+.agents/
+.claude/
+skills-lock.json
