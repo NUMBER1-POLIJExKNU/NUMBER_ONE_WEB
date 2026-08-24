@@ -28,9 +28,21 @@ export interface InstaPost {
 /** 팀 공식 계정 핸들. @는 빼고 적습니다. 비우면 팔로우 버튼이 숨겨집니다. */
 export const INSTAGRAM_HANDLE = "no.1_wfk";
 
+/* 2026-08-25, @no.1_wfk 프로필에서 최신 12개(전체 24개 중).
+   썸네일은 public/social/에 로컬 저장 — 인스타 CDN 링크는 서명이 만료되면 깨집니다. */
 export const POSTS: InstaPost[] = [
-  // 예시 — 실제 값으로 바꾸고 주석을 푸세요.
-  // { url: "https://www.instagram.com/p/XXXXXXXXXXX/", image: "post-01.jpg", alt: "POLIJE에서 진행한 첫 스마트팜 수업" },
+  { url: "https://www.instagram.com/no.1_wfk/p/DbZ8X6FEVPI/", image: "DbZ8X6FEVPI.jpg", alt: "7/29 활동일지 — 현지 친구에게 배우는 인도네시아 여행 회화" },
+  { url: "https://www.instagram.com/no.1_wfk/p/Dbh3c1aEU71/", image: "Dbh3c1aEU71.jpg", alt: "7/30 활동일지 — 인도네시아 호텔에서는 이것을 하면 안 된다?" },
+  { url: "https://www.instagram.com/no.1_wfk/p/DbccSrNkfdE/", image: "DbccSrNkfdE.jpg", alt: "7/31 활동일지 — 이슬람에서는 고양이가?" },
+  { url: "https://www.instagram.com/no.1_wfk/reel/DcbUuQhP4Hr/", image: "DcbUuQhP4Hr.jpg", alt: "학급 단체 릴스" },
+  { url: "https://www.instagram.com/no.1_wfk/p/DcQ9MmfDzNt/", image: "DcQ9MmfDzNt.jpg", alt: "8/6 활동일지 — 지치지 않는 No.1의 여름, 3주간 우리들의 각오" },
+  { url: "https://www.instagram.com/no.1_wfk/p/Db6C-pimEfD/", image: "Db6C-pimEfD.jpg", alt: "8/6 활동일지 — 인도네시아 바틱 체험" },
+  { url: "https://www.instagram.com/no.1_wfk/p/Dbw4qB8Ee9w/", image: "Dbw4qB8Ee9w.jpg", alt: "8/4 활동일지 — K-Food Day 기록: 화채 & 에스부아 만들기" },
+  { url: "https://www.instagram.com/no.1_wfk/reel/DbvFEECxBGp/", image: "DbvFEECxBGp.jpg", alt: "바틱 의상 릴스" },
+  { url: "https://www.instagram.com/no.1_wfk/reel/DbuY_hrRJi-/", image: "DbuY_hrRJi-.jpg", alt: "오락실 릴스" },
+  { url: "https://www.instagram.com/no.1_wfk/p/Dbr8ROEkb8f/", image: "Dbr8ROEkb8f.jpg", alt: "8/3 활동일지 — 진정한 해외봉사의 시작! Opening Ceremony" },
+  { url: "https://www.instagram.com/no.1_wfk/reel/DbrpYQMx6b0/", image: "DbrpYQMx6b0.jpg", alt: "해외봉사 선발 릴스" },
+  { url: "https://www.instagram.com/wfk_knupolije/reel/DbnosYFSib4/", image: "DbnosYFSib4.jpg", alt: "KNU × POLIJE 문화교류 릴스" },
 ];
 
 export const HAS_SOCIAL = POSTS.length > 0 || INSTAGRAM_HANDLE.length > 0;
