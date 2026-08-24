@@ -8,6 +8,7 @@
 import { SIDES, ROLE_ORDER, type Member } from "../data/team";
 import { HERO_ITEMS, SUPPORT_ITEMS, type Deliverable } from "../data/deliverables";
 import { CODEV, METRICS, RETRAIN, ARCH_NODES } from "../data/evidence";
+import { POSTS, HAS_SOCIAL, profileUrl } from "../data/social";
 import { t, translate } from "./i18n";
 
 function el<K extends keyof HTMLElementTagNameMap>(
@@ -279,6 +280,53 @@ export function renderArchitecture(mount: HTMLElement): void {
       mount.append(arrow);
     }
   });
+  translate(mount);
+}
+
+/* ------------------------------------------------- 인스타그램 기록 */
+
+export function renderSocial(section: HTMLElement, mount: HTMLElement): void {
+  if (!HAS_SOCIAL) {
+    // 아직 게시물이 없습니다. 빈 섹션을 세워두면 심사자에게 미완성으로 보입니다.
+    section.remove();
+    return;
+  }
+
+  for (const post of POSTS) {
+    const li = el("li", "post");
+
+    const a = el("a", "post__link");
+    a.href = post.url;
+    a.target = "_blank";
+    a.rel = "noopener noreferrer";
+    a.setAttribute("aria-label", post.alt);
+
+    const img = el("img", "post__img");
+    img.src = `/social/${post.image}`;
+    img.alt = post.alt;
+    img.loading = "lazy";
+    img.decoding = "async";
+    img.width = 600;
+    img.height = 600;
+
+    const cap = el("span", "post__cap");
+    bind(cap, "social.open");
+
+    a.append(img, cap);
+    li.append(a);
+    mount.append(li);
+  }
+
+  const follow = section.querySelector<HTMLAnchorElement>(".post__follow");
+  if (follow) {
+    const url = profileUrl();
+    if (url) {
+      follow.href = url;
+    } else {
+      follow.remove();
+    }
+  }
+
   translate(mount);
 }
 

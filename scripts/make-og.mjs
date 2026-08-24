@@ -37,10 +37,10 @@ const svg = `<svg xmlns='http://www.w3.org/2000/svg' width='${W}' height='${H}' 
     <rect x='880' y='120' width='48' height='16'/>
     <rect x='892' y='112' width='48' height='16'/>
   </g>
-  <text x='80' y='250' font-family='Consolas, monospace' font-size='34' fill='#397A2B' letter-spacing='2'>2026 WFK IT · POLIJE x KNU · JEMBER</text>
-  <text x='80' y='340' font-family='Segoe UI, Arial, sans-serif' font-weight='700' font-size='72' fill='#2B3A27'>Three weeks. Two countries.</text>
-  <text x='80' y='424' font-family='Segoe UI, Arial, sans-serif' font-weight='700' font-size='72' fill='#397A2B'>One codebase.</text>
-  <text x='80' y='494' font-family='Segoe UI, Arial, sans-serif' font-size='32' fill='#5B6B56'>NUMBER ONE — and it is still online.</text>
+  <text x='80' y='250' font-family='Consolas, monospace' font-size='34' fill='#397A2B' letter-spacing='2'>2026 WFK IT · TEAM NUMBER ONE · JEMBER</text>
+  <text x='80' y='340' font-family='Segoe UI, Arial, sans-serif' font-weight='700' font-size='72' fill='#2B3A27'>From wisdom to data,</text>
+  <text x='80' y='424' font-family='Segoe UI, Arial, sans-serif' font-weight='700' font-size='72' fill='#397A2B'>to the next generation.</text>
+  <text x='80' y='494' font-family='Segoe UI, Arial, sans-serif' font-size='32' fill='#5B6B56'>POLIJE x Kyungpook National University</text>
   <g>${soil}</g>
   <rect x='0' y='${H - 32}' width='${W}' height='32' fill='#2B3A27'/>
 </svg>`;

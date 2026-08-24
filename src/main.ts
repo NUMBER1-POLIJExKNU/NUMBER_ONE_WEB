@@ -9,6 +9,7 @@ import {
   renderCodev,
   renderTensorGrid,
   renderArchitecture,
+  renderSocial,
   renderMetrics,
 } from "./modules/render";
 import { VERIFIED_ON } from "./data/evidence";
@@ -28,6 +29,7 @@ async function main(): Promise<void> {
   renderCodev(mount("#codev-mount"));
   renderTensorGrid(mount("#tensor-mount"));
   renderArchitecture(mount("#arch-mount"));
+  renderSocial(mount("#social"), mount("#social-mount"));
   renderMetrics(mount("#metrics-mount"));
 
   const stamp = document.querySelector<HTMLElement>("#verified-on");

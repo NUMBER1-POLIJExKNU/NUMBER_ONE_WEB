@@ -26,13 +26,21 @@ export interface Metric {
   subKey: string;
 }
 
+/**
+ * 요약면 숫자.
+ *
+ * 코드량 지표(총 줄 수, 테스트 파일 수, API 개수)는 일부러 내렸습니다.
+ * 기술봉사 성과 심사에서 앞세울 것은 코드의 부피가 아닙니다.
+ * 수혜 인원·시수 수치도 올리지 않습니다 — 직접 교육 수강생이 없는 구조라
+ * 인원 표로 겨루는 구도를 스스로 만들지 않습니다.
+ */
 export const METRICS: Metric[] = [
-  { value: 280, unitKey: "numbers.commits", subKey: "numbers.commits.sub" },
-  { value: 22527, unitKey: "numbers.lines", subKey: "numbers.lines.sub" },
-  { value: 131, unitKey: "numbers.tests", subKey: "numbers.tests.sub" },
-  { value: 20, unitKey: "numbers.api", subKey: "numbers.api.sub" },
+  { value: 9, unitKey: "numbers.team", subKey: "numbers.team.sub" },
+  { value: 4, unitKey: "numbers.sensors", subKey: "numbers.sensors.sub" },
+  { value: 6, unitKey: "numbers.moods", subKey: "numbers.moods.sub" },
+  { value: 3, unitKey: "numbers.deploys", subKey: "numbers.deploys.sub" },
   { value: 300, unitKey: "numbers.sprites", subKey: "numbers.sprites.sub" },
-  { value: 3, unitKey: "numbers.langs", subKey: "numbers.langs.sub" },
+  { value: 280, unitKey: "numbers.commits", subKey: "numbers.commits.sub" },
 ];
 
 /** 협업 증거. 커밋 해시는 실제 저장소의 것. */

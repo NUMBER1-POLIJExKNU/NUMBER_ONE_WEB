@@ -746,26 +746,6 @@ code {
   color: var(--forest);
 }
 
-.honest {
-  margin-top: 1.5rem;
-  padding: 1.25rem;
-  background: var(--paper-2);
-  border: 2px dashed var(--soil);
-}
-.honest__title {
-  margin: 0 0 0.5rem;
-  font-family: var(--font-display);
-  font-size: calc(0.8rem * var(--display-scale));
-  color: var(--soil-dark);
-}
-.honest p {
-  margin: 0;
-  font-size: 0.94rem;
-  color: var(--ink-soft);
-}
-.honest strong {
-  color: var(--outline);
-}
 
 /* ----------------------------------------------- 재학습 (시그니처) */
 .section--retrain {
@@ -1123,6 +1103,327 @@ code {
     transform: none;
     transition: none;
   }
+}
+
+/* ----------------------------------------------- 철학 (Wisdom → Data → Next)
+   세 단계에 팔레트를 의미로 붙였습니다. 장식이 아니라 내용입니다.
+   경험은 흙, 데이터는 물, 다음 세대는 새싹. */
+.section--philos {
+  background: linear-gradient(180deg, var(--paper) 0%, var(--paper-2) 100%);
+}
+
+.flow {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 1.25rem;
+  margin: 0 0 2rem;
+  padding: 0;
+  list-style: none;
+}
+
+.flow__step {
+  position: relative;
+  min-width: 0;
+  padding: 1.25rem;
+  background: var(--paper);
+  border: 2px solid var(--outline);
+  border-top: var(--step) solid var(--outline);
+}
+.flow__step--wisdom {
+  border-top-color: var(--soil);
+}
+.flow__step--data {
+  border-top-color: var(--water);
+}
+.flow__step--next {
+  border-top-color: var(--grass);
+}
+
+/* 단계 사이의 화살표. 좁은 화면에서는 아래를 가리킵니다. */
+.flow__step + .flow__step::before {
+  content: "→";
+  position: absolute;
+  top: 50%;
+  left: calc(-1.25rem - 0.35em);
+  transform: translateY(-50%);
+  font-family: var(--font-data);
+  font-size: 1.5rem;
+  color: var(--soil);
+}
+
+.flow__tag {
+  margin: 0 0 0.6rem;
+  font-family: var(--font-display);
+  font-size: calc(0.62rem * var(--display-scale));
+  letter-spacing: 0.08em;
+  line-height: 1.6;
+}
+.flow__step--wisdom .flow__tag {
+  color: var(--soil-dark);
+}
+.flow__step--data .flow__tag {
+  color: var(--water);
+}
+.flow__step--next .flow__tag {
+  color: var(--forest);
+}
+
+.flow__title {
+  margin: 0 0 0.5rem;
+  font-family: var(--font-display);
+  font-size: calc(0.95rem * var(--display-scale));
+  line-height: 1.45;
+  color: var(--outline);
+}
+.flow__body {
+  margin: 0;
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+}
+
+.creed {
+  margin: 0;
+  padding: 1.5rem;
+  background: var(--outline);
+  color: var(--paper);
+  border-left: var(--step) solid var(--grass);
+}
+.creed p {
+  margin: 0;
+  font-size: clamp(1.05rem, 2.6vw, 1.35rem);
+  line-height: 1.65;
+}
+
+.hero__kicker {
+  margin: 0 0 2rem;
+  font-family: var(--font-data);
+  font-size: 1.15rem;
+  line-height: 1.4;
+  color: var(--forest);
+}
+
+/* ------------------------------------------------- 남긴 것 (지속가능성)
+   철학 다음에 오는 섹션입니다. 교육하고 떠나는 모델과의 차이를
+   세 가지로 나눠 세웁니다. */
+.section--legacy {
+  background: var(--paper-2);
+}
+
+.stays {
+  display: grid;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: stay;
+}
+
+.stay {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.35rem 1rem;
+  align-items: start;
+  min-width: 0;
+  padding: 1.25rem;
+  background: var(--paper);
+  border: 2px solid var(--outline);
+  border-left: var(--step) solid var(--grass);
+}
+
+/* 새싹 표식 — 남는 것을 뜻하는 마커라 번호가 아니라 형태를 씁니다. */
+.stay::before {
+  counter-increment: stay;
+  content: "";
+  grid-row: span 2;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-top: 0.4rem;
+  background: var(--grass);
+  box-shadow: 0 -0.4rem 0 -0.28rem var(--forest);
+}
+
+.stay__title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: calc(0.9rem * var(--display-scale));
+  line-height: 1.5;
+  color: var(--outline);
+}
+.stay__body {
+  grid-column: 2;
+  margin: 0;
+  font-size: 0.94rem;
+  color: var(--ink-soft);
+}
+
+@media (min-width: 52rem) {
+  .stays {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 52rem) {
+  /* 세로로 쌓이면 화살표도 아래를 가리켜야 합니다. */
+  .flow__step + .flow__step::before {
+    content: "↓";
+    top: calc(-1.25rem - 0.1em);
+    left: 1.25rem;
+    transform: none;
+  }
+}
+
+/* --------------------------------------------------- 성과 (외부 검증)
+   우리가 우리를 평가한 게 아니라는 점이 이 섹션의 전부입니다.
+   그래서 순위보다 "누가 심사했는지"를 같은 크기로 세웁니다. */
+.section--wins {
+  background: var(--outline);
+  color: var(--paper);
+}
+.section--wins .section__title {
+  color: var(--paper);
+}
+.section--wins .eyebrow {
+  color: var(--yellow);
+}
+.section--wins .lede {
+  color: #c8d6c3;
+}
+
+.wins {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.win {
+  min-width: 0;
+  padding: 1.25rem;
+  background: rgba(105, 196, 85, 0.08);
+  border: 2px solid var(--forest);
+}
+.win--media {
+  background: rgba(255, 222, 106, 0.08);
+  border-color: var(--yellow);
+}
+
+.win__rank {
+  display: inline-block;
+  margin: 0 0 0.75rem;
+  padding: 0.25rem 0.55rem;
+  background: var(--yellow);
+  color: var(--outline);
+  font-family: var(--font-display);
+  font-size: calc(0.62rem * var(--display-scale));
+  line-height: 1.6;
+}
+.win__title {
+  margin: 0 0 0.35rem;
+  font-family: var(--font-display);
+  font-size: calc(1rem * var(--display-scale));
+  line-height: 1.45;
+  color: var(--grass-light);
+}
+.win__judge {
+  margin: 0 0 0.6rem;
+  font-family: var(--font-data);
+  font-size: 1.1rem;
+  line-height: 1.35;
+  color: var(--yellow);
+}
+.win__body {
+  margin: 0;
+  font-size: 0.92rem;
+  color: #c8d6c3;
+}
+
+/* ---------------------------------------- SMKN 4 확산 실증 블록 */
+.proof {
+  margin: 0 0 2rem;
+  padding: 1.5rem;
+  background: var(--paper);
+  border: var(--step) solid var(--outline);
+  box-shadow: var(--shadow-pixel);
+}
+.proof__title {
+  margin: 0 0 0.75rem;
+  font-family: var(--font-display);
+  font-size: calc(1rem * var(--display-scale));
+  line-height: 1.45;
+  color: var(--forest);
+}
+.proof__body {
+  margin: 0 0 0.9rem;
+  font-size: 0.96rem;
+  color: var(--ink-soft);
+}
+.proof__note {
+  margin: 0;
+  padding: 0.75rem 0.9rem;
+  background: var(--paper-2);
+  border-left: var(--step) solid var(--grass);
+  font-size: 0.94rem;
+  color: var(--outline);
+}
+
+.footer__slogan {
+  margin: 0 0 0.5rem;
+  font-family: var(--font-data);
+  font-size: 1.15rem;
+  color: var(--forest);
+}
+
+/* ------------------------------------------------- 인스타그램 기록
+   공식 임베드 스크립트를 쓰지 않습니다. 정적 썸네일 + 링크아웃이라
+   외부 요청이 없고, 사람을 인스타그램으로 보냅니다. */
+.posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.post {
+  min-width: 0;
+}
+.post__link {
+  position: relative;
+  display: block;
+  border: 2px solid var(--outline);
+  background: var(--paper-2);
+  text-decoration: none;
+  overflow: hidden;
+}
+.post__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+.post__cap {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 0.3rem 0.5rem;
+  background: var(--outline);
+  color: var(--paper);
+  font-family: var(--font-display);
+  font-size: 0.5rem;
+  line-height: 1.6;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+.post__link:hover .post__cap,
+.post__link:focus-visible .post__cap {
+  opacity: 1;
+}
+
+.posts__foot {
+  margin: 1.5rem 0 0;
 }
 
 /* ------------------------------- 한글·숫자 혼용 지점의 폰트 통일
