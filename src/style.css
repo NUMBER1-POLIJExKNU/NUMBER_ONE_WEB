@@ -15,20 +15,14 @@
    막히면 픽셀 정체성이 통째로 무너지고, 외부 요청 하나가 렌더를 막습니다.
    빌드 때 실제 쓰는 글자로만 서브셋됩니다 → scripts/subset-fonts.mjs */
 @font-face {
-  font-family: "NeoDGM";
-  src: url("/fonts/NeoDGM.subset.woff2") format("woff2");
+  font-family: "Jua";
+  src: url("/fonts/Jua.subset.woff2") format("woff2");
   font-weight: 400 700; /* 단일 웨이트 — 가짜 볼드 합성을 막습니다 */
   font-display: swap;
 }
 @font-face {
   font-family: "Press Start 2P";
   src: url("/fonts/PressStart2P.subset.woff2") format("woff2");
-  font-weight: 400;
-  font-display: swap;
-}
-@font-face {
-  font-family: "VT323";
-  src: url("/fonts/VT323.subset.woff2") format("woff2");
   font-weight: 400;
   font-display: swap;
 }
@@ -54,13 +48,12 @@
   --ink: var(--outline);
   --ink-soft: #5b6b56;
 
-  --font-display: "Press Start 2P", "NeoDGM", monospace;
-  --font-data: "VT323", "NeoDGM", monospace;
+  --font-display: "Jua", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  --font-data: "Jua", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
   --font-body: system-ui, -apple-system, "Segoe UI", "Apple SD Gothic Neo",
     "Malgun Gothic", sans-serif;
 
-  /* Press Start 2P는 같은 px에서 훨씬 크게 보입니다. 언어별로 보정합니다. */
-  --display-scale: 0.72;
+  --display-scale: 1;
 
   --step: 4px;
   --wrap: 68rem;
@@ -68,11 +61,6 @@
   --shadow-pixel: 0 var(--step) 0 0 var(--outline);
 }
 
-/* 한국어에서는 네오둥근모가 라틴까지 담당합니다 — 한 줄에 두 폰트가 섞이지 않게. */
-:root:lang(ko) {
-  --font-display: "NeoDGM", "Press Start 2P", monospace;
-  --display-scale: 1;
-}
 
 /* -------------------------------------------------------- 베이스 */
 *,
@@ -197,8 +185,8 @@ a {
 }
 
 code {
-  font-family: var(--font-data);
-  font-size: 1.05em;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 0.9em;
   background: var(--paper-2);
   padding: 0.05em 0.35em;
 }
@@ -772,7 +760,8 @@ code {
   padding: 0.5rem 0.6rem;
   background: var(--outline);
   color: var(--grass-light);
-  font-size: 1rem;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 0.85rem;
   white-space: pre;
 }
 .evidence__link {
@@ -1123,8 +1112,8 @@ code {
   margin: 1.5rem 0 0;
   padding-top: 1.25rem;
   border-top: 2px dashed var(--soil-light);
-  font-family: var(--font-data);
-  font-size: clamp(1.05rem, 2.4vw, 1.3rem);
+  font-family: "Press Start 2P", monospace;
+  font-size: clamp(0.6rem, 1.8vw, 0.8rem);
   line-height: 1.6;
   text-align: center;
   color: var(--forest);
@@ -1604,26 +1593,15 @@ code {
 
 .posts__tags {
   margin: 1.25rem 0 0;
-  font-family: "NeoDGM", monospace;
-  font-size: 1rem;
+  font-family: var(--font-data);
+  font-size: 0.95rem;
   line-height: 1.8;
-  word-spacing: 0.5em;
+  word-spacing: 0.35em;
   color: var(--forest);
 }
 
 .posts__foot {
   margin: 1.5rem 0 0;
-}
-
-/* ------------------------------- 한글·숫자 혼용 지점의 폰트 통일
-   VT323은 한글 글리프가 없어 한글만 네오둥근모로 넘어갑니다. 두 폰트는
-   x-height가 달라서 혼용되는 곳만 네오둥근모로 통일합니다. */
-:root:lang(ko) .fact__value,
-:root:lang(ko) .fact__unit,
-:root:lang(ko) .rolelegend__label,
-:root:lang(ko) .card__tagline,
-:root:lang(ko) .step__date {
-  font-family: "NeoDGM", monospace;
 }
 
 /* --------------------------------------------- 가로 오버플로 방지
@@ -1680,10 +1658,7 @@ code {
 @media (max-width: 30rem) {
   /* 좁은 화면에서 Press Start 2P는 줄바꿈이 거칠어집니다. 한 단계 더 줄입니다. */
   :root {
-    --display-scale: 0.62;
-  }
-  :root:lang(ko) {
-    --display-scale: 0.88;
+    --display-scale: 0.92;
   }
   .nav__brand img {
     height: 1.4rem;

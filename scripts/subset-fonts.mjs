@@ -53,20 +53,16 @@ async function run() {
   const text = await collectText();
   await mkdir(outDir, { recursive: true });
 
-  // 한국어는 네오둥근모(vendor/fonts, OFL) — Galmuri에서 교체했습니다.
-  // 일부 한글이 깨져 보이는 문제가 있었고, 네오둥근모는 현대 한글 11,172자를
-  // 전부 담고 있어 서브셋에서 글자가 빠질 일이 없습니다.
+  // 디스플레이는 주아체(vendor/fonts, OFL) — 픽셀 비트맵이 작은 화면에서
+  // 거칠게 렌더되는 문제로 교체. 벡터라 어떤 크기에서도 깨끗합니다.
+  // Press Start 2P는 히어로 구호·푸터 낭독(영문 브랜드 라인)에만 씁니다.
   const faces = [
-    [join(root, "vendor", "fonts", "neodgm.ttf"), "NeoDGM.subset.woff2"],
+    [join(root, "vendor", "fonts", "jua.ttf"), "Jua.subset.woff2"],
     // 라틴 픽셀 폰트도 자체 호스팅합니다. 발표장 회선에서 Google Fonts가
     // 느리거나 막히면 페이지의 픽셀 정체성이 통째로 무너지기 때문입니다.
     [
       join(root, "node_modules", "@fontsource", "press-start-2p", "files", "press-start-2p-latin-400-normal.woff2"),
       "PressStart2P.subset.woff2",
-    ],
-    [
-      join(root, "node_modules", "@fontsource", "vt323", "files", "vt323-latin-400-normal.woff2"),
-      "VT323.subset.woff2",
     ],
   ];
 
