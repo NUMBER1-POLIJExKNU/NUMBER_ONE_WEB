@@ -102,6 +102,8 @@ html {
 
 body {
   margin: 0;
+  /* 한글은 어절 단위로만 줄바꿈 — 단어 중간에서 끊기지 않습니다 */
+  word-break: keep-all;
   background: var(--paper);
   color: var(--ink);
   font-family: var(--font-body);
@@ -1563,11 +1565,11 @@ code {
 
 .posts__tags {
   margin: 1.25rem 0 0;
-  font-family: var(--font-data);
-  font-size: 1.05rem;
-  line-height: 1.6;
+  font-family: "NeoDGM", monospace;
+  font-size: 1rem;
+  line-height: 1.8;
+  word-spacing: 0.5em;
   color: var(--forest);
-  overflow-wrap: anywhere;
 }
 
 .posts__foot {
@@ -1598,12 +1600,6 @@ code {
 .rolelegend__item,
 .member__body {
   min-width: 0;
-}
-
-.chips__item,
-.card__body,
-.evidence__desc {
-  overflow-wrap: anywhere;
 }
 
 /* ------------------------------------------------------------ 반응형 */
