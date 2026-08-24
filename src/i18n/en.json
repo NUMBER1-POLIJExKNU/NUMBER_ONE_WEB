@@ -41,7 +41,7 @@
   "legacy.s3.body": "We left code, not slides. Three public repositories, migration scripts that can rebuild the database from scratch, and documentation written in English, Indonesian and Korean. There are tests, too, so a mistake shows itself right away. A POLIJE student next semester can open the repository and continue from today.",
   "team.eyebrow": "Who built it",
   "team.title": "One team — under one sky — indivisible,<br>with wisdom and technology, for the next generation.",
-  "team.lede": "Nine of us split four roles. Each role existed on both sides, so PL worked with PL and TL with TL. We did not sort ourselves into a side that teaches and a side that learns.",
+  "team.lede": "Nine of us shared four roles — PL, TL, KL and ML. Each school held one of each, so PL worked paired with PL, and TL with TL. Every one of us was a builder.",
   "team.polije": "Politeknik Negeri Jember (POLIJE) · Indonesia",
   "team.knu": "Kyungpook National University (KNU) · Korea",
   "team.role.PL": "Project Leader",

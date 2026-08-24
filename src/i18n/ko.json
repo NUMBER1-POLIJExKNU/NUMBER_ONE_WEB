@@ -41,7 +41,7 @@
   "legacy.s3.body": "슬라이드가 아니라 코드로 남겼습니다. 공개 저장소 세 개, 데이터베이스를 처음부터 다시 세울 수 있는 마이그레이션 스크립트, 영어·인도네시아어·한국어로 쓴 문서까지. 고치다 실수해도 바로 티가 나도록 테스트도 갖춰 뒀습니다. 다음 학기 POLIJE 학생이 저장소를 열면, 오늘부터 이어서 만들 수 있습니다.",
   "team.eyebrow": "누가 만들었나",
   "team.title": "One team — under one sky — indivisible,<br>with wisdom and technology, for the next generation.",
-  "team.lede": "아홉 명이 네 개 역할을 나눠 맡았습니다. 양쪽에 같은 역할이 하나씩 있어서 PL은 PL끼리, TL은 TL끼리 붙어서 일했습니다. 가르치는 쪽과 배우는 쪽을 따로 두지 않았습니다.",
+  "team.lede": "아홉 명이 PL·TL·KL·ML 네 역할을 나눠 맡았습니다. 두 학교가 같은 역할을 하나씩 두어 PL은 PL과, TL은 TL과 짝을 이뤄 일했습니다. 모두가 만드는 사람이었습니다.",
   "team.polije": "Politeknik Negeri Jember (POLIJE) · 인도네시아",
   "team.knu": "경북대학교(KNU) · 대한민국",
   "team.role.PL": "Project Leader",
