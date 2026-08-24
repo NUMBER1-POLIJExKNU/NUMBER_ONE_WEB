@@ -236,6 +236,9 @@ code {
 .btn--ghost {
   background: var(--paper);
 }
+.btn--insta {
+  background: var(--cheek);
+}
 
 /* ------------------------------------------------------------ 네비 */
 .nav {
