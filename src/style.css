@@ -1422,6 +1422,20 @@ code {
   color: #c8d6c3;
 }
 
+/* ---------------------------------- 공식 요약 (인용해 가는 문단) */
+.abstract {
+  margin: 1.75rem 0 0;
+  padding: 1.25rem 1.5rem;
+  background: rgba(255, 253, 247, 0.06);
+  border-left: var(--step) solid var(--yellow);
+}
+.abstract p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.9;
+  color: #e9efe6;
+}
+
 /* ------------------------------------------------ 성과 사진 2장 */
 .winsphotos {
   display: grid;

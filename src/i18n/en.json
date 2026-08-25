@@ -159,7 +159,7 @@
   "numbers.days": "hours",
   "numbers.days.sub": "22 days on the ground in Indonesia",
   "ground.program.label": "Programme",
-  "ground.program.value": "WFK IT Volunteer Corps (NIA · KNU)",
+  "ground.program.value": "WFK ICT Volunteer Corps (Ministry of Science and ICT · NIA · KNU)",
   "social.tags": "#해외봉사 #월드프렌즈코리아 #IT봉사단 #NIA #NUMBERONE",
   "team.poster.caption": "31 July 2026 — what each of the nine wrote as the project began",
   "shipped.web.note": "Every reading and record in the app today was actually sent by the kit in Jember.",
@@ -187,5 +187,6 @@
   "hero.slides.label": "Photographs from Jember",
   "hero.slides.pause": "Pause slideshow",
   "hero.slides.play": "Play slideshow",
-  "hero.cta.insta": "Instagram"
+  "hero.cta.insta": "Instagram",
+  "wins.abstract": "Team NUMBER ONE of Kyungpook National University, 2026 World Friends Korea (WFK) ICT Volunteer Corps — nine students from Korea and Indonesia co-developed and deployed PlantMoji, a smart-farming education system, over 22 days in Jember, Indonesia; the team placed first in two locally judged categories, was featured in a KBS documentary, and the services remain in operation — a case of Korea's digital capability carried into the education of the developing world's next generation."
 }
