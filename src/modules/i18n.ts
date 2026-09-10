@@ -27,7 +27,7 @@ function isLocale(v: string | null | undefined): v is Locale {
   return v != null && (LOCALES as readonly string[]).includes(v);
 }
 
-/** 저장값 → URL 파라미터 → 브라우저 언어 → 기본값 순으로 결정 */
+/** URL 파라미터 → 저장값 → 한국어 기본값 순으로 결정 */
 export function detectLocale(): Locale {
   const fromUrl = new URLSearchParams(location.search).get("lang");
   if (isLocale(fromUrl)) return fromUrl;
@@ -40,8 +40,8 @@ export function detectLocale(): Locale {
   }
   if (isLocale(stored)) return stored;
 
-  const nav = navigator.language.slice(0, 2).toLowerCase();
-  if (isLocale(nav)) return nav;
+  // 성과보고회 QR의 주 사용자는 한국어 사용자입니다. 첫 방문에서 브라우저
+  // 언어를 추측하지 않고 한국어로 시작하며, 사용자가 고른 언어는 계속 기억합니다.
   return DEFAULT;
 }
 

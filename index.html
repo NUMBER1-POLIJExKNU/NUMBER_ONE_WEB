@@ -83,7 +83,7 @@
       <!-- ───────────────────────────────── HERO -->
       <section class="hero" id="top">
         <div class="hero__slides" aria-hidden="true">
-          <img src="/images/hero-1.webp" alt="" width="1500" height="1000" fetchpriority="low" decoding="async" class="is-active" />
+          <img src="/images/hero-1.webp" alt="" width="1500" height="1000" fetchpriority="high" class="is-active" />
           <img src="/images/hero-2.webp" alt="" width="1500" height="1000" loading="lazy" decoding="async" />
           <img src="/images/hero-3.webp" alt="" width="1500" height="1000" loading="lazy" decoding="async" />
           <img src="/images/hero-4.webp" alt="" width="1500" height="1000" loading="lazy" decoding="async" />
@@ -388,26 +388,26 @@
               <div class="proof__media">
                 <video
                   class="proof__video"
+                  data-ambient-video
                   src="/video/smk-session.mp4"
                   poster="/images/smk-poster.webp"
                   muted
                   loop
                   playsinline
-                  autoplay
-                  preload="metadata"
+                  preload="none"
                   width="1280"
                   height="720"
                   aria-label="학생들이 센서 키트와 노트북 주위로 모여드는 6초 영상"
                 ></video>
                 <video
                   class="proof__video"
+                  data-ambient-video
                   src="/video/smk-tablet.mp4"
                   poster="/images/smk-tablet-poster.webp"
                   muted
                   loop
                   playsinline
-                  autoplay
-                  preload="metadata"
+                  preload="none"
                   width="1280"
                   height="720"
                   aria-label="학생들이 태블릿으로 PlantMoji를 직접 조작하는 6초 영상"

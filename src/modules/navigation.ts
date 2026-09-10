@@ -10,6 +10,37 @@ export function initNavigation(): void {
   const links = [...document.querySelectorAll<HTMLAnchorElement>(".nav__link")];
   if (!nav || links.length === 0) return;
 
+  const scroller = nav.querySelector<HTMLElement>(".nav__links");
+
+  const syncScrollHints = (): void => {
+    if (!scroller) return;
+    const max = scroller.scrollWidth - scroller.clientWidth;
+    scroller.classList.toggle("can-scroll-left", scroller.scrollLeft > 4);
+    scroller.classList.toggle("can-scroll-right", scroller.scrollLeft < max - 4);
+  };
+
+  const revealCurrentLink = (link: HTMLAnchorElement): void => {
+    if (!scroller) return;
+    const left = link.offsetLeft;
+    const right = left + link.offsetWidth;
+    const visibleLeft = scroller.scrollLeft;
+    const visibleRight = visibleLeft + scroller.clientWidth;
+    if (left >= visibleLeft + 12 && right <= visibleRight - 12) return;
+
+    scroller.scrollTo({
+      left: left - (scroller.clientWidth - link.offsetWidth) / 2,
+      behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
+        ? "auto"
+        : "smooth",
+    });
+  };
+
+  if (scroller) {
+    scroller.addEventListener("scroll", syncScrollHints, { passive: true });
+    window.addEventListener("resize", syncScrollHints, { passive: true });
+    requestAnimationFrame(syncScrollHints);
+  }
+
   const sections = links
     .map((a) => document.querySelector<HTMLElement>(a.getAttribute("href") ?? ""))
     .filter((s): s is HTMLElement => s !== null);
@@ -33,6 +64,7 @@ export function initNavigation(): void {
           link.classList.toggle("is-current", on);
           if (on) {
             link.setAttribute("aria-current", "true");
+            revealCurrentLink(link);
           } else {
             link.removeAttribute("aria-current");
           }

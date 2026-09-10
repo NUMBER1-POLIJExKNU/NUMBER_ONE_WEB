@@ -8,9 +8,55 @@
 const REDUCED = window.matchMedia("(prefers-reduced-motion: reduce)");
 
 function stopAmbientVideo(): void {
-  document.querySelectorAll<HTMLVideoElement>("video[autoplay]").forEach((v) => {
-    v.removeAttribute("autoplay");
+  document.querySelectorAll<HTMLVideoElement>("video[data-ambient-video]").forEach((v) => {
     v.pause();
+  });
+}
+
+function initAmbientVideos(): void {
+  const videos = [...document.querySelectorAll<HTMLVideoElement>("video[data-ambient-video]")];
+  if (videos.length === 0) return;
+
+  const connection = (navigator as Navigator & {
+    connection?: { saveData?: boolean };
+  }).connection;
+
+  // 데이터 절약 모드와 감속 설정에서는 포스터만 보여 줍니다.
+  if (REDUCED.matches || connection?.saveData) {
+    stopAmbientVideo();
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      for (const entry of entries) {
+        const video = entry.target as HTMLVideoElement;
+        if (entry.isIntersecting && !REDUCED.matches) {
+          void video.play().catch(() => {
+            // 브라우저가 자동 재생을 막으면 포스터를 그대로 유지합니다.
+          });
+        } else {
+          video.pause();
+        }
+      }
+    },
+    { rootMargin: "160px 0px", threshold: 0.1 },
+  );
+
+  videos.forEach((video) => observer.observe(video));
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) {
+      stopAmbientVideo();
+      return;
+    }
+
+    videos.forEach((video) => {
+      const rect = video.getBoundingClientRect();
+      const isNearViewport = rect.bottom >= -160 && rect.top <= window.innerHeight + 160;
+      if (isNearViewport && !REDUCED.matches) {
+        void video.play().catch(() => {});
+      }
+    });
   });
 }
 
@@ -77,6 +123,7 @@ function initHeroSlides(): void {
 }
 
 export function initMotion(): void {
+  initAmbientVideos();
   initHeroSlides();
   if (REDUCED.matches) {
     stopAmbientVideo();
