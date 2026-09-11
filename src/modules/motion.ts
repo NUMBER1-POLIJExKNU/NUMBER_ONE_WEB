@@ -122,9 +122,43 @@ function initHeroSlides(): void {
   REDUCED.addEventListener("change", (e) => { if (e.matches) stop(); });
 }
 
+/** 모바일 가로 갤러리는 화면에 들어올 때만 안내 동작을 시작하고, 사용 후에는 숨깁니다. */
+function initSwipeGuides(): void {
+  if (!window.matchMedia("(max-width: 40rem)").matches) return;
+
+  const hints = [...document.querySelectorAll<HTMLElement>("[data-swipe-hint]")];
+  if (hints.length === 0) return;
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      for (const entry of entries) {
+        if (!entry.isIntersecting) continue;
+        const hint = entry.target as HTMLElement;
+        hint.classList.add("is-active");
+        observer.unobserve(hint);
+      }
+    },
+    { threshold: 0.8 },
+  );
+
+  for (const hint of hints) {
+    const track = hint.nextElementSibling;
+    if (!(track instanceof HTMLElement) || !track.matches("[data-swipe-track]")) continue;
+
+    observer.observe(hint);
+    const dismiss = (): void => {
+      if (Math.abs(track.scrollLeft) < 12) return;
+      hint.classList.add("is-dismissed");
+      track.removeEventListener("scroll", dismiss);
+    };
+    track.addEventListener("scroll", dismiss, { passive: true });
+  }
+}
+
 export function initMotion(): void {
   initAmbientVideos();
   initHeroSlides();
+  initSwipeGuides();
   if (REDUCED.matches) {
     stopAmbientVideo();
     settleAll();

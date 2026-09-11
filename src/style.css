@@ -1295,6 +1295,12 @@ code {
   color: var(--forest);
 }
 
+/* 모바일 가로 갤러리 안내. 화면에 들어왔을 때 세 번만 움직이고,
+   실제로 넘긴 뒤에는 조용히 사라집니다. */
+.swipehint {
+  display: none;
+}
+
 /* ------------------------------------------------- 남긴 것 (지속가능성)
    철학 다음에 오는 섹션입니다. 교육하고 떠나는 모델과의 차이를
    세 가지로 나눠 세웁니다. */
@@ -2058,6 +2064,43 @@ code {
   }
   .posts > * {
     scroll-snap-align: start;
+  }
+
+  .swipehint {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.35rem;
+    min-height: 1.5rem;
+    margin: -0.25rem 0 0.55rem;
+    color: var(--forest);
+    font-size: 0.78rem;
+    font-weight: 700;
+    line-height: 1.4;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  .swipehint__arrow {
+    display: inline-block;
+    font-size: 1.05rem;
+  }
+  .swipehint.is-active .swipehint__arrow {
+    animation: swipehint-nudge 1.15s ease-in-out 3;
+  }
+  .swipehint.is-dismissed {
+    opacity: 0;
+    transform: translateY(-0.2rem);
+    pointer-events: none;
+  }
+  .section--wins .swipehint {
+    color: var(--yellow);
+  }
+  .swipehint + .winsphotos {
+    margin-top: 0;
+  }
+
+  @keyframes swipehint-nudge {
+    0%, 100% { transform: translateX(0); }
+    45% { transform: translateX(0.45rem); }
   }
 
   .post__cap {
