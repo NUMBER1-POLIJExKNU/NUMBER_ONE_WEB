@@ -1,14 +1,14 @@
 /**
  * 검증된 사실만 모아 두는 단일 출처.
  *
- * 여기 없는 수치는 페이지에 쓰지 마세요. 전부 2026-08-25에 디스크·git 로그·
+ * 여기 없는 수치는 페이지에 쓰지 마세요. 2026-09-11까지 디스크·git 로그·
  * 라이브 API로 직접 확인한 값입니다. 새 수치를 넣을 때도 먼저 여기에 근거와 함께 추가하세요.
  *
  * 쓰지 않는 값: 수혜자 4,440명(KNU 파견단 전체 수치라 9명 팀에 귀속 불가),
  * 모델 정확도(평가셋이 없습니다), "실시간 센서 연동 중"(2026-08-20 이후 하드웨어 정지).
  */
 
-export const VERIFIED_ON = "2026-08-25";
+export const VERIFIED_ON = "2026-09-11";
 
 export const LINKS = {
   web: "https://main-plant-moji.vercel.app/",
@@ -17,6 +17,7 @@ export const LINKS = {
   repoWeb: "https://github.com/NUMBER1-POLIJExKNU/Main-PlantMoji",
   repoMobile: "https://github.com/NUMBER1-POLIJExKNU/Mobile-PlantEmoji",
   repoDesign: "https://github.com/NUMBER1-POLIJExKNU/Web-PlantEmoji",
+  kbsVod: "https://vod.kbs.co.kr/index.html?broadcast_complete_yn=N&local_station_code=00&program_code=T2020-0388&program_id=PS-2026147543-01-000&section_code=05&section_id=11203&section_sub_code=08&sname=vod&source=episode&stype=vod",
 } as const;
 
 /** Hero의 카운터. value는 숫자, suffix는 i18n 키. */

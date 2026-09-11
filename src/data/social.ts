@@ -28,11 +28,21 @@ export interface InstaPost {
 /** 팀 공식 계정 핸들. @는 빼고 적습니다. 비우면 팔로우 버튼이 숨겨집니다. */
 export const INSTAGRAM_HANDLE = "no.1_wfk";
 
-/* 2026-08-25, @no.1_wfk 프로필에서 전체 25개.
+/* 2026-09-11, @no.1_wfk 프로필에서 전체 35개.
    썸네일은 public/social/에 로컬 저장 — 인스타 CDN 링크는 서명이 만료되면 깨집니다. */
 export const POSTS: InstaPost[] = [
+  { url: "https://www.instagram.com/no.1_wfk/p/DcyLrj6j85x/", image: "DcyLrj6j85x.jpg", alt: "9/2 활동일지 — 같은 영화, 다른 느낌: 인도네시아 영화관 체험기" },
   { url: "https://www.instagram.com/no.1_wfk/p/DbZ8X6FEVPI/", image: "DbZ8X6FEVPI.jpg", alt: "7/29 활동일지 — 현지 친구에게 배우는 인도네시아 여행 회화" },
   { url: "https://www.instagram.com/no.1_wfk/p/Dbh3c1aEU71/", image: "Dbh3c1aEU71.jpg", alt: "7/30 활동일지 — 인도네시아 호텔에서는 이것을 하면 안 된다?" },
+  { url: "https://www.instagram.com/no.1_wfk/p/DdE0TIpkovP/", image: "DdE0TIpkovP.jpg", alt: "9/9 활동일지 — 커피 좋아하는 사람? 인도네시아는 천국입니다" },
+  { url: "https://www.instagram.com/no.1_wfk/reel/Dc_jynIg5Bw/", image: "Dc_jynIg5Bw.jpg", alt: "계속되는 회의와 특별한 경험을 담은 귀국 후 회상 릴스" },
+  { url: "https://www.instagram.com/no.1_wfk/reel/Dc5-t4yz9Y7/", image: "Dc5-t4yz9Y7.jpg", alt: "안녕하세요, 나 마뱀이에요 — 젬버에서 만난 도마뱀 릴스" },
+  { url: "https://www.instagram.com/no.1_wfk/reel/Dc3BsBAxQkN/", image: "Dc3BsBAxQkN.jpg", alt: "넘버원 팀원들을 평생 기억 구슬에 담아두는 추억 릴스" },
+  { url: "https://www.instagram.com/no.1_wfk/reel/DcyRy3CANzU/", image: "DcyRy3CANzU.jpg", alt: "누가 봐도 같이 봉사 간 사람들 — 팀원 단체 릴스" },
+  { url: "https://www.instagram.com/no.1_wfk/reel/DcvxC9OPYn8/", image: "DcvxC9OPYn8.jpg", alt: "Brand New Day in Jember — NUMBER ONE 팀 역할 소개" },
+  { url: "https://www.instagram.com/no.1_wfk/reel/Dcvqz_CAGAk/", image: "Dcvqz_CAGAk.jpg", alt: "POLIJE Information Technology 건물 앞 팀원 릴스" },
+  { url: "https://www.instagram.com/no.1_wfk/reel/DctksfzPaS3/", image: "DctksfzPaS3.jpg", alt: "YOU WIN! JEMKACHU 픽셀 애니메이션 릴스" },
+  { url: "https://www.instagram.com/no.1_wfk/reel/Dcq66GsT4EX/", image: "Dcq66GsT4EX.jpg", alt: "Moments in Indonesia — 젬버의 풍경을 담은 릴스" },
   { url: "https://www.instagram.com/no.1_wfk/p/DbccSrNkfdE/", image: "DbccSrNkfdE.jpg", alt: "7/31 활동일지 — 이슬람에서는 고양이가?" },
   { url: "https://www.instagram.com/no.1_wfk/reel/DcbUuQhP4Hr/", image: "DcbUuQhP4Hr.jpg", alt: "학급 단체 릴스" },
   { url: "https://www.instagram.com/no.1_wfk/p/DcQ9MmfDzNt/", image: "DcQ9MmfDzNt.jpg", alt: "8/6 활동일지 — 지치지 않는 No.1의 여름, 3주간 우리들의 각오" },
