@@ -127,7 +127,7 @@
   "ground.culture.items": "K-Food Day · Green Earth Day · K-I Speech Day · K-I Sports Day",
   "social.eyebrow": "Field record",
   "social.title": "Instagram @no.1_wfk",
-  "social.lede": "From daily logs to Reels, we kept the record across 35 posts. Tap one to continue on Instagram.",
+  "social.lede": "From daily logs to Reels, we kept the record across {igPosts} posts. Tap one to continue on Instagram.",
   "social.follow": "See it on Instagram",
   "social.open": "Open post",
   "numbers.eyebrow": "Scale",

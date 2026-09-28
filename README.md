@@ -82,6 +82,19 @@ npm run preview    # 빌드 결과 확인
 [`src/i18n/`](./src/i18n)의 `ko.json` / `en.json` / `id.json` 셋을 **같이** 고쳐야 합니다.
 키가 없으면 화면에 키 이름이 그대로 나옵니다.
 
+`{igPosts}` 자리는 지우지 마세요. 인스타그램 게시물 수가 들어갑니다.
+
+### 4. 인스타그램 게시물 수
+
+`{igPosts}`에는 `src/data/evidence.ts`의 `INSTAGRAM_POSTS.value`가 들어갑니다. 손으로 고치지 않습니다.
+
+```bash
+npm run insta              # 프로필에서 현재 게시물 수를 불러와 evidence.ts에 넣기
+npm run insta -- --push    # 바뀌었으면 evidence.ts만 커밋해 main에 푸시 (Vercel 재배포)
+```
+
+팀 PC의 작업 스케줄러가 별도 클론에서 `--push` 모드를 4시간마다 돌립니다.
+
 한국어 문구에 **새로운 글자**를 쓴 경우 반드시 `npm run build`(또는 `npm run fonts`)를
 다시 돌리세요. 폰트가 실제 쓰는 글자로만 서브셋되어 있어서, 서브셋에 없는 글자는
 픽셀 폰트가 아닌 시스템 폰트로 떨어집니다.

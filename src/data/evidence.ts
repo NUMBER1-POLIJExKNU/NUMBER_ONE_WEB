@@ -96,6 +96,16 @@ export const RETRAIN = {
   reclassifySeconds: 2.5,
 } as const;
 
+/**
+ * 인스타그램 @no.1_wfk 게시물 수. 번역 문장 속 {igPosts}에 들어갑니다.
+ *
+ * 팀이 계속 올리므로 손으로 고치지 않습니다. `npm run insta`(scripts/update-insta-count.mjs)가
+ * 프로필에서 불러와 아래 두 값을 고칩니다. verifiedOn은 값이 마지막으로 바뀐 날입니다.
+ */
+export const INSTAGRAM_POSTS = {
+  value: 77,
+  verifiedOn: "2026-09-28",
+} as const;
 
 export const DEPLOYMENT = {
   startISO: "2026-07-27",

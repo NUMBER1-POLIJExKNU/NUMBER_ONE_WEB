@@ -127,7 +127,7 @@
   "ground.culture.items": "K-Food Day · Green Earth Day · K-I Speech Day · K-I Sports Day",
   "social.eyebrow": "활동 기록",
   "social.title": "인스타그램 @no.1_wfk",
-  "social.lede": "활동일지부터 릴스까지, 35개의 게시물로 기록을 남겼습니다. 게시물을 누르면 인스타그램에서 이어집니다.",
+  "social.lede": "활동일지부터 릴스까지, {igPosts}개의 게시물로 기록을 남겼습니다. 게시물을 누르면 인스타그램에서 이어집니다.",
   "social.follow": "인스타그램에서 보기",
   "social.open": "게시물 열기",
   "numbers.eyebrow": "규모",

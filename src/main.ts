@@ -1,8 +1,9 @@
 import "./style.css";
 
-import { detectLocale, setLocale, initLangSwitcher } from "./modules/i18n";
+import { detectLocale, setLocale, setVar, initLangSwitcher } from "./modules/i18n";
 import { initNavigation } from "./modules/navigation";
 import { initMotion } from "./modules/motion";
+import { INSTAGRAM_POSTS } from "./data/evidence";
 import {
   renderTeam,
   renderDeliverables,
@@ -19,6 +20,8 @@ function mount(selector: string): HTMLElement {
 }
 
 async function main(): Promise<void> {
+  setVar("igPosts", INSTAGRAM_POSTS.value);
+
   // 번역을 먼저 올려야 조립하면서 바로 올바른 언어로 채워집니다.
   await setLocale(detectLocale());
 

@@ -28,7 +28,8 @@ export interface InstaPost {
 /** 팀 공식 계정 핸들. @는 빼고 적습니다. 비우면 팔로우 버튼이 숨겨집니다. */
 export const INSTAGRAM_HANDLE = "no.1_wfk";
 
-/* 2026-09-11, @no.1_wfk 프로필에서 전체 35개.
+/* 2026-09-11 기준 @no.1_wfk 프로필의 35개. 문장에 나오는 전체 게시물 수는 여기서 세지 않고
+   evidence.ts의 INSTAGRAM_POSTS를 씁니다 (npm run insta로 갱신).
    썸네일은 public/social/에 로컬 저장 — 인스타 CDN 링크는 서명이 만료되면 깨집니다. */
 export const POSTS: InstaPost[] = [
   { url: "https://www.instagram.com/no.1_wfk/p/DcyLrj6j85x/", image: "DcyLrj6j85x.jpg", alt: "9/2 활동일지 — 같은 영화, 다른 느낌: 인도네시아 영화관 체험기" },

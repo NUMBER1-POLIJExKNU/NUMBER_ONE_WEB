@@ -8,7 +8,8 @@
     "build": "npm run fonts && npm run og && tsc --noEmit && vite build",
     "preview": "vite preview",
     "fonts": "node scripts/subset-fonts.mjs",
-    "og": "node scripts/make-og.mjs"
+    "og": "node scripts/make-og.mjs",
+    "insta": "node scripts/update-insta-count.mjs"
   },
   "devDependencies": {
     "@fontsource/press-start-2p": "^5.3.0",

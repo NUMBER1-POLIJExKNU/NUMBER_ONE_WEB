@@ -23,6 +23,13 @@ const loaders: Record<Locale, () => Promise<{ default: Dict }>> = {
 let dict: Dict = {};
 let current: Locale = DEFAULT;
 
+/**
+ * 문장 속 {이름} 자리에 들어갈 숫자. 인스타그램 게시물 수처럼 자주 바뀌는 값을
+ * 번역 파일 셋에 따로 적지 않고 evidence.ts 한 곳에서 받습니다.
+ * 형식은 언어별로 맞춥니다 (1,234 / 1.234).
+ */
+const vars: Record<string, number> = {};
+
 function isLocale(v: string | null | undefined): v is Locale {
   return v != null && (LOCALES as readonly string[]).includes(v);
 }
@@ -46,7 +53,15 @@ export function detectLocale(): Locale {
 }
 
 export function t(key: string): string {
-  return dict[key] ?? key;
+  const raw = dict[key] ?? key;
+  return raw.replace(/\{(\w+)\}/g, (token, name: string) =>
+    name in vars ? new Intl.NumberFormat(current).format(vars[name]) : token,
+  );
+}
+
+/** 자리표시자 값을 등록합니다. setLocale보다 먼저 불러야 첫 화면부터 채워집니다. */
+export function setVar(name: string, value: number): void {
+  vars[name] = value;
 }
 
 export function getLocale(): Locale {
