@@ -27,10 +27,27 @@ export interface InstaPost {
 /** 팀 공식 계정 핸들. @는 빼고 적습니다. 비우면 팔로우 버튼이 숨겨집니다. */
 export const INSTAGRAM_HANDLE = "no.1_wfk";
 
-/* 2026-09-11 기준 @no.1_wfk 프로필의 35개. 문장에 나오는 전체 게시물 수는 여기서 세지 않고
-   evidence.ts의 INSTAGRAM_POSTS를 씁니다 (npm run insta로 갱신).
+/* 최신 게시물부터. 2026-09-29에 프로필과 릴스 탭에서 18개를 더했습니다.
+   문장에 나오는 전체 게시물 수는 여기서 세지 않고 evidence.ts의 INSTAGRAM_POSTS를 씁니다 (npm run insta로 갱신).
    썸네일은 public/social/에 로컬 저장 — 인스타 CDN 링크는 서명이 만료되면 깨집니다. */
 export const POSTS: InstaPost[] = [
+  { url: "https://www.instagram.com/no.1_wfk/p/Dd3EucTEeFY/", image: "Dd3EucTEeFY.jpg", alt: "넘버원이 추천하는 인도네시아 노래" },
+  { url: "https://www.instagram.com/no.1_wfk/p/Dd20DN1keHI/", image: "Dd20DN1keHI.jpg", alt: "성과공유회에서 3주간의 여정과 결과물을 발표한 기록" },
+  { url: "https://www.instagram.com/no.1_wfk/p/Dd2vEAeEemR/", image: "Dd2vEAeEemR.jpg", alt: "한국 귀국과 해외봉사 마지막 일정, 성과공유회" },
+  { url: "https://www.instagram.com/no.1_wfk/reel/Dd1vrL8g9rn/", image: "Dd1vrL8g9rn.jpg", alt: "회의 현장을 담은 릴스" },
+  { url: "https://www.instagram.com/no.1_wfk/p/Dd1vNm5kgfb/", image: "Dd1vNm5kgfb.jpg", alt: "일단 춤을 추시오! — 팀원 댄스 게시물" },
+  { url: "https://www.instagram.com/no.1_wfk/reel/Dd1lW_8Ay-y/", image: "Dd1lW_8Ay-y.jpg", alt: "아무말 대잔치 릴스" },
+  { url: "https://www.instagram.com/no.1_wfk/p/Dd1geMUkl5h/", image: "Dd1geMUkl5h.jpg", alt: "젬버 생활을 마무리하며 추천하는 인도네시아 먹방 후기 2편" },
+  { url: "https://www.instagram.com/no.1_wfk/reel/Dd1Gl_kyFKd/", image: "Dd1Gl_kyFKd.jpg", alt: "봉사 중에 만난 장화신은 고양이를 닮은 고양이 릴스" },
+  { url: "https://www.instagram.com/no.1_wfk/p/DdzMgWVEheg/", image: "DdzMgWVEheg.jpg", alt: "젬버 생활을 마무리하며 추천하는 인도네시아 먹방 후기" },
+  { url: "https://www.instagram.com/no.1_wfk/p/DdzGk_8ErPg/", image: "DdzGk_8ErPg.jpg", alt: "인도네시아 전통 놀이 볼라 베켈 소개" },
+  { url: "https://www.instagram.com/no.1_wfk/reel/Ddxzc37AWFA/", image: "Ddxzc37AWFA.jpg", alt: "해외 갈 때 양말을 잔뜩 챙기는 사람 릴스" },
+  { url: "https://www.instagram.com/no.1_wfk/p/DdvxrTVkkiV/", image: "DdvxrTVkkiV.jpg", alt: "젬버에서 맛본 인도네시아 음식 이야기" },
+  { url: "https://www.instagram.com/no.1_wfk/reel/DdvN6b2xADY/", image: "DdvN6b2xADY.jpg", alt: "'제 얘기를 들어보세요' 팀원 소개 릴스" },
+  { url: "https://www.instagram.com/no.1_wfk/reel/DdWXRA3gC8f/", image: "DdWXRA3gC8f.jpg", alt: "현지 기사님과 함께한 이동 길 릴스" },
+  { url: "https://www.instagram.com/no.1_wfk/reel/DdPBIJ_yKen/", image: "DdPBIJ_yKen.jpg", alt: "Peaceful day in Jember — 젬버의 평화로운 하루 릴스" },
+  { url: "https://www.instagram.com/no.1_wfk/reel/DdO-6OJPUOd/", image: "DdO-6OJPUOd.jpg", alt: "비행기를 타고 떠나는 순간을 담은 릴스" },
+  { url: "https://www.instagram.com/no.1_wfk/reel/DdLc_hBxakx/", image: "DdLc_hBxakx.jpg", alt: "인도네시아에서 만난 아기고양이 릴스" },
   { url: "https://www.instagram.com/no.1_wfk/p/DcyLrj6j85x/", image: "DcyLrj6j85x.jpg", alt: "9/2 활동일지 — 같은 영화, 다른 느낌: 인도네시아 영화관 체험기" },
   { url: "https://www.instagram.com/no.1_wfk/p/DbZ8X6FEVPI/", image: "DbZ8X6FEVPI.jpg", alt: "7/29 활동일지 — 현지 친구에게 배우는 인도네시아 여행 회화" },
   { url: "https://www.instagram.com/no.1_wfk/p/Dbh3c1aEU71/", image: "Dbh3c1aEU71.jpg", alt: "7/30 활동일지 — 인도네시아 호텔에서는 이것을 하면 안 된다?" },
@@ -43,6 +60,7 @@ export const POSTS: InstaPost[] = [
   { url: "https://www.instagram.com/no.1_wfk/reel/Dcvqz_CAGAk/", image: "Dcvqz_CAGAk.jpg", alt: "POLIJE Information Technology 건물 앞 팀원 릴스" },
   { url: "https://www.instagram.com/no.1_wfk/reel/DctksfzPaS3/", image: "DctksfzPaS3.jpg", alt: "YOU WIN! JEMKACHU 픽셀 애니메이션 릴스" },
   { url: "https://www.instagram.com/no.1_wfk/reel/Dcq66GsT4EX/", image: "Dcq66GsT4EX.jpg", alt: "Moments in Indonesia — 젬버의 풍경을 담은 릴스" },
+  { url: "https://www.instagram.com/no.1_wfk/reel/DcgujLNPMs5/", image: "DcgujLNPMs5.jpg", alt: "교수님과 함께 춤을 추는 릴스" },
   { url: "https://www.instagram.com/no.1_wfk/p/DbccSrNkfdE/", image: "DbccSrNkfdE.jpg", alt: "7/31 활동일지 — 이슬람에서는 고양이가?" },
   { url: "https://www.instagram.com/no.1_wfk/reel/DcbUuQhP4Hr/", image: "DcbUuQhP4Hr.jpg", alt: "학급 단체 릴스" },
   { url: "https://www.instagram.com/no.1_wfk/p/DcQ9MmfDzNt/", image: "DcQ9MmfDzNt.jpg", alt: "8/6 활동일지 — 지치지 않는 No.1의 여름, 3주간 우리들의 각오" },
