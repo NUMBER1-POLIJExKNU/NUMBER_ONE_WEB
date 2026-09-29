@@ -14,6 +14,7 @@ import {
   renderBeneficiaries,
 } from "./modules/render";
 import { initCopyButtons } from "./modules/copy";
+import { initRail } from "./modules/rail";
 
 function mount(selector: string): HTMLElement {
   const node = document.querySelector<HTMLElement>(selector);
@@ -39,6 +40,7 @@ async function main(): Promise<void> {
   initCopyButtons();
   initLangSwitcher();
   initNavigation();
+  initRail();
   initMotion();
 }
 

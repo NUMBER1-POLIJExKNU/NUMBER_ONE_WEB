@@ -46,10 +46,15 @@ export const SERVICE_HOURS = {
   culture: 26.5,
 } as const;
 
-/** SMK Negeri 4 Jember 스마트팜 수업 (2026-08-13)과 사후 설문(구글 폼). */
+/**
+ * SMK Negeri 4 Jember 스마트팜 수업 (2026-08-13)과 사후 설문.
+ * 활동결과보고서 최종본 p.39 — Google Forms, 2026-08-29 ~ 09-03, 시연 참여 44명 중 19명 응답, 8개 문항.
+ */
 export const SMK_CLASS = {
   students: 44,
   surveyResponses: 19,
+  surveyPeriod: "2026-08-29 ~ 2026-09-03",
+  surveyItems: 8,
   smartFarmInterest: 18,
   gameLearningFun: 18,
   growTogether: 19,

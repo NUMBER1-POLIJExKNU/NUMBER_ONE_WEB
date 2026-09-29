@@ -80,6 +80,102 @@
       </div>
     </header>
 
+    <nav class="rail" id="rail" data-i18n-attr="aria-label:rail.label" aria-label="섹션 이동">
+      <button
+        type="button"
+        class="rail__toggle"
+        aria-expanded="false"
+        aria-controls="rail-list"
+        data-i18n="rail.toc"
+      >목차</button>
+      <ol class="rail__list" id="rail-list" role="list">
+          <li>
+            <a class="rail__link" href="#summary">
+              <span class="rail__dot" aria-hidden="true"></span>
+              <span class="rail__text" data-i18n="rail.summary">한눈에</span>
+            </a>
+          </li>
+          <li>
+            <a class="rail__link" href="#sdgs">
+              <span class="rail__dot" aria-hidden="true"></span>
+              <span class="rail__text" data-i18n="nav.sdgs">SDGs</span>
+            </a>
+          </li>
+          <li>
+            <a class="rail__link" href="#sustain">
+              <span class="rail__dot" aria-hidden="true"></span>
+              <span class="rail__text" data-i18n="nav.legacy">지속가능성</span>
+            </a>
+          </li>
+          <li>
+            <a class="rail__link" href="#numbers">
+              <span class="rail__dot" aria-hidden="true"></span>
+              <span class="rail__text" data-i18n="rail.numbers">숫자</span>
+            </a>
+          </li>
+          <li>
+            <a class="rail__link" href="#team">
+              <span class="rail__dot" aria-hidden="true"></span>
+              <span class="rail__text" data-i18n="nav.team">팀</span>
+            </a>
+          </li>
+          <li>
+            <a class="rail__link" href="#wins">
+              <span class="rail__dot" aria-hidden="true"></span>
+              <span class="rail__text" data-i18n="nav.wins">성과</span>
+            </a>
+          </li>
+          <li>
+            <a class="rail__link" href="#philosophy">
+              <span class="rail__dot" aria-hidden="true"></span>
+              <span class="rail__text" data-i18n="nav.philos">철학</span>
+            </a>
+          </li>
+          <li>
+            <a class="rail__link" href="#shipped">
+              <span class="rail__dot" aria-hidden="true"></span>
+              <span class="rail__text" data-i18n="nav.shipped">산출물</span>
+            </a>
+          </li>
+          <li>
+            <a class="rail__link" href="#codev">
+              <span class="rail__dot" aria-hidden="true"></span>
+              <span class="rail__text" data-i18n="nav.codev">협업 증거</span>
+            </a>
+          </li>
+          <li>
+            <a class="rail__link" href="#retrain">
+              <span class="rail__dot" aria-hidden="true"></span>
+              <span class="rail__text" data-i18n="nav.retrain">재학습</span>
+            </a>
+          </li>
+          <li>
+            <a class="rail__link" href="#ground">
+              <span class="rail__dot" aria-hidden="true"></span>
+              <span class="rail__text" data-i18n="nav.ground">현장</span>
+            </a>
+          </li>
+          <li>
+            <a class="rail__link" href="#social">
+              <span class="rail__dot" aria-hidden="true"></span>
+              <span class="rail__text" data-i18n="rail.social">인스타그램</span>
+            </a>
+          </li>
+          <li>
+            <a class="rail__link" href="#legacy">
+              <span class="rail__dot" aria-hidden="true"></span>
+              <span class="rail__text" data-i18n="rail.legacy">기록</span>
+            </a>
+          </li>
+          <li class="rail__topitem">
+            <a class="rail__link rail__link--top" href="#top">
+              <span class="rail__dot rail__dot--top" aria-hidden="true"></span>
+              <span class="rail__text" data-i18n="rail.top">맨 위로</span>
+            </a>
+          </li>
+      </ol>
+    </nav>
+
     <main id="main">
       <!-- ───────────────────────────────── HERO -->
       <section class="hero" id="top">
@@ -265,6 +361,11 @@
             <h2 class="section__title" data-i18n="sdgs.title"></h2>
             <p class="lede" data-i18n="sdgs.lede"></p>
           </header>
+
+          <aside class="sdg-about reveal" aria-labelledby="sdg-about-title">
+            <h3 class="sdg-about__title" id="sdg-about-title" data-i18n="sdgs.about.title">UN SDGs란?</h3>
+            <p class="sdg-about__body" data-i18n="sdgs.about.body"></p>
+          </aside>
 
           <ul class="sdg-tiles reveal" role="list">
             <li class="sdg-tile sdg-tile--4">
@@ -692,23 +793,51 @@
               <figcaption data-i18n="ground.smk.photo.caption"></figcaption>
             </figure>
             <figure class="survey">
-              <figcaption class="survey__title" data-i18n="ground.smk.stats.title">사후 설문 (응답 19명)</figcaption>
+              <figcaption class="survey__head">
+                <span class="survey__title" data-i18n="ground.smk.stats.title">사후 설문 결과 — 8개 문항 모두 긍정 응답</span>
+                <span class="survey__source" data-i18n="ground.smk.stats.source"></span>
+              </figcaption>
               <ul class="survey__rows" role="list">
-              <li class="survey__row" style="--v: 95%">
-                <span class="survey__label" data-i18n="ground.smk.stat1.label"></span>
-                <span class="survey__track"><span class="survey__fill"></span></span>
-                <span class="survey__value" data-i18n="ground.smk.stat1.value">95%</span>
-              </li>
-              <li class="survey__row" style="--v: 95%">
-                <span class="survey__label" data-i18n="ground.smk.stat2.label"></span>
-                <span class="survey__track"><span class="survey__fill"></span></span>
-                <span class="survey__value" data-i18n="ground.smk.stat2.value">95%</span>
-              </li>
-              <li class="survey__row" style="--v: 100%">
-                <span class="survey__label" data-i18n="ground.smk.stat3.label"></span>
-                <span class="survey__track"><span class="survey__fill"></span></span>
-                <span class="survey__value" data-i18n="ground.smk.stat3.value">100%</span>
-              </li>
+                <li class="survey__row" style="--v: 100%">
+                  <span class="survey__label" data-i18n="ground.smk.q1.label"></span>
+                  <span class="survey__track"><span class="survey__fill"></span></span>
+                  <span class="survey__value">100%</span>
+                </li>
+                <li class="survey__row" style="--v: 95%">
+                  <span class="survey__label" data-i18n="ground.smk.q2.label"></span>
+                  <span class="survey__track"><span class="survey__fill"></span></span>
+                  <span class="survey__value">95%</span>
+                </li>
+                <li class="survey__row" style="--v: 100%">
+                  <span class="survey__label" data-i18n="ground.smk.q3.label"></span>
+                  <span class="survey__track"><span class="survey__fill"></span></span>
+                  <span class="survey__value">100%</span>
+                </li>
+                <li class="survey__row" style="--v: 95%">
+                  <span class="survey__label" data-i18n="ground.smk.q4.label"></span>
+                  <span class="survey__track"><span class="survey__fill"></span></span>
+                  <span class="survey__value">95%</span>
+                </li>
+                <li class="survey__row" style="--v: 100%">
+                  <span class="survey__label" data-i18n="ground.smk.q5.label"></span>
+                  <span class="survey__track"><span class="survey__fill"></span></span>
+                  <span class="survey__value">100%</span>
+                </li>
+                <li class="survey__row" style="--v: 100%">
+                  <span class="survey__label" data-i18n="ground.smk.q6.label"></span>
+                  <span class="survey__track"><span class="survey__fill"></span></span>
+                  <span class="survey__value">100%</span>
+                </li>
+                <li class="survey__row" style="--v: 100%">
+                  <span class="survey__label" data-i18n="ground.smk.q7.label"></span>
+                  <span class="survey__track"><span class="survey__fill"></span></span>
+                  <span class="survey__value">100%</span>
+                </li>
+                <li class="survey__row" style="--v: 100%">
+                  <span class="survey__label" data-i18n="ground.smk.q8.label"></span>
+                  <span class="survey__track"><span class="survey__fill"></span></span>
+                  <span class="survey__value">100%</span>
+                </li>
               </ul>
             </figure>
             <p class="proof__body" data-i18n="ground.smk.body"></p>
