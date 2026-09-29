@@ -265,7 +265,7 @@ export function renderTensorGrid(mount: HTMLElement): void {
 
 export function renderSocial(section: HTMLElement, mount: HTMLElement): void {
   if (!HAS_SOCIAL) {
-    // 아직 게시물이 없습니다. 빈 섹션을 세워두면 심사자에게 미완성으로 보입니다.
+    // 게시물이 없으면 섹션을 숨깁니다.
     section.remove();
     return;
   }
