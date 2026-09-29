@@ -81,13 +81,10 @@
     </header>
 
     <nav class="rail" id="rail" data-i18n-attr="aria-label:rail.label" aria-label="섹션 이동">
-      <button
-        type="button"
-        class="rail__toggle"
-        aria-expanded="false"
-        aria-controls="rail-list"
-        data-i18n="rail.toc"
-      >목차</button>
+      <button type="button" class="rail__toggle" aria-expanded="false" aria-controls="rail-list">
+        <span class="sr-only" data-i18n="rail.toc">목차</span>
+        <span class="rail__now" data-i18n="rail.toc">목차</span>
+      </button>
       <ol class="rail__list" id="rail-list" role="list">
           <li>
             <a class="rail__link" href="#summary">
@@ -243,7 +240,7 @@
               >모바일 앱 열기</a
             >
             <a
-              class="btn btn--secondary"
+              class="btn btn--secondary btn--pulse"
               href="https://main-plant-moji.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"

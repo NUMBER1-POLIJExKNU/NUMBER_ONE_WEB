@@ -42,6 +42,14 @@ export function initRail(): void {
     rail.classList.add("rail--on");
   }
 
+  // 좁은 화면의 '목차' 버튼에도 지금 읽는 섹션 이름을 띄웁니다.
+  const now = rail.querySelector<HTMLElement>(".rail__now");
+  const syncNow = (): void => {
+    const current = rail.querySelector<HTMLElement>('.rail__link[aria-current="true"] .rail__text');
+    if (now && current?.textContent) now.textContent = current.textContent;
+  };
+  document.addEventListener("localechange", syncNow);
+
   const spy = new IntersectionObserver(
     (entries) => {
       for (const entry of entries) {
@@ -51,6 +59,7 @@ export function initRail(): void {
           if (link.getAttribute("href") === id) link.setAttribute("aria-current", "true");
           else link.removeAttribute("aria-current");
         }
+        syncNow();
       }
     },
     { rootMargin: "-45% 0px -50% 0px" },
