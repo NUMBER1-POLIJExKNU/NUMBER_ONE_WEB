@@ -5,6 +5,8 @@
  * 처음부터 최종 상태로 둡니다 — 움직임을 줄이는 게 아니라 없앱니다.
  */
 
+import { getLocale } from "./i18n";
+
 const REDUCED = window.matchMedia("(prefers-reduced-motion: reduce)");
 
 function stopAmbientVideo(): void {
@@ -67,8 +69,16 @@ function settleAll(): void {
   });
 }
 
+/** 언어별 자릿수 표기 — 한국어·영어 4,440 / 인도네시아어 4.440 */
 function formatCount(n: number): string {
-  return n.toLocaleString("en-US");
+  return new Intl.NumberFormat(getLocale()).format(n);
+}
+
+/** 언어를 바꾸면 이미 올라간 숫자도 그 언어의 표기로 다시 씁니다. */
+function refreshCounts(): void {
+  document.querySelectorAll<HTMLElement>("[data-count]").forEach((n) => {
+    if (n.textContent !== "0") n.textContent = formatCount(Number(n.dataset.count ?? 0));
+  });
 }
 
 /** 숫자가 0에서 목표까지 올라갑니다. 한 번만 실행됩니다. */
@@ -156,6 +166,7 @@ function initSwipeGuides(): void {
 }
 
 export function initMotion(): void {
+  document.addEventListener("localechange", refreshCounts);
   initAmbientVideos();
   initHeroSlides();
   initSwipeGuides();

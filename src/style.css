@@ -439,8 +439,8 @@ code {
 
 .hero__highlights {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  max-width: 42rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  max-width: 48rem;
   margin: 0 0 1.5rem;
   padding: 0.35rem;
   list-style: none;
@@ -1521,19 +1521,6 @@ code {
   background: #ffe789;
 }
 
-/* ---------------------------------- 공식 요약 (인용해 가는 문단) */
-.abstract {
-  margin: 1.75rem 0 0;
-  padding: 1.25rem 1.5rem;
-  background: rgba(255, 253, 247, 0.06);
-  border-left: var(--step) solid var(--yellow);
-}
-.abstract p {
-  margin: 0;
-  font-size: 0.95rem;
-  line-height: 1.9;
-  color: #e9efe6;
-}
 
 /* ------------------------------------------------ 성과 사진 2장 */
 .winsphotos {
@@ -2323,5 +2310,90 @@ code {
     position: static;
     display: inline-block;
     margin-top: 0.5rem;
+  }
+}
+
+/* ------------------------------------ 한눈에 보는 성과 (인용해 가는 문단) */
+.section--summary .section__title {
+  font-size: calc(clamp(1.35rem, 3.6vw, 2rem) * var(--display-scale));
+}
+.summary__meta {
+  margin: 0.75rem 0 0;
+  font-family: var(--font-data);
+  font-size: 1rem;
+  color: var(--forest);
+}
+.summary__lead {
+  max-width: 46rem;
+  margin: 0 0 2rem;
+  padding-left: 1.25rem;
+  border-left: var(--step) solid var(--yellow);
+  font-size: clamp(1rem, 2.1vw, 1.1rem);
+  line-height: 1.9;
+  color: var(--outline);
+}
+.summary__brief {
+  max-width: 46rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--paper-2);
+  border: 2px solid var(--outline);
+  box-shadow: var(--shadow-pixel);
+}
+.summary__brieftitle {
+  margin: 0 0 0.75rem;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  color: var(--outline);
+}
+.summary__list {
+  display: grid;
+  gap: 0.55rem;
+  margin: 0;
+  padding-left: 1.1rem;
+  line-height: 1.6;
+  color: var(--outline);
+}
+.summary__list li::marker {
+  color: var(--forest);
+}
+
+/* 섹션 안의 서술 문단 */
+.story {
+  max-width: 46rem;
+  margin: 2rem 0 0;
+  font-size: 1rem;
+  line-height: 1.85;
+  color: var(--outline);
+}
+
+/* SMK 수업 사후 설문 */
+.proof__stats {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.6rem;
+  margin: 0 0 0.9rem;
+}
+.proof__stats .fact__value {
+  font-size: 1.6rem;
+  color: var(--forest);
+}
+
+@media (max-width: 40rem) {
+  .hero__highlights {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .hero__highlights li:nth-child(odd) {
+    border-left: 0;
+  }
+  .hero__highlights li:nth-child(n + 3) {
+    border-top: 1px solid rgba(43, 58, 39, 0.14);
+  }
+  .summary__brief {
+    padding: 1rem 1.1rem;
+  }
+  .proof__stats .fact {
+    padding: 0.75rem 0.6rem;
+  }
+  .proof__stats .fact__value {
+    font-size: 1.35rem;
   }
 }

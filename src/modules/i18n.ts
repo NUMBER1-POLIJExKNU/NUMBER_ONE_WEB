@@ -108,6 +108,8 @@ export async function setLocale(next: Locale): Promise<void> {
     btn.setAttribute("aria-pressed", String(on));
   });
 
+  document.dispatchEvent(new Event("localechange"));
+
   try {
     localStorage.setItem(STORAGE_KEY, next);
   } catch {

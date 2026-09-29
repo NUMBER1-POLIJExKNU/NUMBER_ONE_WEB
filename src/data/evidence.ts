@@ -14,6 +14,7 @@ export const LINKS = {
   repoWeb: "https://github.com/NUMBER1-POLIJExKNU/Main-PlantMoji",
   repoMobile: "https://github.com/NUMBER1-POLIJExKNU/Mobile-PlantEmoji",
   repoDesign: "https://github.com/NUMBER1-POLIJExKNU/Web-PlantEmoji",
+  kjtv: "https://www.youtube.com/watch?v=G2zWa1sDu_Y",
   kbsVod: "https://vod.kbs.co.kr/index.html?broadcast_complete_yn=N&local_station_code=00&program_code=T2020-0388&program_id=PS-2026147543-01-000&section_code=05&section_id=11203&section_sub_code=08&sname=vod&source=episode&stype=vod",
 } as const;
 
@@ -24,11 +25,56 @@ export interface Metric {
   subKey: string;
 }
 
+/**
+ * 수혜 인원 — 활동결과보고서 Ⅰ 결과 종합.
+ * NUMBER ONE은 경북대 파견단의 공연·교육·문화교류 전 일정에 참여했습니다.
+ */
+export const BENEFICIARIES = {
+  total: 4440,
+  youth: 1000,
+  university: 3240,
+  teachers: 100,
+  professors: 50,
+  public: 50,
+} as const;
+
+/** 봉사활동 시간 — 활동결과보고서. */
+export const SERVICE_HOURS = {
+  total: 111,
+  itEducation: 18.5,
+  itProject: 66,
+  culture: 26.5,
+} as const;
+
+/** SMK Negeri 4 Jember 스마트팜 수업 (2026-08-13)과 사후 설문(구글 폼). */
+export const SMK_CLASS = {
+  students: 44,
+  surveyResponses: 19,
+  smartFarmInterest: 18,
+  gameLearningFun: 18,
+  growTogether: 19,
+} as const;
+
+/**
+ * 인스타그램 @no.1_wfk 게시물 수. 번역 문장 속 {igPosts}에 들어갑니다.
+ *
+ * 팀이 계속 올리므로 손으로 고치지 않습니다. `npm run insta`(scripts/update-insta-count.mjs)가
+ * 프로필에서 불러와 아래 두 값을 고칩니다. verifiedOn은 값이 마지막으로 바뀐 날입니다.
+ */
+export const INSTAGRAM_POSTS = {
+  value: 81,
+  verifiedOn: "2026-09-29",
+} as const;
+
 /** 요약면 숫자 — 팀이 이룬 것을 셉니다. */
 export const METRICS: Metric[] = [
+  { value: BENEFICIARIES.total, unitKey: "numbers.people", subKey: "numbers.people.sub" },
+  { value: SERVICE_HOURS.total, unitKey: "numbers.hours", subKey: "numbers.hours.sub" },
   { value: 1, unitKey: "numbers.first", subKey: "numbers.first.sub" },
+  { value: SMK_CLASS.students, unitKey: "numbers.students", subKey: "numbers.students.sub" },
   { value: 9, unitKey: "numbers.team", subKey: "numbers.team.sub" },
-  { value: 528, unitKey: "numbers.days", subKey: "numbers.days.sub" },
+  { value: 22, unitKey: "numbers.days", subKey: "numbers.days.sub" },
+  { value: INSTAGRAM_POSTS.value, unitKey: "numbers.posts", subKey: "numbers.posts.sub" },
   { value: 3, unitKey: "numbers.deploys", subKey: "numbers.deploys.sub" },
   { value: 280, unitKey: "numbers.commits", subKey: "numbers.commits.sub" },
   { value: 300, unitKey: "numbers.sprites", subKey: "numbers.sprites.sub" },
@@ -86,16 +132,6 @@ export const RETRAIN = {
   reclassifySeconds: 2.5,
 } as const;
 
-/**
- * 인스타그램 @no.1_wfk 게시물 수. 번역 문장 속 {igPosts}에 들어갑니다.
- *
- * 팀이 계속 올리므로 손으로 고치지 않습니다. `npm run insta`(scripts/update-insta-count.mjs)가
- * 프로필에서 불러와 아래 두 값을 고칩니다. verifiedOn은 값이 마지막으로 바뀐 날입니다.
- */
-export const INSTAGRAM_POSTS = {
-  value: 77,
-  verifiedOn: "2026-09-28",
-} as const;
 
 export const DEPLOYMENT = {
   startISO: "2026-07-27",
