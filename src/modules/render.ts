@@ -7,9 +7,9 @@
 
 import { SIDES, ROLE_ORDER, type Member } from "../data/team";
 import { HERO_ITEMS, SUPPORT_ITEMS, type Deliverable } from "../data/deliverables";
-import { CODEV, METRICS, RETRAIN } from "../data/evidence";
+import { BENEFICIARIES, CODEV, METRICS, RETRAIN } from "../data/evidence";
 import { POSTS, HAS_SOCIAL, profileUrl } from "../data/social";
-import { t, translate } from "./i18n";
+import { getLocale, t, translate } from "./i18n";
 
 function el<K extends keyof HTMLElementTagNameMap>(
   tag: K,
@@ -328,4 +328,48 @@ export function renderMetrics(mount: HTMLElement): void {
     mount.append(li);
   }
   translate(mount);
+}
+
+/* ------------------------------------------------ 수혜 인원 구성 */
+
+const BENE_PARTS = [
+  ["university", "numbers.bene.university"],
+  ["youth", "numbers.bene.youth"],
+  ["teachers", "numbers.bene.teachers"],
+  ["professors", "numbers.bene.professors"],
+  ["public", "numbers.bene.public"],
+] as const;
+
+/** 4,440명을 대상별 비율 막대와 범례로 보여 줍니다. */
+export function renderBeneficiaries(mount: HTMLElement): void {
+  const bar = el("div", "bene__bar");
+  bar.setAttribute("aria-hidden", "true");
+  const legend = el("ul", "bene__legend");
+
+  for (const [part, key] of BENE_PARTS) {
+    const count = BENEFICIARIES[part];
+
+    const seg = el("span", `bene__seg bene__seg--${part}`);
+    seg.style.flexGrow = String(count);
+    bar.append(seg);
+
+    const item = el("li", `bene__item bene__item--${part}`);
+    const name = el("span", "bene__name");
+    bind(name, key);
+    const num = el("span", "bene__num");
+    num.dataset.num = String(count);
+    item.append(name, num);
+    legend.append(item);
+  }
+
+  mount.append(bar, legend);
+  formatNums(mount);
+  document.addEventListener("localechange", () => formatNums(mount));
+}
+
+function formatNums(root: ParentNode): void {
+  const fmt = new Intl.NumberFormat(getLocale());
+  root.querySelectorAll<HTMLElement>("[data-num]").forEach((n) => {
+    n.textContent = fmt.format(Number(n.dataset.num));
+  });
 }

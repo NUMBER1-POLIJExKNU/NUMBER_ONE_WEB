@@ -11,7 +11,9 @@ import {
   renderTensorGrid,
   renderSocial,
   renderMetrics,
+  renderBeneficiaries,
 } from "./modules/render";
+import { initCopyButtons } from "./modules/copy";
 
 function mount(selector: string): HTMLElement {
   const node = document.querySelector<HTMLElement>(selector);
@@ -31,8 +33,10 @@ async function main(): Promise<void> {
   renderTensorGrid(mount("#tensor-mount"));
   renderSocial(mount("#social"), mount("#social-mount"));
   renderMetrics(mount("#metrics-mount"));
+  renderBeneficiaries(mount("#bene-mount"));
 
 
+  initCopyButtons();
   initLangSwitcher();
   initNavigation();
   initMotion();

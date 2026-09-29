@@ -61,6 +61,8 @@
         </a>
 
         <nav class="nav__links" aria-label="Sections">
+          <a class="nav__link" href="#sdgs" data-i18n="nav.sdgs">SDGs</a>
+          <a class="nav__link" href="#sustain" data-i18n="nav.legacy">지속가능성</a>
           <a class="nav__link" href="#team" data-i18n="nav.team">팀</a>
           <a class="nav__link" href="#wins" data-i18n="nav.wins">성과</a>
           <a class="nav__link" href="#philosophy" data-i18n="nav.philos">철학</a>
@@ -68,7 +70,6 @@
           <a class="nav__link" href="#codev" data-i18n="nav.codev">협업 증거</a>
           <a class="nav__link" href="#retrain" data-i18n="nav.retrain">재학습</a>
           <a class="nav__link" href="#ground" data-i18n="nav.ground">현장</a>
-          <a class="nav__link" href="#legacy" data-i18n="nav.legacy">남긴 것</a>
         </nav>
 
         <div class="langs" role="group" data-i18n-attr="aria-label:nav.lang">
@@ -182,22 +183,186 @@
             <p class="eyebrow" data-i18n="summary.eyebrow">한눈에 보는 성과</p>
             <h2 class="section__title" data-i18n="summary.title"></h2>
             <p class="summary__meta" data-i18n="summary.meta"></p>
+            <ul class="sdg-chips" role="list" aria-label="UN SDGs">
+              <li><a class="sdg-chip sdg-chip--4" href="#sdgs">SDG 4</a></li>
+              <li><a class="sdg-chip sdg-chip--17" href="#sdgs">SDG 17</a></li>
+              <li><a class="sdg-chip sdg-chip--2" href="#sdgs">SDG 2</a></li>
+            </ul>
           </header>
 
-          <p class="summary__lead reveal" data-i18n="summary.lead"></p>
+          <ul class="feats reveal" role="list">
+              <li class="feat feat--wide">
+                <h3 class="feat__label" data-i18n="summary.c1.label"></h3>
+                <p class="feat__value" data-i18n="summary.c1.value"></p>
+                <p class="feat__body" data-i18n="summary.c1.body"></p>
+              </li>
+              <li class="feat feat--wide">
+                <h3 class="feat__label" data-i18n="summary.c2.label"></h3>
+                <p class="feat__value" data-i18n="summary.c2.value"></p>
+                <p class="feat__body" data-i18n="summary.c2.body"></p>
+              </li>
+              <li class="feat">
+                <h3 class="feat__label" data-i18n="summary.c3.label"></h3>
+                <p class="feat__value" data-i18n="summary.c3.value"></p>
+                <p class="feat__body" data-i18n="summary.c3.body"></p>
+              </li>
+              <li class="feat">
+                <h3 class="feat__label" data-i18n="summary.c4.label"></h3>
+                <p class="feat__value" data-i18n="summary.c4.value"></p>
+                <p class="feat__body" data-i18n="summary.c4.body"></p>
+              </li>
+              <li class="feat">
+                <h3 class="feat__label" data-i18n="summary.c5.label"></h3>
+                <p class="feat__value" data-i18n="summary.c5.value"></p>
+                <p class="feat__body" data-i18n="summary.c5.body"></p>
+              </li>
+              <li class="feat">
+                <h3 class="feat__label" data-i18n="summary.c6.label"></h3>
+                <p class="feat__value" data-i18n="summary.c6.value"></p>
+                <p class="feat__body" data-i18n="summary.c6.body"></p>
+              </li>
+              <li class="feat feat--strip">
+                <h3 class="feat__label" data-i18n="summary.c7.label"></h3>
+                <p class="feat__value" data-i18n="summary.c7.value"></p>
+                <p class="feat__body" data-i18n="summary.c7.body"></p>
+              </li>
+          </ul>
 
-          <div class="summary__brief reveal">
-            <h3 class="summary__brieftitle" data-i18n="summary.list.title">주요 성과</h3>
-            <ul class="summary__list">
-              <li data-i18n="summary.i1"></li>
-              <li data-i18n="summary.i2"></li>
-              <li data-i18n="summary.i3"></li>
-              <li data-i18n="summary.i4"></li>
-              <li data-i18n="summary.i5"></li>
-              <li data-i18n="summary.i6"></li>
-              <li data-i18n="summary.i7"></li>
-            </ul>
-          </div>
+          <details class="presskit reveal">
+            <summary class="presskit__toggle" data-i18n="summary.press.title">보도자료·결재용 문안</summary>
+            <div class="presskit__part">
+              <div class="presskit__head">
+                <h3 class="presskit__title" id="press-lead-title" data-i18n="summary.press.lead">보도자료 첫 문단</h3>
+                <button type="button" class="presskit__copy" id="copy-lead" aria-labelledby="copy-lead press-lead-title" data-copy="lead" data-i18n="ui.copy">복사</button>
+              </div>
+              <p class="presskit__lead" data-copy-source="lead" data-i18n="summary.lead"></p>
+            </div>
+            <div class="presskit__part">
+              <div class="presskit__head">
+                <h3 class="presskit__title" id="press-brief-title" data-i18n="summary.press.brief">결재용 개조식</h3>
+                <button type="button" class="presskit__copy" id="copy-brief" aria-labelledby="copy-brief press-brief-title" data-copy="brief" data-i18n="ui.copy">복사</button>
+              </div>
+              <ul class="presskit__list" data-copy-source="brief">
+                <li data-i18n="summary.i1"></li>
+                <li data-i18n="summary.i2"></li>
+                <li data-i18n="summary.i3"></li>
+                <li data-i18n="summary.i4"></li>
+                <li data-i18n="summary.i5"></li>
+                <li data-i18n="summary.i6"></li>
+                <li data-i18n="summary.i7"></li>
+              </ul>
+            </div>
+            <p class="sr-only" role="status" data-copy-status></p>
+          </details>
+        </div>
+      </section>
+
+      <!-- ───────────────────────────────── UN SDGs -->
+      <section class="section section--sdgs" id="sdgs">
+        <div class="wrap">
+          <header class="section__head reveal">
+            <p class="eyebrow" data-i18n="sdgs.eyebrow">UN 지속가능발전목표</p>
+            <h2 class="section__title" data-i18n="sdgs.title"></h2>
+            <p class="lede" data-i18n="sdgs.lede"></p>
+          </header>
+
+          <ul class="sdg-tiles reveal" role="list">
+            <li class="sdg-tile sdg-tile--4">
+              <div class="sdg-tile__face">
+                <p class="sdg-tile__num" aria-hidden="true">4</p>
+                <h3 class="sdg-tile__goal" data-i18n="sdgs.g4.goal"></h3>
+                <p class="sdg-tile__target" data-i18n="sdgs.g4.target"></p>
+              </div>
+              <p class="sdg-tile__body" data-i18n="sdgs.g4.body"></p>
+              <p class="sdg-tile__stat" data-i18n="sdgs.g4.stat"></p>
+            </li>
+            <li class="sdg-tile sdg-tile--17">
+              <div class="sdg-tile__face">
+                <p class="sdg-tile__num" aria-hidden="true">17</p>
+                <h3 class="sdg-tile__goal" data-i18n="sdgs.g17.goal"></h3>
+                <p class="sdg-tile__target" data-i18n="sdgs.g17.target"></p>
+              </div>
+              <p class="sdg-tile__body" data-i18n="sdgs.g17.body"></p>
+              <p class="sdg-tile__stat" data-i18n="sdgs.g17.stat"></p>
+            </li>
+            <li class="sdg-tile sdg-tile--2">
+              <div class="sdg-tile__face">
+                <p class="sdg-tile__num" aria-hidden="true">2</p>
+                <h3 class="sdg-tile__goal" data-i18n="sdgs.g2.goal"></h3>
+                <p class="sdg-tile__target" data-i18n="sdgs.g2.target"></p>
+              </div>
+              <p class="sdg-tile__body" data-i18n="sdgs.g2.body"></p>
+              <p class="sdg-tile__stat" data-i18n="sdgs.g2.stat"></p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ───────────────────────────────── SUSTAINABILITY -->
+      <section class="section section--sustain" id="sustain">
+        <div class="wrap">
+          <header class="section__head reveal">
+            <p class="eyebrow" data-i18n="sustain.eyebrow">지속가능성</p>
+            <h2 class="section__title" data-i18n="sustain.title"></h2>
+            <p class="lede" data-i18n="sustain.lede"></p>
+          </header>
+
+          <ul class="pillars reveal" role="list">
+            <li class="pillar">
+              <span class="pillar__glyph" aria-hidden="true">👥</span>
+              <h3 class="pillar__label" data-i18n="sustain.p1.label"></h3>
+              <p class="pillar__value" data-i18n="sustain.p1.value"></p>
+              <p class="pillar__body" data-i18n="sustain.p1.body"></p>
+            </li>
+            <li class="pillar">
+              <span class="pillar__glyph" aria-hidden="true">🔧</span>
+              <h3 class="pillar__label" data-i18n="sustain.p2.label"></h3>
+              <p class="pillar__value" data-i18n="sustain.p2.value"></p>
+              <p class="pillar__body" data-i18n="sustain.p2.body"></p>
+            </li>
+            <li class="pillar">
+              <span class="pillar__glyph" aria-hidden="true">💾</span>
+              <h3 class="pillar__label" data-i18n="sustain.p3.label"></h3>
+              <p class="pillar__value" data-i18n="sustain.p3.value"></p>
+              <p class="pillar__body" data-i18n="sustain.p3.body"></p>
+            </li>
+            <li class="pillar">
+              <span class="pillar__glyph" aria-hidden="true">🌐</span>
+              <h3 class="pillar__label" data-i18n="sustain.p4.label"></h3>
+              <p class="pillar__value" data-i18n="sustain.p4.value"></p>
+              <p class="pillar__body" data-i18n="sustain.p4.body"></p>
+            </li>
+            <li class="pillar">
+              <span class="pillar__glyph" aria-hidden="true">💬</span>
+              <h3 class="pillar__label" data-i18n="sustain.p5.label"></h3>
+              <p class="pillar__value" data-i18n="sustain.p5.value"></p>
+              <p class="pillar__body" data-i18n="sustain.p5.body"></p>
+            </li>
+          </ul>
+
+          <ol class="relay reveal" role="list">
+            <li class="relay__step">
+              <h3 class="relay__title" data-i18n="sustain.f1.title"></h3>
+              <p class="relay__body" data-i18n="sustain.f1.body"></p>
+            </li>
+            <li class="relay__step">
+              <h3 class="relay__title" data-i18n="sustain.f2.title"></h3>
+              <p class="relay__body" data-i18n="sustain.f2.body"></p>
+            </li>
+            <li class="relay__step">
+              <h3 class="relay__title" data-i18n="sustain.f3.title"></h3>
+              <p class="relay__body" data-i18n="sustain.f3.body"></p>
+            </li>
+            <li class="relay__step">
+              <h3 class="relay__title" data-i18n="sustain.f4.title"></h3>
+              <p class="relay__body" data-i18n="sustain.f4.body"></p>
+            </li>
+            <li class="relay__step">
+              <h3 class="relay__title" data-i18n="sustain.f5.title"></h3>
+              <p class="relay__body" data-i18n="sustain.f5.body"></p>
+            </li>
+          </ol>
+
         </div>
       </section>
 
@@ -209,6 +374,11 @@
             <h2 class="section__title" data-i18n="numbers.title">숫자로</h2>
           </header>
           <ul id="metrics-mount" class="metrics"></ul>
+
+          <figure class="bene reveal">
+            <figcaption class="bene__title" data-i18n="numbers.bene.title">수혜 인원 4,440명 구성</figcaption>
+            <div id="bene-mount"></div>
+          </figure>
         </div>
       </section>
       <!-- ───────────────────────────────── TEAM -->
@@ -345,18 +515,37 @@
             </li>
           </ol>
 
-          <p class="story reveal" data-i18n="philos.origin"></p>
+          <div class="origin reveal">
+            <h3 class="origin__head" data-i18n="philos.origin.title">프로젝트의 출발점</h3>
+            <ol class="origin__steps" role="list">
+            <li class="origin__step">
+              <p class="origin__title" data-i18n="philos.o1.title"></p>
+              <p class="origin__body" data-i18n="philos.o1.body"></p>
+            </li>
+            <li class="origin__step">
+              <p class="origin__title" data-i18n="philos.o2.title"></p>
+              <p class="origin__body" data-i18n="philos.o2.body"></p>
+            </li>
+            <li class="origin__step">
+              <p class="origin__title" data-i18n="philos.o3.title"></p>
+              <p class="origin__body" data-i18n="philos.o3.body"></p>
+            </li>
+            <li class="origin__step">
+              <p class="origin__title" data-i18n="philos.o4.title"></p>
+              <p class="origin__body" data-i18n="philos.o4.body"></p>
+            </li>
+            <li class="origin__step">
+              <p class="origin__title" data-i18n="philos.o5.title"></p>
+              <p class="origin__body" data-i18n="philos.o5.body"></p>
+            </li>
+            </ol>
+          </div>
 
           <p class="footnote reveal" data-i18n="philos.roots"></p>
 
           <blockquote class="creed reveal">
             <p data-i18n="philos.quote"></p>
           </blockquote>
-
-          <p class="sdg reveal">
-            <span class="sdg__label" data-i18n="philos.sdg.label"></span>
-            <span class="sdg__items" data-i18n="philos.sdg.items"></span>
-          </p>
 
           <figure class="snap reveal">
             <img src="/images/philos-field.webp" alt="젬버의 농장에서 현지 농부 취재를 마친 뒤 찍은 사진" width="900" height="675" loading="lazy" decoding="async" />
@@ -502,21 +691,27 @@
               </div>
               <figcaption data-i18n="ground.smk.photo.caption"></figcaption>
             </figure>
+            <figure class="survey">
+              <figcaption class="survey__title" data-i18n="ground.smk.stats.title">사후 설문 (응답 19명)</figcaption>
+              <ul class="survey__rows" role="list">
+              <li class="survey__row" style="--v: 95%">
+                <span class="survey__label" data-i18n="ground.smk.stat1.label"></span>
+                <span class="survey__track"><span class="survey__fill"></span></span>
+                <span class="survey__value" data-i18n="ground.smk.stat1.value">95%</span>
+              </li>
+              <li class="survey__row" style="--v: 95%">
+                <span class="survey__label" data-i18n="ground.smk.stat2.label"></span>
+                <span class="survey__track"><span class="survey__fill"></span></span>
+                <span class="survey__value" data-i18n="ground.smk.stat2.value">95%</span>
+              </li>
+              <li class="survey__row" style="--v: 100%">
+                <span class="survey__label" data-i18n="ground.smk.stat3.label"></span>
+                <span class="survey__track"><span class="survey__fill"></span></span>
+                <span class="survey__value" data-i18n="ground.smk.stat3.value">100%</span>
+              </li>
+              </ul>
+            </figure>
             <p class="proof__body" data-i18n="ground.smk.body"></p>
-            <ul class="facts proof__stats">
-              <li class="fact">
-                <span class="fact__value" data-i18n="ground.smk.stat1.value">95%</span>
-                <span class="fact__label" data-i18n="ground.smk.stat1.label"></span>
-              </li>
-              <li class="fact">
-                <span class="fact__value" data-i18n="ground.smk.stat2.value">95%</span>
-                <span class="fact__label" data-i18n="ground.smk.stat2.label"></span>
-              </li>
-              <li class="fact">
-                <span class="fact__value" data-i18n="ground.smk.stat3.value">100%</span>
-                <span class="fact__label" data-i18n="ground.smk.stat3.label"></span>
-              </li>
-            </ul>
             <p class="proof__body" data-i18n="ground.smk.survey"></p>
             <p class="proof__note" data-i18n="ground.smk.note"></p>
           </article>
@@ -581,31 +776,9 @@
       <section class="section section--legacy" id="legacy">
         <div class="wrap">
           <header class="section__head reveal">
-            <p class="eyebrow" data-i18n="legacy.eyebrow">다른 봉사와 다른 점</p>
-            <h2 class="section__title" data-i18n="legacy.title"></h2>
-            <p class="lede" data-i18n-html="legacy.lede"></p>
+            <p class="eyebrow" data-i18n="legacy.eyebrow">기록</p>
+            <h2 class="section__title" data-i18n="legacy.title">젬버에 남은 기록</h2>
           </header>
-
-          <ul class="stays reveal">
-            <li class="stay">
-              <h3 class="stay__title" data-i18n="legacy.s1.title"></h3>
-              <p class="stay__body" data-i18n="legacy.s1.body"></p>
-            </li>
-            <li class="stay">
-              <h3 class="stay__title" data-i18n="legacy.s2.title"></h3>
-              <p class="stay__body" data-i18n="legacy.s2.body"></p>
-            </li>
-            <li class="stay">
-              <h3 class="stay__title" data-i18n="legacy.s3.title"></h3>
-              <p class="stay__body" data-i18n="legacy.s3.body"></p>
-            </li>
-            <li class="stay">
-              <h3 class="stay__title" data-i18n="legacy.s4.title"></h3>
-              <p class="stay__body" data-i18n="legacy.s4.body"></p>
-            </li>
-          </ul>
-
-          <p class="story reveal" data-i18n="legacy.sustain"></p>
 
           <div class="diaryblock reveal">
             <h3 class="diaryblock__title" data-i18n="legacy.snaps.title"></h3>

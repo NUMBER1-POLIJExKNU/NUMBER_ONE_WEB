@@ -70,7 +70,8 @@ export const INSTAGRAM_POSTS = {
 export const METRICS: Metric[] = [
   { value: BENEFICIARIES.total, unitKey: "numbers.people", subKey: "numbers.people.sub" },
   { value: SERVICE_HOURS.total, unitKey: "numbers.hours", subKey: "numbers.hours.sub" },
-  { value: 1, unitKey: "numbers.first", subKey: "numbers.first.sub" },
+  // IT프로젝트 부문 · K-I Food Day
+  { value: 2, unitKey: "numbers.first", subKey: "numbers.first.sub" },
   { value: SMK_CLASS.students, unitKey: "numbers.students", subKey: "numbers.students.sub" },
   { value: 9, unitKey: "numbers.team", subKey: "numbers.team.sub" },
   { value: 22, unitKey: "numbers.days", subKey: "numbers.days.sub" },
