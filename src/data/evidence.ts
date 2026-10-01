@@ -67,8 +67,8 @@ export const SMK_CLASS = {
  * 프로필에서 불러와 아래 두 값을 고칩니다. verifiedOn은 값이 마지막으로 바뀐 날입니다.
  */
 export const INSTAGRAM_POSTS = {
-  value: 98,
-  verifiedOn: "2026-09-30",
+  value: 105,
+  verifiedOn: "2026-10-01",
 } as const;
 
 /** 요약면 숫자 — 팀이 이룬 것을 셉니다. */
